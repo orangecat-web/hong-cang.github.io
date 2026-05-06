@@ -1,0 +1,281 @@
+//- for extends only | block 覆蓋, append 新增在後, prepend 新增在前
+extends _base.pug
+block siteTitle
+	title Portfolio Effects | Orange Web Template v4.0 - orangeCat's photography
+block siteCSS
+	link(href="css/exsample.css" type="text/css" rel="stylesheet")
+block container
+	h2.page_title portfolio effects
+	section.guide
+		//浮動快速選單
+		dl.jump
+			dd: a(href="#pseffects") PS 濾鏡效果
+			dd: a(href="#imgeffects") Image Effects
+		.note
+			p #[span(style="color: #f00") * aspect-ratio] IE, Edge 87, Firefox 88, Opera 73, Chrome 87, iOS 15, Android Browser 4.4.4, Opera Mobile 12.1 以前不支援
+			p 請參照 #[a(href="https://caniuse.com/?search=aspect-ratio" target="_blank") https://caniuse.com/?search=aspect-ratio]
+		.guide
+			h3 In SASS
+			.code
+				code
+					p #[i // _mixin.sass line 384]
+					p #[span element].#[span customize class]
+					p.element +gallery
+					p 修改圖片比例
+					p #[i // _mixin.sass line 410]
+					p aspect-ratio:  #[span 1/1]
+	main.portfolio
+		// Photoshop 濾鏡效果
+		h3.unit_title#pseffects Portfolio | PS 濾鏡效果
+		section.guide
+			.note
+				p Photoshop 濾鏡效果，無法直接使用在 &lt;img&gt;，需要疊一層色塊在圖片上。工具寫在偽元素 ::before 裡。
+				p 感覺實用性不高，不過都寫了還是留著備用。
+			.guide
+				h3 In SASS
+				.code
+					code
+						p #[i // _effects.sass line 4]
+						p #[i // color _colors.sass line 47]
+						p #[span element].#[span customize class]
+						p.element +pseffects #[span (effects name)]
+				h3 In HTML
+				.code
+					code
+						p &lt; #[span element] class="#[span customize class]"&gt;
+						p.element &lt;img src="#[span upload/images.jpg]" alt="#[span image alt]&gt;
+						p &lt;/#[span element]&gt;
+		section.portfolio
+			.content.pseffects00
+				a(href="#")
+					figure
+						.img
+							img(src="upload/IMG_8167.JPG", alt="")
+						figcaption
+							h3 無濾鏡效果
+							p #[span SASS code |] +pseffects
+			.content.pseffects01
+				a(href="#")
+					figure
+						.img
+							img(src="upload/IMG_8236.JPG", alt="")
+						figcaption
+							h3 multiply 色彩增值
+							p #[span SASS code |] +pseffects(multiply)
+			.content.pseffects02
+				a(href="#")
+					figure
+						.img
+							img(src="upload/IMG_8242.JPG", alt="")
+						figcaption
+							h3 screen 濾色
+							p #[span SASS code |] +pseffects(screen)
+			.content.pseffects03
+				a(href="#")
+					figure
+						.img
+							img(src="upload/IMG_8240.JPG", alt="")
+						figcaption
+							h3 overlay 覆蓋
+							p #[span SASS code |] +pseffects(overlay)
+			.content.pseffects04
+				a(href="#")
+					figure
+						.img
+							img(src="upload/IMG_8249.JPG", alt="")
+						figcaption
+							h3 darken 變暗
+							p #[span SASS code |] +pseffects(darken)
+			.content.pseffects05
+				a(href="#")
+					figure
+						.img
+							img(src="upload/IMG_8171.JPG", alt="")
+						figcaption
+							h3 lighten 變亮
+							p #[span SASS code |] +pseffects(lighten)
+			.content.pseffects06
+				a(href="#")
+					figure
+						.img
+							img(src="upload/IMG_8252.JPG", alt="")
+						figcaption
+							h3 color-dodge 加亮顏色
+							p #[span SASS code |] +pseffects(colordodge)
+			.content.pseffects07
+				a(href="#")
+					figure
+						.img
+							img(src="upload/IMG_8174.JPG", alt="")
+						figcaption
+							h3 color-burn 加深顏色
+							p #[span SASS code |] +pseffects(colorburn)
+			.content.pseffects08
+				a(href="#")
+					figure
+						.img
+							img(src="upload/IMG_8231.JPG", alt="")
+						figcaption
+							h3 hard-light 實光
+							p #[span SASS code |] +pseffects(hardlight)
+			.content.pseffects09
+				a(href="#")
+					figure
+						.img
+							img(src="upload/IMG_8256.JPG", alt="")
+						figcaption
+							h3 soft-light 柔光
+							p #[span SASS code |] +pseffects(softlight)
+			.content.pseffects10
+				a(href="#")
+					figure
+						.img
+							img(src="upload/IMG_8256.JPG", alt="")
+						figcaption
+							h3 difference 差異化
+							p #[span SASS code |] +pseffects(difference)
+			.content.pseffects11
+				a(href="#")
+					figure
+						.img
+							img(src="upload/IMG_8256.JPG", alt="")
+						figcaption
+							h3 exclusion 排除
+							p #[span SASS code |] +pseffects(exclusion)
+			.content.pseffects12
+				a(href="#")
+					figure
+						.img
+							img(src="upload/IMG_8256.JPG", alt="")
+						figcaption
+							h3 hue 色相
+							p #[span SASS code |] +pseffects(hue)
+			.content.pseffects13
+				a(href="#")
+					figure
+						.img
+							img(src="upload/IMG_8256.JPG", alt="")
+						figcaption
+							h3 aturation 飽和度
+							p #[span SASS code |] +pseffects(aturation)
+			.content.pseffects14
+				a(href="#")
+					figure
+						.img
+							img(src="upload/IMG_8256.JPG", alt="")
+						figcaption
+							h3 color 顏色
+							p #[span SASS code |] +pseffects(color)
+			.content.pseffects15
+				a(href="#")
+					figure
+						.img
+							img(src="upload/IMG_8256.JPG", alt="")
+						figcaption
+							h3 luminosity 明度
+							p #[span SASS code |] +pseffects(luminosity)
+		|
+		|
+		// image 濾鏡效果
+		h3.unit_title#imgeffects Portfolio | Image Effects
+		section.guide
+			.note
+				p 圖片濾鏡效果，可以直接使用在 &lt;img&gt; 上。
+			.guide
+				h3 In SASS
+				.code
+					code
+						p #[i // _effects.sass line 80]
+						p #[span element].#[span customize class]
+						p.element +imgfilter #[span (count, imgfilter)]
+						p #[i hue rotate 色相]、#[i blur 模糊]、#[i saturate 飽和] 運算方式不同，獨立寫三支。
+						p #[i // 色相 _effects.sass line 119] #[span +hue-rotate($count)]
+						p #[i // 模糊 _effects.sass line 124] #[span +blur($count)]
+						p #[i // 飽和 _effects.sass line 129] #[span +saturate($count)]
+				h3 In HTML
+				.code
+					code
+						p &lt; #[span element] class="#[span customize class]"&gt;
+						p.element &lt;img src="#[span upload/images.jpg]" alt="#[span image alt]&gt;
+						p &lt;/#[span element]&gt;
+		section.portfolio
+			.content
+				a(href="")
+					figure
+						.img
+							img(src="upload/IMG_8157.JPG", alt="")
+						figcaption
+							h3 無濾鏡效果
+							p SASS code | #[span +imgfilter]
+			.content.imgeffects01
+				a(href="")
+					figure
+						.img
+							img(src="upload/IMG_8157.JPG", alt="")
+						figcaption
+							h3 grayscale 灰階
+							p SASS code | #[span +imgfilter(#[i 100], grayscale)]
+			.content.imgeffects02
+				a(href="")
+					figure
+						.img
+							img(src="upload/IMG_8157.JPG", alt="")
+						figcaption
+							h3 brightness 亮度
+							p SASS code | #[span +imgfilter(#[i 50], brightness)]
+			.content.imgeffects03
+				a(href="")
+					figure
+						.img
+							img(src="upload/IMG_8157.JPG", alt="")
+						figcaption
+							h3 contrast 對比
+							p SASS code | #[span +imgfilter(#[i 50], contrast)]
+			.content.imgeffects04
+				a(href="")
+					figure
+						.img
+							img(src="upload/IMG_8157.JPG", alt="")
+						figcaption
+							h3 invert 負片
+							p SASS code | #[span +imgfilter(#[i 100], invert)]
+			.content.imgeffects05
+				a(href="")
+					figure
+						.img
+							img(src="upload/IMG_8157.JPG", alt="")
+						figcaption
+							h3 opacity 不透明
+							p SASS code | #[span +imgfilter(#[i 50], opacity)]
+			.content.imgeffects06
+				a(href="")
+					figure
+						.img
+							img(src="upload/IMG_8157.JPG", alt="")
+						figcaption
+							h3 epia 懷舊
+							p SASS code | #[span +imgfilter(#[i 100], epia)]
+			.content.imgeffects07
+				a(href="")
+					figure
+						.img
+							img(src="upload/IMG_8157.JPG", alt="")
+						figcaption
+							h3 hue rotate 色相
+							p SASS code | #[span ++hue-rotate(#[i 100])]
+			.content.imgeffects08
+				a(href="")
+					figure
+						.img
+							img(src="upload/IMG_8157.JPG", alt="")
+						figcaption
+							h3 blur 模糊
+							p SASS code | #[span +blur(#[i 5])]
+			.content.imgeffects09
+				a(href="")
+					figure
+						.img
+							img(src="upload/IMG_8157.JPG", alt="")
+						figcaption
+							h3 saturate 飽和
+							p SASS code | #[span +saturate(#[i 2])]

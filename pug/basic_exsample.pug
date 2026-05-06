@@ -1,0 +1,185 @@
+//- for extends only | block 覆蓋, append 新增在後, prepend 新增在前
+extends _base.pug
+block siteTitle
+	title Basic Exsample | Orange Web Template v4.0 - orangeCat's photography
+block siteCSS
+	link(href="css/exsample.min.css" type="text/css" rel="stylesheet")
+block container
+	h2.page_title fonts & spacing
+	section.guide
+		//浮動快速選單
+		dl.jump
+			dd: a(href="#text_align") 文字對齊
+			dd: a(href="#row_align") row 對齊
+			//- dd: a(href="#row_align") row 對齊
+		.note
+			p 在切版上 SASS 可能會用到的切版元件
+	main.basic_exsample
+		//文字對齊
+		h3.unit_title#text_align 文字對齊
+		section.guide
+			.guide
+				h3 In SASS
+				.codeArea
+					include _extools/_guide.pug
+					code.sass
+						.EXcode
+							+number
+							p.tag element.customize class
+						.EXcode
+							+number
+							p.tag.cs1 +tal
+
+		section.text_align
+			.ex_align
+				.title #[h4 靠左對齊]
+				.content.tal
+					img(src="../upload/IMG_8157.jpg", alt="")
+					+exsampleText
+				.code
+					code
+						p +tal
+			.ex_align
+				.title #[h4 靠中對齊]
+				.content.tac
+					img(src="../upload/IMG_8157.jpg", alt="")
+					+exsampleText
+				.code
+					code
+						p +tac
+			.ex_align
+				.title #[h4 靠左對齊]
+				.content
+					img(src="../upload/IMG_8157.jpg", alt="")
+					+exsampleText
+				.code
+					code
+						p +tal
+			.ex_align
+				.title #[h4 靠右對齊]
+				.content.tar
+					img(src="../upload/IMG_8157.jpg", alt="")
+					+exsampleText
+				.code
+					code
+						p +tar
+			.ex_align.taf
+				.title #[h4 左右對齊]
+				.content
+					img(src="../upload/IMG_8157.jpg", alt="")
+					+exsampleText
+				.code
+					code
+						p +taf 英文的部分因為單字的關係無法強制左右對齊
+
+		h3.unit_title#row_align row 對齊
+		section.guide
+			.guide
+				h3 In SASS
+				.codeArea
+					include _extools/_guide.pug
+					code.sass
+						.EXcode
+							+number
+							p.tag #[span element].#[span customize class]
+						.EXcode
+							+number
+							p.tag.cs1 +row
+						.EXcode
+							+number
+							p.tag.cs2 element
+						.EXcode
+							+number
+							p.tag.cs3 +jcc
+		section.row_align
+			.title #[h4 靠左對齊]
+			.code
+				code
+					p +jcs
+			.ex_code.jcs
+				.ex_align
+					.content
+						img(src="../upload/IMG_8157.jpg", alt="")
+						+exsampleText
+				.ex_align
+					.content
+						img(src="../upload/IMG_8157.jpg", alt="")
+						+exsampleText
+				.ex_align
+					.content
+						img(src="../upload/IMG_8157.jpg", alt="")
+						+exsampleText
+				.ex_align
+					.content
+						img(src="../upload/IMG_8157.jpg", alt="")
+						+exsampleText
+			.title #[h4 靠右對齊]
+			.code
+				code
+					p +jce
+			.ex_code.jce
+				.ex_align
+					.content
+						img(src="../upload/IMG_8157.jpg", alt="")
+						+exsampleText
+				.ex_align
+					.content
+						img(src="../upload/IMG_8157.jpg", alt="")
+						+exsampleText
+				.ex_align
+					.content
+						img(src="../upload/IMG_8157.jpg", alt="")
+						+exsampleText
+				.ex_align
+					.content
+						img(src="../upload/IMG_8157.jpg", alt="")
+						+exsampleText
+			.title #[h4 靠中對齊]
+			.code
+				code
+					p +jcc
+			.ex_code.jcc
+				.ex_align
+					.content
+						img(src="../upload/IMG_8157.jpg", alt="")
+						+exsampleText
+				.ex_align
+					.content
+						img(src="../upload/IMG_8157.jpg", alt="")
+						+exsampleText
+				.ex_align
+					.content
+						img(src="../upload/IMG_8157.jpg", alt="")
+						+exsampleText
+				.ex_align
+					.content
+						img(src="../upload/IMG_8157.jpg", alt="")
+						+exsampleText
+			.title #[h4 左右對齊]
+			.code
+				code
+					p +jcb
+			.ex_code.jcb
+				.ex_align
+					.content
+						img(src="../upload/IMG_8157.jpg", alt="")
+						+exsampleText
+				.ex_align
+					.content
+						img(src="../upload/IMG_8157.jpg", alt="")
+						+exsampleText
+				.ex_align
+					.content
+						img(src="../upload/IMG_8157.jpg", alt="")
+						+exsampleText
+				.ex_align
+					.content
+						img(src="../upload/IMG_8157.jpg", alt="")
+						+exsampleText
+		h3.unit_title#text_list 文字列表
+
+
+
+//- for exsample text only
+mixin exsampleText
+	p 周一，科技巨頭臉書與旗下 Instagram、WhatsApp、Messenger 平台和 VR 系統 Oculus 跳出錯誤訊息幾分鐘後，便陷入了約 6 小時的全面癱瘓，全球約 35 億用戶受到影響。

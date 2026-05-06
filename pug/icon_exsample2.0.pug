@@ -1,0 +1,478 @@
+//- for extends only | block 覆蓋, append 新增在後, prepend 新增在前
+extends _base.pug
+block siteTitle
+	title google icons v1.0 | Orange Web Template v4.0 - orangeCat's photography
+block siteCSS
+	link(href="css/exsample.min.css" type="text/css" rel="stylesheet")
+block container
+	h2.page_title google font icons v1.0
+	section.guide
+		//浮動快速選單
+		dl.jump
+			dd: a(href="#base") 基本常用
+			dd: a(href="#base") 聯絡 & 表單
+			dd: a(href="#contact") 會員
+			dd: a(href="#cart") 購物車
+			dd: a(href="#video") 影音
+			dd: a(href="#orther") 其他 other
+		.note
+			p 利用 #[a(href="https://fonts.google.com/icons?selected=Material+Icons" title="Material Icons" target="_blank") GOOGLE Fonts] 做出來的工具包。紅字部分自行更換
+		.guide
+			h3 Include GOOGLE Font icon to SASS
+			.code
+				code
+					p(style="word-break: break-all") @import url('https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp')
+			h3 In SASS
+			.code.code-row
+				code
+					p #[i // Material Icons Filled (base)]
+					p #[span element].#[span icon class]
+					p.element +google_icons(#[span icon name])
+				code
+					p #[i // Material Icons Round]
+					p #[span element].#[span icon class]
+					p.element +google_icons(#[span icon name], #[span round])
+				code
+					p #[i // Material Icons outlined]
+					p #[span element].#[span icon class]
+					p.element +google_icons(#[span icon name], #[span outlined])
+				code
+					p #[i // Material Icons Sharp]
+					p #[span element].#[span icon class]
+					p.element +google_icons(#[span icon name], #[span Sharp])
+				code
+					p #[i // Material Icons Two Tone]
+					p #[span element].#[span icon class]
+					p.element +google_icons(#[span icon name], #[span Two Tone])
+			h3 In HTML
+			.code
+				code
+					p &lt; #[span element] class="#[span icon class]"&gt;
+					p.element &lt;span&gt;&lt;/span&gt;
+					p.element #[span element].#[span icon class]
+					p &lt;/#[span element]&gt;
+	section.icons
+		dl.Exsample
+			dt Exsample
+			dd
+				p Material Icons Filled
+				p.base
+					i
+				p +google_icons(#[span home])
+			dd
+				p Material Icons Round
+				p.round
+					i
+				p +google_icons(#[span home], #[span round])
+			dd
+				p Material Icons Outlined
+				p.outlined
+					i
+				p +google_icons(#[span home], #[span outlined])
+			dd
+				p Material Icons Sharp
+				p.sharp
+					i
+				p +google_icons(#[span home], #[span sharp])
+			dd
+				p Material Icons Two Tone
+				p.twotone
+					i
+				p +google_icons(#[span home], #[span twotone])
+
+		dl.icons#base
+			dt 基本常用
+			dd
+				p.base
+					i
+				span 預設 icon
+				p +google_icons(base)
+			dd
+				p
+					i
+				span Home
+				p +google_icons(home)
+			dd
+				p.nav
+					i
+				span 手機版選單 1
+				p +google_icons(nav)
+			dd
+				p.app
+					i
+				span 手機版選單 2
+				p +google_icons(app)
+			dd
+				p.close
+					i
+				span 關閉
+				p +google_icons(close)
+			dd
+				p.gotop
+					i
+				span 回到頂層
+				p +google_icons(gotop)
+			dd
+				p.first
+					i
+				span 第一頁
+				p +google_icons(first)
+			dd
+				p.last
+					i
+				span 最末頁
+				p +google_icons(last)
+			dd
+				p.prev
+					i
+				span 上一頁
+				p +google_icons(prev)
+			dd
+				p.next
+					i
+				span 下一頁
+				p +google_icons(next)
+			dd
+				p.search
+					i
+				span 搜尋
+				p +google_icons(search)
+			dd
+				p.download
+					i
+				span 下載
+				p +google_icons(download)
+			dd
+				p.cloud_download
+					i
+				span 下載
+				p +google_icons(cloud_download)
+			dd
+				p.info
+					i
+				span Info
+				p +google_icons(info)
+			dd
+				p.renew
+					i
+				span Renew
+				p +google_icons(renew)
+
+		dl.icons#contact
+			dt 聯絡 & 表單
+			dd
+				p.email
+					i
+				span E-mail
+				p +google_icons(email)
+			dd
+				p.alternate_email
+					i
+				span E-mail
+				p +google_icons(alternate_email)
+			dd
+				p.phone
+					i
+				span 電話
+				p +google_icons(phone)
+			dd
+				p.mobile
+					i
+				span 手機
+				p +google_icons(mobile)
+			dd
+				p.fax
+					i
+				span FAX
+				p +google_icons(fax)
+			dd
+				p.support_agent
+					i
+				span 客服
+				p +google_icons(support_agent)
+			dd
+				p.qr_code
+					i
+				span QR Code
+				p +google_icons(qr_code)
+			dd
+				p.location
+					i
+				span 地址
+				p +google_icons(location)
+			dd
+				p.checkbox
+					i
+				span input check box
+				p +google_icons(checkbox)
+			dd
+				p.checkbox_checked
+					i
+				span Input check circle checked
+				p +google_icons(checkbox_checked)
+			dd
+				p.radio
+					i
+				span Radio
+				p +google_icons(radio)
+			dd
+				p.radio_checked
+					i
+				span Radio checked
+				p +google_icons(radio_checked)
+			dd
+				p.check_circle
+					i
+				span Input check box checked
+				p +google_icons(check_circle)
+			dd
+				p.checklist
+					i
+				span Checklist
+				p +google_icons(checklist)
+
+		dl.icons#member
+			dt 會員
+			dd
+				p.assignment_ind
+					i
+				span 會員
+				p +google_icons(assignment_ind)
+			dd
+				p.account_circle
+					i
+				span 會員
+				p +google_icons(account_circle)
+			dd
+				p.person
+					i
+				span 會員
+				p +google_icons(person)
+			dd
+				p.groups
+					i
+				span 會員群組
+				p +google_icons(groups)
+			dd
+				p.login
+					i
+				span login
+				p +google_icons(login)
+			dd
+				p.logout
+					i
+				span logout
+				p +google_icons(logout)
+			dd
+				p.male
+					i
+				span Male
+				p +google_icons(male)
+			dd
+					p.female
+							i
+					span Female
+					p +google_icons(female)
+			dd
+				p.visibility
+					i
+				span 密碼可視
+				p +google_icons(visibility)
+			dd
+				p.visibility_off
+					i
+				span 密碼不可視
+				p +google_icons(visibility_off)
+			dd
+				p.upload
+					i
+				span Upload
+				p +google_icons(upload)
+			dd
+				p.lock
+					i
+				span Lock
+				p +google_icons(lock)
+			dd
+				p.manage_accounts
+					i
+				span Manage accounts
+				p +google_icons(manage_accounts)
+			dd
+				p.edit
+					i
+				span Edit
+				p +google_icons(edit)
+
+		dl.icons#cart
+			dt 購物車
+			dd
+				p.shopping_cart
+					i
+				span 購物車
+				p +google_icons(shopping_cart)
+			dd
+				p.shopping_bag
+					i
+				span 購物車
+				p +google_icons(shopping_bag)
+			dd
+				p.remove_cart
+					i
+				span 清空購物車
+				p +google_icons(remove_cart)
+			dd
+				p.add_cart
+					i
+				span 加入購物車
+				p +google_icons(add_cart)
+			dd
+				p.pay
+					i
+				span 轉帳
+				p +google_icons(pay)
+			dd
+				p.credit_card
+					i
+				span 信用卡
+				p +google_icons(credit_card)
+			dd
+				p.delete
+					i
+				span Delete
+				p +google_icons(delete)
+
+		dl.icons#video
+			dt 影音
+			dd
+				p.video
+					i
+				span 影音
+				p +google_icons(video)
+			dd
+				p.smart_display
+					i
+				span YouTube
+				p +google_icons(smart_display)
+			dd
+				p.play_arrow
+					i
+				span 播放
+				p +google_icons(play_arrow)
+			dd
+				p.stop_play
+					i
+				span 停止播放
+				p +google_icons(stop_play)
+			dd
+				p.pause
+					i
+				span 暫停
+				p +google_icons(pause)
+			dd
+				p.skip_next
+					i
+				span 下一首
+				p +google_icons(skip_next)
+			dd
+				p.skip_previous
+					i
+				span 上一首
+				p +google_icons(skip_previous)
+			dd
+				p.fast_forward
+					i
+				span 快轉
+				p +google_icons(fast_forward)
+			dd
+				p.fast_rewind
+					i
+				span 倒退
+				p +google_icons(fast_rewind)
+
+		dl.icons#arrow
+			dt 箭頭
+			dd
+				p.desktop
+					i
+				span Desktop
+				p +google_icons(desktop)
+			dd
+				p.laptop
+					i
+				span Laptop
+				p +google_icons(laptop)
+			dd
+				p.print
+					i
+				span Print
+				p +google_icons(print)
+			dd
+				p.clock
+					i
+				span Clock
+				p +google_icons(clock)
+			dd
+				p.settings
+					i
+				span Settings
+				p +google_icons(settings)
+
+		dl.icons#orther
+			dt 其他
+			dd
+				p.desktop
+					i
+				span Desktop
+				p +google_icons(desktop)
+			dd
+				p.laptop
+					i
+				span Laptop
+				p +google_icons(laptop)
+			dd
+				p.print
+					i
+				span Print
+				p +google_icons(print)
+			dd
+				p.clock
+					i
+				span Clock
+				p +google_icons(clock)
+			dd
+				p.settings
+					i
+				span Settings
+				p +google_icons(settings)
+	h2.page_title use it from google
+	section.icons
+		.note
+			p GOOGLE 預設使用方式 詳細方式請參考 #[a(href="https://fonts.google.com/icons?selected=Material+Icons" title="GOOGLE Fonts Introducing Material Symbols (Open in New Windows)" target="_blank") GOOGLE Fonts Introducing Material Symbols]
+		dl.Exsample
+			dt Exsample GOOGLE 預設使用方式
+			dd.useclass
+				p Material Icons Filled (base)
+				i.material-icons home
+				p
+					code &lt;i class="material-icons"&gt;#[span home]&lt;/i&gt;</code>
+			dd.useclass
+				p Material Icons Round
+				i.material-icons-round home
+				p
+					code &lt;i class="material-icons-round"&gt;#[span home]&lt;/i&gt;</code>
+			dd.useclass
+				p Material Icons Outlined
+				i.material-icons-outlined home
+				p
+					code &lt;i class="material-icons-outlined"&gt;#[span home]&lt;/i&gt;</code>
+			dd.useclass
+				p Material Icons Sharp
+				i.material-icons-sharp home
+				p
+					code &lt;i class="material-icons-sharp"&gt;#[span home]&lt;/i&gt;</code>
+			dd.useclass
+				p Material Icons Two Tone
+				i.material-icons-two-tone home
+				p
+					code &lt;i class="material-icons-two-tone"&gt;#[span home]&lt;/i&gt;</code>

@@ -1,0 +1,2 @@
+// orangecat javascript
+"use strict";

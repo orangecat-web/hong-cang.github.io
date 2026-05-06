@@ -1,0 +1,728 @@
+@import _layout
+@import _tools/_extools
+div.codeArea
+	+code
+div.code
+	background: #eee
+	border: 1px solid #ccc
+	// border-top: none
+	line-height: 1.5
+	+mb(1.5)
+	+py(1)
+	+px(1.5)
+	code
+		+fontFamily
+		p
+			word-break: break-word
+		p.element
+			+ml(1)
+		p.element2
+			+ml(2)
+		p.element3
+			+ml(3)
+		p.element4
+			+ml(4)
+		p.element5
+			+ml(5)
+		p.element6
+			+ml(6)
+		p.element7
+			+ml(7)
+		p.element8
+			+ml(8)
+		p.element9
+			+ml(9)
+		p.element10
+			+ml(10)
+	span
+		color: #f00
+
+// Basic Exsample
+main.basic_exsample
+	+breakpoint(xl)
+		+container(xl)
+	+breakpoint(d1280)
+		+container(xl)
+	+breakpoint(d1366)
+		+container(xl)
+	+breakpoint(d1920)
+		+container(xxl)
+	section.text_align
+		+row
+		div.ex_align
+			+col(3)
+			+mb(2)
+			+breakpoint(md)
+				+col(4)
+			+breakpoint(sm)
+				+col(6)
+			+breakpoint
+				+col(12)
+			div.title
+				+tac
+				h4
+					border-bottom: 1px solid #999
+					+fontSize(2)
+					+fontWeight(3)
+					+pb(2)
+			div.content
+				border: 1px solid #ccc
+				+mt(2)
+				+p(1)
+				img
+					width: 50%
+					border: 1px solid #ccc
+					+p(.25)
+			div.tal
+				+tal
+			div.tac
+				+tac
+			div.tar
+				+tar
+			div.taf
+				+taf
+	section.row_align
+		+px(1)
+		div.title
+			+tac
+			h4
+				border-bottom: 1px solid #999
+				+fontSize(2)
+				+fontWeight(3)
+				+pb(2)
+		div.ex_code
+			+row
+		div.ex_align
+			+col(2)
+			+mb(2)
+			div.content
+				border: 1px solid #ccc
+				+mt(2)
+				+p(1)
+				p
+					+mline(4)
+		div.jcs
+			+jcs
+		div.jce
+			+jce
+		div.jcc
+			+jcc
+		div.jcb
+			+jcb
+		div.ai_align
+			+col(3)
+		div.ais
+			+ais
+
+
+// GOOGLE FONT ICONS
+section.icons
+	+container(xxl)
+	+py(4)
+	+px(1)
+	dl.Exsample
+		+row
+		+mb(5)
+		dt
+			+col(12)
+			border-bottom: 1px solid #ccc
+			color: #999
+			+mt(1.5)
+			+mb(1)
+			+pb(1)
+		dd
+			+col-5
+			border-right: 1px solid #ccc
+			+my(1.5)
+			code
+				+fontFamily
+			span
+				color: #f00
+			+breakpoint
+				+col(6)
+				&:nth-of-type(2n+2)
+					border: none
+			+breakpoint(sm)
+				+col(6)
+				&:nth-of-type(2n+2)
+					border: none
+			&:last-of-type
+				border-right: none
+			p.base
+				+google_icons(home)
+			p.round
+				+google_icons(home, round)
+			p.outlined
+				+google_icons(home, outlined)
+			p.sharp
+				+google_icons(home, sharp)
+			p.twotone
+				+google_icons(home, twotone)
+			p
+				color: #999
+				+tac
+				span, i
+					background: none !important
+					&::before, &::after
+						font-size: 5rem !important
+						color: #999 !important
+		dd.useclass
+			+tac
+			i
+				+fontSize(5)
+				color: #999
+	dl.icons
+		+row
+		+mb(5)
+		dt
+			+col(12)
+			border-bottom: 1px solid #ccc
+			+fontSize(3)
+			+fontWeight(1)
+			color: #f90
+			+tac
+			+mb(1)
+			+pb(2)
+		dd
+			+col(2)
+			border-right: 1px solid #ccc
+			+tac
+			+my(1.5)
+			+py(.5)
+			+breakpoint(xl)
+				&:nth-of-type(6n+6)
+					border-right: none
+			+breakpoint(lg)
+				+col-5
+				&:nth-of-type(5n+5)
+					border-right: none
+			+breakpoint(md)
+				+col(3)
+				&:nth-of-type(4n+4)
+					border-right: none
+			+breakpoint(sm)
+				+col(6)
+				&:nth-of-type(3n+3)
+					border-right: none
+			+breakpoint
+				+col(6)
+				&:nth-of-type(2n+2)
+					border: none
+			// base
+			p.base
+				+google_icons(base)
+			p
+				+google_icons(home)
+			p.nav
+				+google_icons(nav)
+			p.app
+				+google_icons(app)
+			p.close
+				+google_icons(close)
+			p.gotop
+				+google_icons(gotop)
+			p.first
+				+google_icons(first)
+			p.last
+				+google_icons(last)
+			p.next
+				+google_icons(next)
+			p.prev
+				+google_icons(prev)
+			p.search
+				+google_icons(search)
+			p.download
+				+google_icons(download)
+			p.cloud_download
+				+google_icons(cloud_download)
+			p.info
+				+google_icons(info)
+			p.renew
+				+google_icons(renew)
+			//聯絡 & 表單
+			p.email
+				+google_icons(email)
+			p.alternate_email
+				+google_icons(alternate_email)
+			p.phone
+				+google_icons(phone)
+			p.mobile
+				+google_icons(mobile)
+			p.fax
+				+google_icons(fax)
+			p.support_agent
+				+google_icons(support_agent)
+			p.qr_code
+				+google_icons(qr_code)
+			p.location
+				+google_icons(location)
+			p.checkbox
+				+google_icons(checkbox)
+			p.check_circle
+				+google_icons(check_circle)
+			p.radio
+				+google_icons(radio)
+			p.radio_checked
+				+google_icons(radio_checked)
+			p.checkbox_checked
+				+google_icons(checkbox_checked)
+			p.checklist
+				+google_icons(checklist)
+			// member
+			p.assignment_ind
+				+google_icons(assignment_ind)
+			p.account_circle
+				+google_icons(account_circle)
+			p.person
+				+google_icons(person)
+			p.groups
+				+google_icons(groups)
+			p.login
+				+google_icons(login)
+			p.logout
+				+google_icons(logout)
+			p.male
+				+google_icons(male)
+			p.female
+				+google_icons(female)
+			p.visibility
+				+google_icons(visibility)
+			p.visibility_off
+				+google_icons(visibility_off)
+			p.upload
+				+google_icons(upload)
+			p.lock
+				+google_icons(lock)
+			p.manage_accounts
+				+google_icons(manage_accounts)
+			p.edit
+				+google_icons(edit)
+			// cart
+			p.shopping_cart
+				+google_icons(shopping_cart)
+			p.shopping_bag
+				+google_icons(shopping_bag)
+			p.remove_cart
+				+google_icons(remove_cart)
+			p.add_cart
+				+google_icons(add_cart)
+			p.pay
+				+google_icons(pay)
+			p.credit_card
+				+google_icons(credit_card)
+			p.delete
+				+google_icons(delete)
+			// video
+			p.video
+				+google_icons(video)
+			p.smart_display
+				+google_icons(smart_display)
+			p.stop_play
+				+google_icons(stop_play)
+			p.play_arrow
+				+google_icons(play_arrow)
+			p.pause
+				+google_icons(pause)
+			p.skip_next
+				+google_icons(skip_next)
+			p.skip_previous
+				+google_icons(skip_previous)
+			p.fast_forward
+				+google_icons(fast_forward)
+			p.fast_rewind
+				+google_icons(fast_rewind)
+			// arrow
+			p.desktop
+				+google_icons(desktop)
+			p.laptop
+				+google_icons(laptop)
+			p.print
+				+google_icons(print)
+			p.clock
+				+google_icons(clock)
+			p.settings
+				+google_icons(settings)
+			// orther
+			p.desktop
+				+google_icons(desktop)
+			p.laptop
+				+google_icons(laptop)
+			p.print
+				+google_icons(print)
+			p.clock
+				+google_icons(clock)
+			p.settings
+				+google_icons(settings)
+			p
+				+tac
+				span, i
+					background: none !important
+					&::before, &::after
+						font-size: 5rem !important
+						color: #666 !important
+				&:last-of-type
+					+fontSize(.8)
+					+fontWeight(5)
+					color: #f90
+					word-break: break-word
+
+			&:hover
+				background: #f90
+				color: #fff
+				p
+					span, i
+						&::before, &::after
+							color: #fff !important
+					&:last-of-type
+						color: #fff
+
+
+// PORTFOLIO EFFECTS
+main.portfolio
+	+container(xxl)
+	+px(1)
+	+breakpoint
+		+px(0)
+	h2
+		+fontSize(6)
+		+fontWeight(1)
+		color: map-get($headings, h2)
+		+tac
+		text-transform: uppercase
+		line-height: 150%
+		+mb(3)
+		+breakpoint
+			+fontSize(3)
+	section.portfolio
+		+gallery
+		div
+			a
+				h3
+					+fontWeight(4)
+					color: #333
+				p
+					+fontWeight(3)
+					span
+						color: #666
+					i
+						+fontWeight(7)
+						font-style: initial
+						color: #f00
+		// PS 濾鏡效果
+		div.pseffects00
+			div.img
+				+pseffects
+		div.pseffects01
+			div.img
+				+pseffects(multiply)
+				&:hover
+					+pseffects
+		div.pseffects02
+			div.img
+				+pseffects(screen)
+				&:hover
+					+pseffects
+		div.pseffects03
+			div.img
+				+pseffects(overlay)
+				&:hover
+					+pseffects
+		div.pseffects04
+			div.img
+				+pseffects(darken)
+				&:hover
+					+pseffects
+		div.pseffects05
+			div.img
+				+pseffects(lighten)
+				&:hover
+					+pseffects
+		div.pseffects06
+			div.img
+				+pseffects(colordodge)
+				&:hover
+					+pseffects
+		div.pseffects07
+			div.img
+				+pseffects(colorburn)
+				&:hover
+					+pseffects
+		div.pseffects08
+			div.img
+				+pseffects(hardlight)
+				&:hover
+					+pseffects
+		div.pseffects09
+			div.img
+				+pseffects(softlight)
+				&:hover
+					+pseffects
+		div.pseffects10
+			div.img
+				+pseffects(difference)
+				&:hover
+					+pseffects
+		div.pseffects11
+			div.img
+				+pseffects(exclusion)
+				&:hover
+					+pseffects
+		div.pseffects12
+			div.img
+				+pseffects(hue)
+				&:hover
+					+pseffects
+		div.pseffects13
+			div.img
+				+pseffects(saturation)
+				&:hover
+					+pseffects
+		div.pseffects14
+			div.img
+				+pseffects(color)
+				&:hover
+					+pseffects
+		div.pseffects15
+			div.img
+				+pseffects(luminosity)
+				&:hover
+					+pseffects
+		// Images Effects | 圖片濾鏡效果
+		div.imgeffects01
+			a
+				+imgfilter(100, grayscale)
+				&:hover
+					+imgfilter(none)
+		div.imgeffects02
+			a
+				+imgfilter(50, brightness)
+				&:hover
+					+imgfilter(none)
+		div.imgeffects03
+			a
+				+imgfilter(50, contrast)
+				&:hover
+					+imgfilter(none)
+		div.imgeffects04
+			a
+				+imgfilter(100, invert)
+				&:hover
+					+imgfilter(none)
+		div.imgeffects05
+			a
+				+imgfilter(50, opacity)
+				&:hover
+					+imgfilter(none)
+		div.imgeffects06
+			a
+				+imgfilter(100, sepia)
+				&:hover
+					+imgfilter(none)
+		div.imgeffects07
+			a
+				+hue-rotate(180)
+				&:hover
+					+imgfilter(none)
+		div.imgeffects08
+			a
+				+blur(5)
+				&:hover
+					+imgfilter(none)
+		div.imgeffects09
+			a
+				+saturate(2)
+				&:hover
+					+imgfilter(none)
+
+
+// GRAPHIC LIST
+main.list
+	+breakpoint(xl)
+		+container(lg)
+	+breakpoint(d1280)
+		+container(lg)
+	+breakpoint(d1366)
+		+container(xl)
+	+breakpoint(d1920)
+		+container(xxl)
+	// 圖文列表 | 上圖下文 + 濾鏡效果
+	section.graphic_list
+		+container(xxl)
+		+img_list01
+		div.graphic_list_01
+			+imgfilter(100, grayscale)
+			&:hover, &:focus
+				+imgfilter(none)
+				h3
+					color: map-get($gallery, text_hover)
+		div.graphic_list_02
+			+imgfilter(50, brightness)
+			&:hover, &:focus
+				+imgfilter(none)
+				h3
+					color: map-get($gallery, text_hover)
+		div.graphic_list_03
+			+imgfilter(50, contrast)
+			&:hover
+				+imgfilter(none)
+				h3
+					color: map-get($gallery, text_hover)
+		div.graphic_list_04
+			+imgfilter(100, invert)
+			&:hover
+				+imgfilter(none)
+				h3
+					color: map-get($gallery, text_hover)
+		div.graphic_list_05
+			+imgfilter(50, opacity)
+			&:hover
+				+imgfilter(none)
+				h3
+					color: map-get($gallery, text_hover)
+		div.graphic_list_06
+			+imgfilter(100, sepia)
+			&:hover
+				+imgfilter(none)
+				h3
+					color: map-get($gallery, text_hover)
+		div.graphic_list_07
+			+hue-rotate(180)
+			&:hover
+				+imgfilter(none)
+				h3
+					color: map-get($gallery, text_hover)
+		div.graphic_list_08
+			+blur(5)
+			&:hover
+				+imgfilter(none)
+				h3
+					color: map-get($gallery, text_hover)
+		div.graphic_list_09
+			+saturate(2)
+			&:hover
+				+imgfilter(none)
+				h3
+					color: map-get($gallery, text_hover)
+	// 圖文列表 | 圖文重疊 + 轉場效果
+	section.graphic_pic
+		ul
+			+img_list02
+			li.content
+				flex-direction: column
+				+graphic_trans
+				figcaption
+					color: #fff
+				div.note
+					+mt(.25)
+					+px(.5)
+					h3
+						+fontWeight(4)
+					p
+						color: #666
+					span
+						color: #f90
+						i
+							+fontWeight(5)
+							font-style: initial
+							color: #f00
+				&:hover
+					+blur(10)
+			li.graphic_trans02
+				+graphic_trans(slideInDown)
+				&:hover
+					+blur(10)
+			li.graphic_trans03
+				+graphic_trans(slideInUP)
+				&:hover
+					+blur(10)
+			li.graphic_trans04
+				+graphic_trans(slideInLeft)
+				&:hover
+					+blur(10)
+			li.graphic_trans05
+				+graphic_trans(slideInRight)
+				&:hover
+					+blur(10)
+			li.graphic_trans06
+				+graphic_trans(slideInLeftTop)
+				&:hover
+					+blur(10)
+			li.graphic_trans07
+				+graphic_trans(slideInRightTop)
+				&:hover
+					+blur(10)
+			li.graphic_trans08
+				+graphic_trans(slideInLeftBottom)
+				&:hover
+					+blur(10)
+			li.graphic_trans09
+				+graphic_trans(slideInRightBottom)
+				&:hover
+					+blur(10)
+			li.graphic_trans10
+				+graphic_trans(backInDown)
+				&:hover
+					+blur(10)
+			li.graphic_trans11
+				+graphic_trans(backInUp)
+				&:hover
+					+blur(10)
+			li.graphic_trans12
+				+graphic_trans(backInLeft)
+				&:hover
+					+blur(10)
+			li.graphic_trans13
+				+graphic_trans(backInRight)
+				&:hover
+					+blur(10)
+			li.graphic_trans14
+				+graphic_trans(zoomIn)
+				&:hover
+					+blur(10)
+			li.graphic_trans15
+				+graphic_trans(zoomInDown)
+				&:hover
+					+blur(10)
+			li.graphic_trans16
+				+graphic_trans(zoomInUpE)
+				&:hover
+					+blur(10)
+			li.graphic_trans17
+				+graphic_trans(zoomInLeft)
+				&:hover
+					+blur(10)
+			li.graphic_trans18
+				+graphic_trans(zoomInRight)
+				&:hover
+					+blur(10)
+			li.graphic_trans19
+				+graphic_trans(flipInX)
+				&:hover
+					+blur(10)
+			li.graphic_trans20
+				+graphic_trans(flipInY)
+				&:hover
+					+blur(10)
+			li.graphic_trans21
+				+graphic_trans(bounceIn)
+				&:hover
+					+blur(10)
+			li.graphic_trans22
+				+graphic_trans(bounceInDown)
+				&:hover
+					+blur(10)
+			li.graphic_trans23
+				+graphic_trans(bounceInUp)
+				&:hover
+					+blur(10)
+			li.graphic_trans24
+				+graphic_trans(bounceInLeft)
+				&:hover
+					+blur(10)
+			li.graphic_trans25
+				+graphic_trans(bounceInRight)
+				&:hover
+					+blur(10)
+
+
+

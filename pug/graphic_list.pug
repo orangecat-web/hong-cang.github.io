@@ -1,0 +1,501 @@
+//- for extends only | block 覆蓋, append 新增在後, prepend 新增在前
+extends _base.pug
+block siteTitle
+	title Graphic List | Orange Web Template v4.0 - orangeCat's photography
+block siteCSS
+	link(href="css/exsample.min.css" type="text/css" rel="stylesheet")
+block container
+	include _tools/_list.pug
+	h2.page_title graphic list
+	section.guide
+		//浮動快速選單
+		dl.jump
+			dd: a(href="#graphic_list1") 上圖下文+濾鏡效果
+			dd: a(href="#graphic_list2") 左圖右文
+			dd: a(href="#graphic_pic1") 圖文重疊+轉場效果
+	main.list
+		h3.unit_title#graphic_list1 上圖下文 | + 濾鏡效果
+		section.guide
+			.note
+				p #[span(style="color: #f00") * aspect-ratio] IE, Edge 87, Firefox 88, Opera 73, Chrome 87, iOS 15, Android Browser 4.4.4, Opera Mobile 12.1 以前不支援
+				p 請參照 #[a(href="https://caniuse.com/?search=aspect-ratio" target="_blank") https://caniuse.com/?search=aspect-ratio]
+			.guide
+				h3 In SASS
+				.codeArea
+					include _extools/_guide.pug
+					code.sass
+						.EXcode
+							+number
+							p.comment // in _mixin.sass
+						.EXcode
+							+number
+							p.tag #[i element].#[i customize class]
+						.EXcode
+							+number
+							p.tag.cs1 +img_list01
+						.EXcode
+							+number
+							p.tag.cs1 #[i element].content
+						.EXcode
+							+number
+							p.comment.cs2 // in _effects.sass
+						.EXcode
+							+number
+							p.tag.cs2 +imgfilter(#[i 100, grayscale])
+				h3 In HTML
+				.codeArea
+					include _extools/_guide.pug
+					code.html
+						.EXcode
+							+number
+							p.tag
+								span #[i element] class="#[i customize class]"
+						.EXcode
+							+number
+							p.tag.cs1
+								span #[i element] class="content"
+						.EXcode
+							+number
+							p.tag.cs2
+								span a
+						.EXcode
+							+number
+							p.tag.cs3
+								span figure
+						.EXcode
+							+number
+							p.tag.cs4 #[span div class="img"]#[span img src="#[i upload/images.jpg]" alt="#[i image alt]"]#[span /div]
+						.EXcode
+							+number
+							p.tag.cs4
+								span figcaption
+						.EXcode
+							+number
+							p.tag.cs5 #[span h3]#[i list title , 列表標題]#[span /h3]
+						.EXcode
+							+number
+							p.tag.cs5 #[span p]#[i content text , 內容描述]#[span /p]
+						.EXcode
+							+number
+							p.tag.cs4
+								span /figcaption
+						.EXcode
+							+number
+							p.tag.cs3
+								span /figure
+						.EXcode
+							+number
+							p.tag.cs2
+								span /a
+						.EXcode
+							+number
+							p.tag.cs1
+								span #[i /element]
+						.EXcode
+							+number
+							p.tag
+								span #[i /element]
+				h3 In PUG
+				.codeArea
+					include _extools/_guide.pug
+					code.pug
+						.EXcode
+							+number
+							p.tag #[i element].#[i customize class]
+						.EXcode
+							+number
+							p.tag.cs1 #[i element].content
+						.EXcode
+							+number
+							p.tag.cs2 a
+						.EXcode
+							+number
+							p.tag.cs3 figure
+						.EXcode
+							+number
+							p.tag.cs4 .img
+						.EXcode
+							+number
+							p.tag.cs5 img(src="#[i upload/images.jpg]", alt="#[i alt]")
+						.EXcode
+							+number
+							p.tag.cs4 figcaption
+						.EXcode
+							+number
+							p.tag.cs5 h3 #[i list title , 列表標題]
+						.EXcode
+							+number
+							p.tag.cs5 p #[i content text , 內容描述]
+				h3 In PUG ( 模組化 )
+				.codeArea
+					include _extools/_guide.pug
+					code.pug
+						.EXcode
+							+number
+							p.tag #[i element]
+						.EXcode
+							+number
+							p.tag.cs1 #[i element].content
+						.EXcode
+							+number
+							p.tag.cs2 +img_list01('#[i #]', '#[i atitle]', '#[i upload/image.jpg]', '#[i alt]', '#[i list title , 列表標題]', '#[i content text , 內容描述]')
+						.EXcode
+							+number
+							p.tag.cs2 1.連結, 2.連結標題, 3.圖檔位置, 4.圖說 5.文章標題, 6.內容描述, 很重要 順序不能錯誤 會找不到東西
+		section.graphic_list
+			//- 原始寫法
+			.content
+				a(href="#")
+					figure
+						.img
+							img(src="upload/IMG_8167.JPG", alt="")
+						+graphic_text
+			.content.graphic_list_01
+				//- 模組化
+				+img_list01('#', '連結標題', 'upload/IMG_8236.JPG', 'cat', 'Title 123 列表標題長度測試 Title 123 列表標題長度測試 Title 123 列表標題長度測試', 'content text 123 文字列長度測試 content text 123 文字列長度測試 content text 123 文字列長度測試 content text 123 文字列長度測試')
+			.content.graphic_list_02
+				+img_list01('#', '連結標題', 'upload/IMG_8242.JPG', 'cat', 'Title 123 列表標題長度測試 Title 123 列表標題長度測試 Title 123 列表標題長度測試', 'content text 123 文字列長度測試 content text 123 文字列長度測試 content text 123 文字列長度測試 content text 123 文字列長度測試')
+			.content.graphic_list_03
+				+img_list01('#', '連結標題', 'upload/IMG_8240.JPG', 'cat', 'Title 123 列表標題長度測試 Title 123 列表標題長度測試 Title 123 列表標題長度測試', 'content text 123 文字列長度測試 content text 123 文字列長度測試 content text 123 文字列長度測試 content text 123 文字列長度測試')
+			.content.graphic_list_04
+				+img_list01('#', '連結標題', 'upload/IMG_8249.JPG', 'cat', 'Title 123 列表標題長度測試 Title 123 列表標題長度測試 Title 123 列表標題長度測試', 'content text 123 文字列長度測試 content text 123 文字列長度測試 content text 123 文字列長度測試 content text 123 文字列長度測試')
+			.content.graphic_list_05
+				+img_list01('#', '連結標題', 'upload/IMG_8171.JPG', 'cat', 'Title 123 列表標題長度測試 Title 123 列表標題長度測試 Title 123 列表標題長度測試', 'content text 123 文字列長度測試 content text 123 文字列長度測試 content text 123 文字列長度測試 content text 123 文字列長度測試')
+			.content.graphic_list_06
+				+img_list01('#', '連結標題', 'upload/IMG_8252.JPG', 'cat', 'Title 123 列表標題長度測試 Title 123 列表標題長度測試 Title 123 列表標題長度測試', 'content text 123 文字列長度測試 content text 123 文字列長度測試 content text 123 文字列長度測試 content text 123 文字列長度測試')
+			.content.graphic_list_07
+				+img_list01('#', '連結標題', 'upload/IMG_8174.JPG', 'cat', 'Title 123 列表標題長度測試 Title 123 列表標題長度測試 Title 123 列表標題長度測試', 'content text 123 文字列長度測試 content text 123 文字列長度測試 content text 123 文字列長度測試 content text 123 文字列長度測試')
+			.content.graphic_list_08
+				+img_list01('#', '連結標題', 'upload/IMG_8231.JPG', 'cat', 'Title 123 列表標題長度測試 Title 123 列表標題長度測試 Title 123 列表標題長度測試', 'content text 123 文字列長度測試 content text 123 文字列長度測試 content text 123 文字列長度測試 content text 123 文字列長度測試')
+			.content.graphic_list_09
+				+img_list01('#', '連結標題', 'upload/IMG_8256.JPG', 'cat', 'Title 123 列表標題長度測試 Title 123 列表標題長度測試 Title 123 列表標題長度測試', 'content text 123 文字列長度測試 content text 123 文字列長度測試 content text 123 文字列長度測試 content text 123 文字列長度測試')
+
+		//- 未完成 2021/10/25 還沒想到要做哪種樣式
+		//- h3.unit_title#graphic_list2 左圖右文
+		//- h3.unit_title#graphic_list3 圖左文右交錯
+		//- section.guide
+		//-   .note
+		//-     p #[span(style="color: #f00") * aspect-ratio] IE, Edge 87, Firefox 88, Opera 73, Chrome 87, iOS 15, Android Browser 4.4.4, Opera Mobile 12.1 以前不支援
+		//-     p 請參照 #[a(href="https://caniuse.com/?search=aspect-ratio" target="_blank") https://caniuse.com/?search=aspect-ratio]
+		//-   .guide
+		//-     h3 In SASS
+		//-     .code
+		//-       code
+		//-         p #[i // _mixin.sass line 396]
+		//-         p #[i Exsample]
+		//-         p #[span element].#[span customize class]
+		//-         p.element +graphic_list
+		//-         p.element2 #[span element].#[span content]
+		//-         p.element3 #[i // _effects.sass line 80]
+		//-         p.element3 #[span +imgfilter(100, grayscale)]
+		//-     h3 In HTML
+		//-     .code
+		//-       code
+		//-         p &lt; #[span element] class="#[span customize class]"&gt;
+		//-         p.element &lt;#[span element] class="content"&gt;
+		//-         p.element2 &lt;a&gt;
+		//-         p.element3 &lt;figure&gt;
+		//-         p.element4 &lt;div class="img"&gt;&lt;img src="#[span upload/images.jpg]" alt="#[span image alt]&gt;&lt;/div&gt;
+		//-         p.element4 &lt;figcaption&gt;
+		//-         p.element4 &lt;h3&gt;#[span list title , 列表標題]&lt;/h3&gt;
+		//-         p.element5 &lt;p&gt;#[span content text , 文字列]&lt;/p&gt;
+		//-         p.element4 &lt;/figcaption&gt;
+		//-         p.element3 &lt;/figure&gt;
+		//-         p.element2 &lt;/a&gt;
+		//-         p.element &lt;#[span /element]&gt;
+		//-         p &lt;/#[span element]&gt;
+		|
+		|
+		h3.unit_title#graphic_pic1 圖文重疊 | + 轉場效果
+		section.guide
+			.note
+				p #[span(style="color: #f00") *] 無障礙不適用
+			h3 In SASS
+			.codeArea
+				include _extools/_guide.pug
+				code.sass
+					.EXcode
+						+number
+						p.tag #[i element].#[i customize class]
+					.EXcode
+						+number
+						p.tag.cs1 #[i ul]
+					.EXcode
+						+number
+						p.comment.cs2 // 圖文列表 | 圖文重疊 in _mixin.sass
+					.EXcode
+						+number
+						p.tag.cs2 +img_list02
+					.EXcode
+						+number
+						p.comment.cs2 // in _effects.sass 如果需要濾淨效果加在 +img_list02 底下 ex: +imgfilter(100, grayscale)
+					.EXcode
+						+number
+						p.tag.cs2 #[i li].content
+					.EXcode
+						+number
+						p.comment.cs3 // 轉場效果 in _effects.sass "(slideInDown)" 可寫可不寫 , 不寫預設淡入淡出
+					.EXcode
+						+number
+						p.tag.cs3 +graphic_tran(#[i slideInDown])
+			h3 In HTML
+			.codeArea
+				include _extools/_guide.pug
+				code.html
+					.EXcode
+						+number
+						p.tag
+							span #[i element] class="#[i customize class]"
+					.EXcode
+						+number
+						p.tag.cs1
+							span #[i ul]
+					.EXcode
+						+number
+						p.tag.cs2
+							span #[i li] class="content"
+					.EXcode
+						+number
+						p.tag.cs3
+							span figure
+					.EXcode
+						+number
+						p.tag.cs4 #[span div class="img"]#[span img src="#[i upload/images.jpg]" alt="#[i image alt]"]#[span /div]
+					.EXcode
+						+number
+						p.tag.cs4
+							span figcaption
+					.EXcode
+						+number
+						p.tag.cs5 #[span h3]#[i list title , 列表標題]#[span /h3]
+					.EXcode
+						+number
+						p.tag.cs5 #[span p]#[i content text , 內容描述]#[span /p]
+					.EXcode
+						+number
+						p.tag.cs4
+							span /figcaption
+					.EXcode
+						+number
+						p.tag.cs3
+							span /figure
+					.EXcode
+						+number
+						p.tag.cs2
+							span #[i /li]
+					.EXcode
+						+number
+						p.tag.cs1
+							span #[i /ul]
+					.EXcode
+						+number
+						p.tag
+							span #[i /element]
+
+
+
+					//- p &lt; #[span section] class="#[span graphic_pic]"&gt;
+					//- p.element &lt;#[span ul]&gt;
+					//- p.element2 &lt;#[span li] class="content"&gt;
+					//- 以下未完成
+					//- p.element3 &lt;div&gt;
+					//- p.element4 &lt;figure&gt;
+					//- p.element5 &lt;div class="img"&gt;&lt;img src="#[span upload/images.jpg]" alt="#[span image alt]&gt;&lt;/div&gt;
+					//- p.element4 &lt;figcaption&gt;
+					//- p.element4 &lt;h3&gt;#[span list title , 列表標題]&lt;/h3&gt;
+					//- p.element5 &lt;p&gt;#[span content text , 文字列]&lt;/p&gt;
+					//- p.element4 &lt;/figcaption&gt;
+					//- p.element3 &lt;/figure&gt;
+					//- p.element3 &lt;/a&gt;
+					//- p.element2 &lt;/li&gt;
+					//- p.element &lt;#[span /element]&gt;
+					//- p &lt;/#[span element]&gt;
+			h3 In PUG
+			.codeArea
+				include _extools/_guide.pug
+				code.pug
+					.EXcode
+						+number
+						p.tag #[i ul]
+					.EXcode
+						+number
+						p.tag.cs1 #[i li].content
+					.EXcode
+						+number
+						p.tag.cs2 figure
+					.EXcode
+						+number
+						p.tag.cs3 .img
+					.EXcode
+						+number
+						p.tag.cs4 img(src="#[i upload/images.jpg]", alt="#[i alt]")
+					.EXcode
+						+number
+						p.tag.cs3 figcaption
+					.EXcode
+						+number
+						p.tag.cs4 h3 #[i list title , 列表標題]
+					.EXcode
+						+number
+						p.tag.cs4 p #[i content text , 內容描述]
+			h3 In PUG ( 模組化 )
+			.codeArea
+				include _extools/_guide.pug
+				code.pug
+					.EXcode
+						+number
+						p.tag #[i ul]
+					.EXcode
+						+number
+						p.tag.cs1 #[i li].content
+					.EXcode
+						+number
+						p.tag.cs2 +img_list02('#[i #]', '#[i 連結標題]', '#[i upload/image.jpg]', '#[i alt]', '#[i list title , 列表標題]', '#[i content text , 內容描述]') 
+					.EXcode
+						+number
+						p.tag.cs2 1.連結, 2.連結標題, 3.圖檔位置, 4.圖說 5.文章標題, 6.內容描述, 很重要 順序不能錯誤 會找不到東西
+		section.graphic_pic
+			//- 原始寫法
+			ul
+				li.content
+					figure
+						.img
+							img(src="upload/IMG_8167.JPG", alt="")
+						+graphic_text_links
+					.note
+						h3 預設淡入
+						p SASS code | #[span +graphic_trans]
+				li.content.graphic_trans02
+					//- 模組化
+					+img_list02('#', '連結標題', 'upload/IMG_8167.JPG', '屁貓陳柳丁', 'Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題', 'content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列')
+					.note
+						h3 滑動上往下
+						p SASS code | #[span +graphic_trans(#[i slideInDown])]
+				li.content.graphic_trans03
+					+img_list02('#', '連結標題', 'upload/IMG_8167.JPG', '屁貓陳柳丁', 'Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題', 'content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列')
+					.note
+						h3 滑動下往上
+						p SASS code | #[span +graphic_trans(#[i slideInUP])]
+				li.content.graphic_trans04
+					+img_list02('#', '連結標題', 'upload/IMG_8167.JPG', '屁貓陳柳丁', 'Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題', 'content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列')
+					.note
+						h3 滑動左往右
+						p SASS code | #[span +graphic_trans(#[i slideInLeft])]
+				li.content.graphic_trans05
+					+img_list02('#', '連結標題', 'upload/IMG_8167.JPG', '屁貓陳柳丁', 'Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題', 'content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列')
+					.note
+						h3 滑動右往左
+						p SASS code | #[span +graphic_trans(#[i slideInRight])]
+				li.content.graphic_trans06
+					+img_list02('#', '連結標題', 'upload/IMG_8167.JPG', '屁貓陳柳丁', 'Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題', 'content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列')
+					.note
+						h3 滑動左上往右下
+						p SASS code | #[span +graphic_trans(#[i slideInLeftTop])]
+				li.content.graphic_trans07
+					+img_list02('#', '連結標題', 'upload/IMG_8167.JPG', '屁貓陳柳丁', 'Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題', 'content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列')
+					.note
+						h3 滑動右上往左下
+						p SASS code | #[span +graphic_trans(#[i slideInRightTop])]
+				li.content.graphic_trans08
+					+img_list02('#', '連結標題', 'upload/IMG_8167.JPG', '屁貓陳柳丁', 'Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題', 'content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列')
+					.note
+						h3 滑動左下往右上
+						p SASS code | #[span +graphic_trans(#[i slideInRightBottom])]
+				li.content.graphic_trans09
+					+img_list02('#', '連結標題', 'upload/IMG_8167.JPG', '屁貓陳柳丁', 'Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題', 'content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列')
+					.note
+						h3 滑動右下往左上
+						p SASS code | #[span +graphic_trans(#[i slideInRightBottom])]
+				li.content.graphic_trans10
+					+img_list02('#', '連結標題', 'upload/IMG_8167.JPG', '屁貓陳柳丁', 'Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題', 'content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列')
+					.note
+						h3 滑動放大上往下
+						p SASS code | #[span +graphic_trans(#[i backInDown])]
+				li.content.graphic_trans11
+					+img_list02('#', '連結標題', 'upload/IMG_8167.JPG', '屁貓陳柳丁', 'Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題', 'content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列')
+					.note
+						h3 滑動放大下往上
+						p SASS code | #[span +graphic_trans(#[i backInUp])]
+				li.content.graphic_trans12
+					+img_list02('#', '連結標題', 'upload/IMG_8167.JPG', '屁貓陳柳丁', 'Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題', 'content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列')
+					.note
+						h3 滑動放大左往右
+						p SASS code | #[span +graphic_trans(#[i backInLeft])]
+				li.content.graphic_trans13
+					+img_list02('#', '連結標題', 'upload/IMG_8167.JPG', '屁貓陳柳丁', 'Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題', 'content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列')
+					.note
+						h3 滑動放大右往左
+						p SASS code | #[span +graphic_trans(#[i backInRight])]
+				li.content.graphic_trans14
+					+img_list02('#', '連結標題', 'upload/IMG_8167.JPG', '屁貓陳柳丁', 'Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題', 'content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列')
+					.note
+						h3 放大
+						p SASS code | #[span +graphic_trans(#[i zoomIn])]
+				li.content.graphic_trans15
+					+img_list02('#', '連結標題', 'upload/IMG_8167.JPG', '屁貓陳柳丁', 'Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題', 'content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列')
+					.note
+						h3 放大上往下
+						p SASS code | #[span +graphic_trans(#[i zoomInDown])]
+				li.content.graphic_trans16
+					+img_list02('#', '連結標題', 'upload/IMG_8167.JPG', '屁貓陳柳丁', 'Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題', 'content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列')
+					.note
+						h3 放大下往上
+						p SASS code | #[span +imgfilter(#[i zoomInUp])]
+				li.content.graphic_trans17
+					+img_list02('#', '連結標題', 'upload/IMG_8167.JPG', '屁貓陳柳丁', 'Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題', 'content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列')
+					.note
+						h3 放大左往右
+						p SASS code | #[span +imgfilter(#[i zoomInLeft])]
+				li.content.graphic_trans18
+					+img_list02('#', '連結標題', 'upload/IMG_8167.JPG', '屁貓陳柳丁', 'Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題', 'content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列')
+					.note
+						h3 放大右往左
+						p SASS code | #[span +imgfilter(#[i zoomInLRight])]
+				li.content.graphic_trans19
+					+img_list02('#', '連結標題', 'upload/IMG_8167.JPG', '屁貓陳柳丁', 'Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題', 'content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列')
+					.note
+						h3 旋轉 X 軸
+						p SASS code | #[span +imgfilter(#[i flipInX])]
+				li.content.graphic_trans20
+					+img_list02('#', '連結標題', 'upload/IMG_8167.JPG', '屁貓陳柳丁', 'Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題', 'content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列')
+					.note
+						h3 旋轉 Y 軸
+						p SASS code | #[span +imgfilter(#[i flipInY])]
+				li.content.graphic_trans21
+					+img_list02('#', '連結標題', 'upload/IMG_8167.JPG', '屁貓陳柳丁', 'Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題', 'content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列')
+					.note
+						h3 Bounce
+						p SASS code | #[span +imgfilter(#[i bounceIn])]
+				li.content.graphic_trans22
+					+img_list02('#', '連結標題', 'upload/IMG_8167.JPG', '屁貓陳柳丁', 'Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題', 'content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列')
+					.note
+						h3 bounceInDown
+						p SASS code | #[span +imgfilter(#[i bounceInDown])]
+				li.content.graphic_trans23
+					+img_list02('#', '連結標題', 'upload/IMG_8167.JPG', '屁貓陳柳丁', 'Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題', 'content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列')
+					.note
+						h3 bounceInUp
+						p SASS code | #[span +imgfilter(#[i bounceInUp])]
+				li.content.graphic_trans24
+					+img_list02('#', '連結標題', 'upload/IMG_8167.JPG', '屁貓陳柳丁', 'Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題', 'content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列')
+					.note
+						h3 bounceInLeft
+						p SASS code | #[span +imgfilter(#[i bounceInLeft])]
+				li.content.graphic_trans25
+					+img_list02('#', '連結標題', 'upload/IMG_8167.JPG', '屁貓陳柳丁', 'Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題', 'content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列')
+					.note
+						h3 bounceInRight
+						p SASS code | #[span +imgfilter(#[i bounceInRight])]
+
+//- 測試用文字
+mixin graphic_text
+	figcaption
+		h3 Title123列表標題長度測試Title123列表標題長度測試Title123列表標題長度測試Title123列表標題長度測試
+		p.intro_text content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列
+mixin graphic_text_links
+	figcaption
+		h3
+			a(href="#") Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題
+		p.intro_text content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列
+		p.more_link
+			a(href="#") #[span more]
