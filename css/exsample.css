@@ -1,0 +1,6925 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, rem, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, rembed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b, strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+code, kbd, pre, samp {
+  font-size: 1rem;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+q {
+  quotes: "“" "”" "‘" "’";
+}
+
+small {
+  font-size: 80%;
+}
+
+sub {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5rem;
+}
+
+sub {
+  bottom: -0.25rem;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 0;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35rem 0.625rem 0.75rem;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+button, input {
+  line-height: normal;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, html input[type=button] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], html input[disabled] {
+  cursor: default;
+}
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+input[type=search] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.clearfix:before {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+html or element selector {
+  -webkit-text-size-adjust: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+@media only screen and (min-resolution: 120dpi) {
+  body {
+    zoom: 0.8;
+  }
+}
+@media only screen and (min-resolution: 125dpi) {
+  body {
+    zoom: 0.7;
+  }
+}
+html, body, [canvas=container], [off-canvas] {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Roboto", "Noto Sans TC", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: normal;
+  color: #333;
+  line-height: 175%;
+}
+
+a, button, input, select, textarea {
+  transition: all 0.5s ease-in-out;
+}
+
+button.openNav {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  color: #f90;
+}
+a:hover {
+  color: #f60;
+}
+a:active {
+  color: #a00;
+}
+
+button {
+  background: #fff;
+}
+input {
+  background: #fff;
+}
+select {
+  background: #fff;
+  text-align: center;
+  -moz-text-align-last: center;
+       text-align-last: center;
+}
+textarea {
+  background: #fff;
+}
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+[canvas] {
+  z-index: 1;
+}
+
+[canvas=container] {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+
+[canvas=container]:before,
+[canvas=container]:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+[off-canvas] {
+  display: none;
+  position: fixed;
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+[off-canvas*=top] {
+  width: 100%;
+  height: 255px;
+  top: 0;
+}
+
+[off-canvas*=right] {
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  right: 0;
+}
+
+[off-canvas*=bottom] {
+  width: 100%;
+  height: 255px;
+  bottom: 0;
+}
+
+[off-canvas*=left] {
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+[off-canvas*=reveal] {
+  z-index: 0;
+}
+
+[off-canvas*=push] {
+  z-index: 1;
+}
+
+[off-canvas*=overlay] {
+  z-index: 9999;
+}
+
+[off-canvas*=shift] {
+  z-index: 0;
+}
+
+[canvas], [off-canvas] {
+  transform: translate(0px, 0px);
+  transition: transform 300ms;
+  -webkit-backface-visibility: hidden;
+}
+
+[off-canvas*=shift][off-canvas*=top] {
+  transform: translate(0px, 50%);
+}
+
+[off-canvas*=shift][off-canvas*=right] {
+  transform: translate(-50%, 0px);
+}
+
+[off-canvas*=shift][off-canvas*=bottom] {
+  transform: translate(0px, -50%);
+}
+
+[off-canvas*=shift][off-canvas*=left] {
+  transform: translate(50%, 0px);
+}
+
+.material-icons,
+.material-icons-outlined,
+.material-icons-sharp,
+.material-icons-two-tone,
+.material-icons-round {
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+}
+
+div.goTop {
+  transform: translateX(0);
+  transition: transform 0.2s;
+  position: fixed;
+  bottom: 4rem;
+  right: 2rem;
+  z-index: 9999;
+}
+div.goTop.hide {
+  transform: translateX(200%);
+}
+div.goTop a.goTop {
+  background: rgba(0, 0, 0, 0.5647058824);
+  border: none;
+  cursor: pointer;
+}
+
+h2.page_title {
+  font-size: 6rem;
+  font-weight: 100;
+  color: #999;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 150%;
+  margin-bottom: 45px;
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  h2.page_title {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  h2.page_title {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  h2.page_title {
+    font-size: 3rem;
+  }
+}
+
+h3.unit_title {
+  font-size: 3.5rem;
+  font-weight: 100;
+  color: #333;
+  text-align: center;
+  line-height: 150%;
+  margin-top: 75px;
+  margin-bottom: 75px;
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  h3.unit_title {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  h3.unit_title {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  h3.unit_title {
+    font-size: 2rem;
+  }
+}
+
+a:focus {
+  outline-width: 3px;
+  outline-color: #f60;
+  outline-style: dashed;
+}
+
+section.guide {
+  max-width: 1470px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 75px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+section.guide dl.jump {
+  background: rgba(0, 0, 0, 0.4666666667);
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 7.5px;
+  border-top-left-radius: 7.5px;
+  border-bottom-left-radius: 7.5px;
+  position: fixed;
+  top: 35vh;
+  right: 0;
+  z-index: 9999;
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  section.guide dl.jump {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    background: none;
+    border: none;
+    justify-content: center !important;
+    margin-bottom: 22.5px;
+    position: initial;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) and (max-width: 575.98px) {
+  section.guide dl.jump {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) and (min-width: 576px) and (max-width: 767.98px) {
+  section.guide dl.jump {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) and (max-width: 575.98px) {
+  section.guide dl.jump {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  section.guide dl.jump {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    background: none;
+    border: none;
+    justify-content: center !important;
+    margin-bottom: 22.5px;
+    position: initial;
+  }
+}
+@media screen and (max-width: 575.98px) and (max-width: 575.98px) {
+  section.guide dl.jump {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 575.98px) and (min-width: 576px) and (max-width: 767.98px) {
+  section.guide dl.jump {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 575.98px) and (max-width: 575.98px) {
+  section.guide dl.jump {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  section.guide dl.jump {
+    background: none;
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    justify-content: center !important;
+    margin-bottom: 22.5px;
+    position: initial;
+  }
+}
+@media screen and (max-width: 575.98px) and (max-width: 575.98px) {
+  section.guide dl.jump {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 575.98px) and (min-width: 576px) and (max-width: 767.98px) {
+  section.guide dl.jump {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 575.98px) and (max-width: 575.98px) {
+  section.guide dl.jump {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+section.guide dl.jump dt, section.guide dl.jump dd {
+  font-weight: 400;
+  text-align: right;
+}
+section.guide dl.jump dd {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+section.guide dl.jump dd:last-of-type {
+  border: none;
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  section.guide dl.jump dd {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  section.guide dl.jump dd::after {
+    content: "|";
+    border-bottom: none;
+    top: 0;
+    right: 0;
+    padding-left: 30px;
+  }
+  section.guide dl.jump dd:last-of-type::after {
+    content: none;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  section.guide dl.jump dd {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  section.guide dl.jump dd::after {
+    content: "|";
+    border-bottom: none;
+    top: 0;
+    right: 0;
+    padding-left: 30px;
+  }
+  section.guide dl.jump dd:last-of-type::after {
+    content: none;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  section.guide dl.jump dd {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  section.guide dl.jump dd::after {
+    content: "|";
+    border-bottom: none;
+    top: 0;
+    right: 0;
+    padding-left: 30px;
+  }
+  section.guide dl.jump dd:last-of-type::after {
+    content: none;
+  }
+}
+section.guide div.note {
+  background: #eee;
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+  padding: 15px;
+}
+
+@media screen and (min-width: 992px) {
+  nav.desktop {
+    display: block;
+  }
+  nav.mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  nav.desktop {
+    display: none;
+  }
+  nav.mobile {
+    display: block;
+  }
+}
+body {
+  font-size: 1rem;
+}
+
+header {
+  width: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+header div.navbar {
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+header div.navbar div.logo {
+  width: auto;
+}
+header div.navbar div.logo img {
+  width: 225px;
+}
+@media screen and (max-width: 575.98px) {
+  header div.navbar div.logo img {
+    width: 225px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  header div.navbar div.logo img {
+    width: 225px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  header div.navbar div.logo img {
+    width: 225px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  header div.navbar div.logo img {
+    width: 225px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  header div.navbar div.logo img {
+    width: 225px;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+  header div.navbar div.logo img {
+    width: 225px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  header div.navbar div.logo img {
+    width: 225px;
+  }
+}
+@media (min-width: 1200px) {
+  header div.navbar div.logo img {
+    width: 225px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  header div.navbar div.logo img {
+    width: 225px;
+  }
+}
+header div.navbar div.logo {
+  text-align: center;
+  margin-bottom: 45px;
+}
+header div.navbar nav.desktop {
+  max-width: 1310px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 30px;
+}
+header div.navbar nav.desktop ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+@media screen and (max-width: 575.98px) {
+  header div.navbar nav.desktop ul {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  header div.navbar nav.desktop ul {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  header div.navbar nav.desktop ul {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+header div.navbar nav.desktop ul {
+  align-items: center !important;
+  justify-content: center !important;
+}
+header div.navbar nav.desktop ul li {
+  font-size: 1.25rem;
+}
+header div.navbar nav.desktop ul li a {
+  color: #333;
+}
+header div.navbar nav.desktop ul li a:hover {
+  color: #f90;
+}
+header div.navbar nav.desktop ul li a:focus {
+  color: #000;
+}
+header div.navbar nav.desktop ul li::after {
+  content: "|";
+  padding-left: 15px;
+  padding-right: 15px;
+}
+header div.navbar nav.desktop ul li:last-of-type::after {
+  content: none;
+}
+header div.navbar nav.mobile div.navOpen button.navOpen {
+  background: none;
+  border: none;
+  padding-left: 0px;
+  padding-right: 0px;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+header div.navbar nav.mobile div.navOpen button.navOpen img {
+  width: 2rem;
+  height: 2rem;
+}
+header div.navbar nav.mobile div[off-canvas] {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8666666667);
+}
+header div.navbar nav.mobile div[off-canvas] button.navClose {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+header div.navbar nav.mobile div[off-canvas] button.navClose img {
+  width: 2rem;
+  height: 2rem;
+}
+header div.navbar nav.mobile div[off-canvas] ul.nav {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+@media screen and (max-width: 575.98px) {
+  header div.navbar nav.mobile div[off-canvas] ul.nav {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  header div.navbar nav.mobile div[off-canvas] ul.nav {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  header div.navbar nav.mobile div[off-canvas] ul.nav {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+header div.navbar nav.mobile div[off-canvas] ul.nav {
+  margin-top: 75px;
+}
+header div.navbar nav.mobile div[off-canvas] ul.nav li {
+  flex-basis: 0;
+  flex-grow: 1;
+  flex: 0 0 50%;
+  max-width: 50%;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+header div.navbar nav.mobile div[off-canvas] ul.nav li a {
+  color: #333;
+}
+header div.navbar nav.mobile div[off-canvas] ul.nav li a:hover {
+  color: #f90;
+}
+header div.navbar nav.mobile div[off-canvas] ul.nav li a:focus {
+  color: #000;
+}
+header div.navbar nav.mobile div[off-canvas] ul.nav li {
+  font-size: 1.85rem;
+  text-align: center;
+  margin-bottom: 15px;
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
+}
+@media screen and (max-width: 575.98px) {
+  header div.navbar nav.mobile div[off-canvas] ul.nav li {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+main {
+  max-width: 1470px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+footer div.copyright {
+  background: #000;
+  font-family: Raleway, Noto Sans TC, sans-serif;
+  color: #fff;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+div.goTop a.goTop {
+  background: none;
+}
+div.goTop a.goTop img {
+  height: 50px;
+}
+
+div.codeArea {
+  background: #282c34;
+  border-radius: 7.5px;
+  margin-bottom: 30px;
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+@media screen and (max-width: 575.98px) {
+  div.codeArea {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  div.codeArea {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  div.codeArea {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+div.codeArea {
+  position: relative;
+}
+div.codeArea::after {
+  content: "";
+  width: 1px;
+  height: 100%;
+  border-left: 1px solid #000;
+  position: absolute;
+  top: 0;
+  left: 3rem;
+}
+div.codeArea .sass::before {
+  content: "sass";
+}
+div.codeArea code {
+  text-align: left;
+}
+div.codeArea code::before {
+  content: "";
+  font-size: 0.75rem;
+  color: #999;
+  position: absolute;
+  top: 0;
+  right: 0.5rem;
+}
+div.codeArea code .EXcode {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+@media screen and (max-width: 575.98px) {
+  div.codeArea code .EXcode {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  div.codeArea code .EXcode {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  div.codeArea code .EXcode {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+div.codeArea code .EXcode p {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  line-height: 175%;
+  word-wrap: break-word;
+}
+div.codeArea code .EXcode p span.lazycode::before {
+  content: "<";
+}
+div.codeArea code .EXcode p span.lazycode::after {
+  content: ">";
+}
+div.codeArea code .EXcode p.number {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%;
+  font-family: arial;
+  font-size: 0.9rem;
+  color: #666;
+  padding-left: 7.5px;
+}
+div.codeArea code .EXcode p.comment {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #999;
+  font-style: italic;
+}
+div.codeArea code .EXcode p.tag {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #fff;
+}
+div.codeArea code .EXcode p.tag i {
+  color: #f90;
+}
+div.codeArea code .EXcode p.cs1 {
+  margin-left: 15px;
+}
+@media screen and (max-width: 575.98px) {
+  div.codeArea code .EXcode p.cs1 {
+    margin-left: 2.25px;
+  }
+}
+div.codeArea code .EXcode p.cs2 {
+  margin-left: 30px;
+}
+@media screen and (max-width: 575.98px) {
+  div.codeArea code .EXcode p.cs2 {
+    margin-left: 17.25px;
+  }
+}
+div.codeArea code .EXcode p.cs3 {
+  margin-left: 45px;
+}
+@media screen and (max-width: 575.98px) {
+  div.codeArea code .EXcode p.cs3 {
+    margin-left: 32.25px;
+  }
+}
+div.codeArea code .EXcode p.cs4 {
+  margin-left: 60px;
+}
+@media screen and (max-width: 575.98px) {
+  div.codeArea code .EXcode p.cs4 {
+    margin-left: 47.25px;
+  }
+}
+div.codeArea code .EXcode p.cs5 {
+  margin-left: 75px;
+}
+@media screen and (max-width: 575.98px) {
+  div.codeArea code .EXcode p.cs5 {
+    margin-left: 62.25px;
+  }
+}
+div.codeArea code .EXcode p.cs6 {
+  margin-left: 90px;
+}
+@media screen and (max-width: 575.98px) {
+  div.codeArea code .EXcode p.cs6 {
+    margin-left: 77.25px;
+  }
+}
+div.codeArea code .EXcode p.cs7 {
+  margin-left: 105px;
+}
+@media screen and (max-width: 575.98px) {
+  div.codeArea code .EXcode p.cs7 {
+    margin-left: 92.25px;
+  }
+}
+div.codeArea code .EXcode p.cs8 {
+  margin-left: 120px;
+}
+@media screen and (max-width: 575.98px) {
+  div.codeArea code .EXcode p.cs8 {
+    margin-left: 107.25px;
+  }
+}
+div.codeArea code .EXcode p.cs9 {
+  margin-left: 135px;
+}
+@media screen and (max-width: 575.98px) {
+  div.codeArea code .EXcode p.cs9 {
+    margin-left: 122.25px;
+  }
+}
+div.codeArea code .EXcode p.cs10 {
+  margin-left: 150px;
+}
+@media screen and (max-width: 575.98px) {
+  div.codeArea code .EXcode p.cs10 {
+    margin-left: 137.25px;
+  }
+}
+div.codeArea code.sass::before {
+  content: "sass";
+}
+div.codeArea code.pug::before {
+  content: "pug";
+}
+div.codeArea code.js::before {
+  content: "js";
+}
+div.codeArea code.html::before {
+  content: "html";
+}
+div.codeArea code.html p.tag span::before {
+  content: "<";
+}
+div.codeArea code.html p.tag span::after {
+  content: ">";
+}
+
+div.code {
+  background: #eee;
+  border: 1px solid #ccc;
+  line-height: 1.5;
+  margin-bottom: 22.5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 22.5px;
+  padding-right: 22.5px;
+}
+div.code code {
+  font-family: "Roboto", "Noto Sans TC", sans-serif;
+}
+div.code code p {
+  word-break: break-word;
+}
+div.code code p.element {
+  margin-left: 15px;
+}
+div.code code p.element2 {
+  margin-left: 30px;
+}
+div.code code p.element3 {
+  margin-left: 45px;
+}
+div.code code p.element4 {
+  margin-left: 60px;
+}
+div.code code p.element5 {
+  margin-left: 75px;
+}
+div.code code p.element6 {
+  margin-left: 90px;
+}
+div.code code p.element7 {
+  margin-left: 105px;
+}
+div.code code p.element8 {
+  margin-left: 120px;
+}
+div.code code p.element9 {
+  margin-left: 135px;
+}
+div.code code p.element10 {
+  margin-left: 150px;
+}
+div.code span {
+  color: #f00;
+}
+
+@media (min-width: 1200px) {
+  main.basic_exsample {
+    max-width: 1310px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  main.basic_exsample {
+    max-width: 1310px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (min-width: 1280px) {
+  main.basic_exsample {
+    max-width: 1310px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  main.basic_exsample {
+    max-width: 1310px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (min-width: 1366px) {
+  main.basic_exsample {
+    max-width: 1310px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  main.basic_exsample {
+    max-width: 1310px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (min-width: 1920px) {
+  main.basic_exsample {
+    max-width: 1470px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  main.basic_exsample {
+    max-width: 1470px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+main.basic_exsample section.text_align {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+@media screen and (max-width: 575.98px) {
+  main.basic_exsample section.text_align {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  main.basic_exsample section.text_align {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  main.basic_exsample section.text_align {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+main.basic_exsample section.text_align div.ex_align {
+  flex-basis: 0;
+  flex-grow: 1;
+  flex: 0 0 25%;
+  max-width: 25%;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  main.basic_exsample section.text_align div.ex_align {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  main.basic_exsample section.text_align div.ex_align {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  main.basic_exsample section.text_align div.ex_align {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  main.basic_exsample section.text_align div.ex_align {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  main.basic_exsample section.text_align div.ex_align {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+main.basic_exsample section.text_align div.ex_align div.title {
+  text-align: center;
+}
+main.basic_exsample section.text_align div.ex_align div.title h4 {
+  border-bottom: 1px solid #999;
+  font-size: 2rem;
+  font-weight: 300;
+  padding-bottom: 30px;
+}
+main.basic_exsample section.text_align div.ex_align div.content {
+  border: 1px solid #ccc;
+  margin-top: 30px;
+  padding: 15px;
+}
+main.basic_exsample section.text_align div.ex_align div.content img {
+  width: 50%;
+  border: 1px solid #ccc;
+  padding: 3.75px;
+}
+main.basic_exsample section.text_align div.ex_align div.tal {
+  text-align: left;
+}
+main.basic_exsample section.text_align div.ex_align div.tac {
+  text-align: center;
+}
+main.basic_exsample section.text_align div.ex_align div.tar {
+  text-align: right;
+}
+main.basic_exsample section.text_align div.ex_align div.taf {
+  text-align: justify;
+}
+main.basic_exsample section.row_align {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+main.basic_exsample section.row_align div.title {
+  text-align: center;
+}
+main.basic_exsample section.row_align div.title h4 {
+  border-bottom: 1px solid #999;
+  font-size: 2rem;
+  font-weight: 300;
+  padding-bottom: 30px;
+}
+main.basic_exsample section.row_align div.ex_code {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+@media screen and (max-width: 575.98px) {
+  main.basic_exsample section.row_align div.ex_code {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  main.basic_exsample section.row_align div.ex_code {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  main.basic_exsample section.row_align div.ex_code {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+main.basic_exsample section.row_align div.ex_align {
+  flex-basis: 0;
+  flex-grow: 1;
+  flex: 0 0 16.6666666667%;
+  max-width: 16.6666666667%;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 30px;
+}
+main.basic_exsample section.row_align div.ex_align div.content {
+  border: 1px solid #ccc;
+  margin-top: 30px;
+  padding: 15px;
+}
+main.basic_exsample section.row_align div.ex_align div.content p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+main.basic_exsample section.row_align div.jcs {
+  justify-content: flex-start !important;
+}
+main.basic_exsample section.row_align div.jce {
+  justify-content: flex-end !important;
+}
+main.basic_exsample section.row_align div.jcc {
+  justify-content: center !important;
+}
+main.basic_exsample section.row_align div.jcb {
+  justify-content: space-between !important;
+}
+main.basic_exsample section.row_align div.ai_align {
+  flex-basis: 0;
+  flex-grow: 1;
+  flex: 0 0 25%;
+  max-width: 25%;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+main.basic_exsample section.row_align div.ais {
+  align-items: flex-start !important;
+}
+
+section.icons {
+  max-width: 1470px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+section.icons dl.Exsample {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+@media screen and (max-width: 575.98px) {
+  section.icons dl.Exsample {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  section.icons dl.Exsample {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  section.icons dl.Exsample {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+section.icons dl.Exsample {
+  margin-bottom: 75px;
+}
+section.icons dl.Exsample dt {
+  flex-basis: 0;
+  flex-grow: 1;
+  flex: 0 0 100%;
+  max-width: 100%;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-bottom: 1px solid #ccc;
+  color: #999;
+  margin-top: 22.5px;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+section.icons dl.Exsample dd {
+  flex-basis: 0;
+  flex-grow: 1;
+  flex: 0 0 20%;
+  width: 100%;
+  max-width: 20%;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-right: 1px solid #ccc;
+  margin-top: 22.5px;
+  margin-bottom: 22.5px;
+}
+section.icons dl.Exsample dd code {
+  font-family: "Roboto", "Noto Sans TC", sans-serif;
+}
+section.icons dl.Exsample dd span {
+  color: #f00;
+}
+@media screen and (max-width: 575.98px) {
+  section.icons dl.Exsample dd {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  section.icons dl.Exsample dd:nth-of-type(2n+2) {
+    border: none;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  section.icons dl.Exsample dd {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  section.icons dl.Exsample dd:nth-of-type(2n+2) {
+    border: none;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  section.icons dl.Exsample dd {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  section.icons dl.Exsample dd:nth-of-type(2n+2) {
+    border: none;
+  }
+}
+section.icons dl.Exsample dd:last-of-type {
+  border-right: none;
+}
+section.icons dl.Exsample dd p.base {
+  text-decoration: none;
+}
+section.icons dl.Exsample dd p.base span, section.icons dl.Exsample dd p.base i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.Exsample dd p.base span:hover, section.icons dl.Exsample dd p.base i:hover {
+  color: #f90;
+}
+section.icons dl.Exsample dd p.base span:active, section.icons dl.Exsample dd p.base i:active {
+  color: #000;
+}
+section.icons dl.Exsample dd p.base span::before, section.icons dl.Exsample dd p.base i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.Exsample dd p.base span, section.icons dl.Exsample dd p.base i {
+  font-family: "Material Icons";
+}
+section.icons dl.Exsample dd p.base span::before, section.icons dl.Exsample dd p.base i::before {
+  content: "\e88a";
+}
+section.icons dl.Exsample dd p.round {
+  text-decoration: none;
+}
+section.icons dl.Exsample dd p.round span, section.icons dl.Exsample dd p.round i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.Exsample dd p.round span:hover, section.icons dl.Exsample dd p.round i:hover {
+  color: #f90;
+}
+section.icons dl.Exsample dd p.round span:active, section.icons dl.Exsample dd p.round i:active {
+  color: #000;
+}
+section.icons dl.Exsample dd p.round span::before, section.icons dl.Exsample dd p.round i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.Exsample dd p.round span, section.icons dl.Exsample dd p.round i {
+  font-family: "Material Icons";
+  font-family: "Material Icons Round";
+}
+section.icons dl.Exsample dd p.round span::before, section.icons dl.Exsample dd p.round i::before {
+  content: "\e88a";
+}
+section.icons dl.Exsample dd p.outlined {
+  text-decoration: none;
+}
+section.icons dl.Exsample dd p.outlined span, section.icons dl.Exsample dd p.outlined i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.Exsample dd p.outlined span:hover, section.icons dl.Exsample dd p.outlined i:hover {
+  color: #f90;
+}
+section.icons dl.Exsample dd p.outlined span:active, section.icons dl.Exsample dd p.outlined i:active {
+  color: #000;
+}
+section.icons dl.Exsample dd p.outlined span::before, section.icons dl.Exsample dd p.outlined i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.Exsample dd p.outlined span, section.icons dl.Exsample dd p.outlined i {
+  font-family: "Material Icons";
+  font-family: "Material Icons Outlined";
+}
+section.icons dl.Exsample dd p.outlined span::before, section.icons dl.Exsample dd p.outlined i::before {
+  content: "\e88a";
+}
+section.icons dl.Exsample dd p.sharp {
+  text-decoration: none;
+}
+section.icons dl.Exsample dd p.sharp span, section.icons dl.Exsample dd p.sharp i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.Exsample dd p.sharp span:hover, section.icons dl.Exsample dd p.sharp i:hover {
+  color: #f90;
+}
+section.icons dl.Exsample dd p.sharp span:active, section.icons dl.Exsample dd p.sharp i:active {
+  color: #000;
+}
+section.icons dl.Exsample dd p.sharp span::before, section.icons dl.Exsample dd p.sharp i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.Exsample dd p.sharp span, section.icons dl.Exsample dd p.sharp i {
+  font-family: "Material Icons";
+  font-family: "Material Icons Sharp";
+}
+section.icons dl.Exsample dd p.sharp span::before, section.icons dl.Exsample dd p.sharp i::before {
+  content: "\e88a";
+}
+section.icons dl.Exsample dd p.twotone {
+  text-decoration: none;
+}
+section.icons dl.Exsample dd p.twotone span, section.icons dl.Exsample dd p.twotone i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.Exsample dd p.twotone span:hover, section.icons dl.Exsample dd p.twotone i:hover {
+  color: #f90;
+}
+section.icons dl.Exsample dd p.twotone span:active, section.icons dl.Exsample dd p.twotone i:active {
+  color: #000;
+}
+section.icons dl.Exsample dd p.twotone span::before, section.icons dl.Exsample dd p.twotone i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.Exsample dd p.twotone span, section.icons dl.Exsample dd p.twotone i {
+  font-family: "Material Icons";
+  font-family: "Material Icons Two Tone";
+}
+section.icons dl.Exsample dd p.twotone span::before, section.icons dl.Exsample dd p.twotone i::before {
+  content: "\e88a";
+}
+section.icons dl.Exsample dd p {
+  color: #999;
+  text-align: center;
+}
+section.icons dl.Exsample dd p span, section.icons dl.Exsample dd p i {
+  background: none !important;
+}
+section.icons dl.Exsample dd p span::before, section.icons dl.Exsample dd p span::after, section.icons dl.Exsample dd p i::before, section.icons dl.Exsample dd p i::after {
+  font-size: 5rem !important;
+  color: #999 !important;
+}
+section.icons dl.Exsample dd.useclass {
+  text-align: center;
+}
+section.icons dl.Exsample dd.useclass i {
+  font-size: 5rem;
+  color: #999;
+}
+section.icons dl.icons {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+@media screen and (max-width: 575.98px) {
+  section.icons dl.icons {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  section.icons dl.icons {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  section.icons dl.icons {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+section.icons dl.icons {
+  margin-bottom: 75px;
+}
+section.icons dl.icons dt {
+  flex-basis: 0;
+  flex-grow: 1;
+  flex: 0 0 100%;
+  max-width: 100%;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-bottom: 1px solid #ccc;
+  font-size: 3rem;
+  font-weight: 100;
+  color: #f90;
+  text-align: center;
+  margin-bottom: 15px;
+  padding-bottom: 30px;
+}
+section.icons dl.icons dd {
+  flex-basis: 0;
+  flex-grow: 1;
+  flex: 0 0 16.6666666667%;
+  max-width: 16.6666666667%;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-right: 1px solid #ccc;
+  text-align: center;
+  margin-top: 22.5px;
+  margin-bottom: 22.5px;
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
+}
+@media (min-width: 1200px) {
+  section.icons dl.icons dd:nth-of-type(6n+6) {
+    border-right: none;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  section.icons dl.icons dd:nth-of-type(6n+6) {
+    border-right: none;
+  }
+}
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+  section.icons dl.icons dd {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex: 0 0 20%;
+    width: 100%;
+    max-width: 20%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  section.icons dl.icons dd:nth-of-type(5n+5) {
+    border-right: none;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  section.icons dl.icons dd {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex: 0 0 20%;
+    width: 100%;
+    max-width: 20%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  section.icons dl.icons dd:nth-of-type(5n+5) {
+    border-right: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  section.icons dl.icons dd {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex: 0 0 25%;
+    max-width: 25%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  section.icons dl.icons dd:nth-of-type(4n+4) {
+    border-right: none;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  section.icons dl.icons dd {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex: 0 0 25%;
+    max-width: 25%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  section.icons dl.icons dd:nth-of-type(4n+4) {
+    border-right: none;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  section.icons dl.icons dd {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  section.icons dl.icons dd:nth-of-type(3n+3) {
+    border-right: none;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  section.icons dl.icons dd {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  section.icons dl.icons dd:nth-of-type(3n+3) {
+    border-right: none;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  section.icons dl.icons dd {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  section.icons dl.icons dd:nth-of-type(2n+2) {
+    border: none;
+  }
+}
+section.icons dl.icons dd p.base {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.base span, section.icons dl.icons dd p.base i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.base span:hover, section.icons dl.icons dd p.base i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.base span:active, section.icons dl.icons dd p.base i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.base span::before, section.icons dl.icons dd p.base i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.base span, section.icons dl.icons dd p.base i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.base span::before, section.icons dl.icons dd p.base i::before {
+  content: "\e5d3";
+}
+section.icons dl.icons dd p {
+  text-decoration: none;
+}
+section.icons dl.icons dd p span, section.icons dl.icons dd p i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p span:hover, section.icons dl.icons dd p i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p span:active, section.icons dl.icons dd p i:active {
+  color: #000;
+}
+section.icons dl.icons dd p span::before, section.icons dl.icons dd p i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p span, section.icons dl.icons dd p i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p span::before, section.icons dl.icons dd p i::before {
+  content: "\e88a";
+}
+section.icons dl.icons dd p.nav {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.nav span, section.icons dl.icons dd p.nav i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.nav span:hover, section.icons dl.icons dd p.nav i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.nav span:active, section.icons dl.icons dd p.nav i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.nav span::before, section.icons dl.icons dd p.nav i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.nav span, section.icons dl.icons dd p.nav i {
+  font-family: "Material Icons";
+  background: none;
+}
+section.icons dl.icons dd p.nav span::before, section.icons dl.icons dd p.nav i::before {
+  content: "\e5d2";
+}
+section.icons dl.icons dd p.nav span:hover, section.icons dl.icons dd p.nav span:active, section.icons dl.icons dd p.nav i:hover, section.icons dl.icons dd p.nav i:active {
+  background: none;
+}
+section.icons dl.icons dd p.app {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.app span, section.icons dl.icons dd p.app i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.app span:hover, section.icons dl.icons dd p.app i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.app span:active, section.icons dl.icons dd p.app i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.app span::before, section.icons dl.icons dd p.app i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.app span, section.icons dl.icons dd p.app i {
+  font-family: "Material Icons";
+  background: none;
+}
+section.icons dl.icons dd p.app span::before, section.icons dl.icons dd p.app i::before {
+  content: "\e5c3";
+}
+section.icons dl.icons dd p.app span:hover, section.icons dl.icons dd p.app span:active, section.icons dl.icons dd p.app i:hover, section.icons dl.icons dd p.app i:active {
+  background: none;
+}
+section.icons dl.icons dd p.close {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.close span, section.icons dl.icons dd p.close i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.close span:hover, section.icons dl.icons dd p.close i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.close span:active, section.icons dl.icons dd p.close i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.close span::before, section.icons dl.icons dd p.close i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.close span, section.icons dl.icons dd p.close i {
+  font-family: "Material Icons";
+  background: none;
+}
+section.icons dl.icons dd p.close span::before, section.icons dl.icons dd p.close i::before {
+  content: "\e14c";
+}
+section.icons dl.icons dd p.close span:hover, section.icons dl.icons dd p.close span:active, section.icons dl.icons dd p.close i:hover, section.icons dl.icons dd p.close i:active {
+  background: none;
+}
+section.icons dl.icons dd p.gotop {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.gotop span, section.icons dl.icons dd p.gotop i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.gotop span:hover, section.icons dl.icons dd p.gotop i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.gotop span:active, section.icons dl.icons dd p.gotop i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.gotop span::before, section.icons dl.icons dd p.gotop i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.gotop span, section.icons dl.icons dd p.gotop i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.gotop span::before, section.icons dl.icons dd p.gotop i::before {
+  content: "\e316";
+}
+section.icons dl.icons dd p.first {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.first span, section.icons dl.icons dd p.first i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.first span:hover, section.icons dl.icons dd p.first i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.first span:active, section.icons dl.icons dd p.first i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.first span::before, section.icons dl.icons dd p.first i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.first span, section.icons dl.icons dd p.first i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.first span::before, section.icons dl.icons dd p.first i::before {
+  content: "\eac3";
+}
+section.icons dl.icons dd p.last {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.last span, section.icons dl.icons dd p.last i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.last span:hover, section.icons dl.icons dd p.last i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.last span:active, section.icons dl.icons dd p.last i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.last span::before, section.icons dl.icons dd p.last i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.last span, section.icons dl.icons dd p.last i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.last span::before, section.icons dl.icons dd p.last i::before {
+  content: "\eac9";
+}
+section.icons dl.icons dd p.next {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.next span, section.icons dl.icons dd p.next i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.next span:hover, section.icons dl.icons dd p.next i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.next span:active, section.icons dl.icons dd p.next i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.next span::before, section.icons dl.icons dd p.next i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.next span, section.icons dl.icons dd p.next i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.next span::before, section.icons dl.icons dd p.next i::before {
+  content: "\e409";
+}
+section.icons dl.icons dd p.prev {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.prev span, section.icons dl.icons dd p.prev i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.prev span:hover, section.icons dl.icons dd p.prev i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.prev span:active, section.icons dl.icons dd p.prev i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.prev span::before, section.icons dl.icons dd p.prev i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.prev span, section.icons dl.icons dd p.prev i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.prev span::before, section.icons dl.icons dd p.prev i::before {
+  content: "\e408";
+}
+section.icons dl.icons dd p.search {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.search span, section.icons dl.icons dd p.search i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.search span:hover, section.icons dl.icons dd p.search i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.search span:active, section.icons dl.icons dd p.search i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.search span::before, section.icons dl.icons dd p.search i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.search span, section.icons dl.icons dd p.search i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.search span::before, section.icons dl.icons dd p.search i::before {
+  content: "\e8b6";
+}
+section.icons dl.icons dd p.download {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.download span, section.icons dl.icons dd p.download i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.download span:hover, section.icons dl.icons dd p.download i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.download span:active, section.icons dl.icons dd p.download i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.download span::before, section.icons dl.icons dd p.download i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.download span, section.icons dl.icons dd p.download i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.download span::before, section.icons dl.icons dd p.download i::before {
+  content: "\f090";
+}
+section.icons dl.icons dd p.cloud_download {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.cloud_download span, section.icons dl.icons dd p.cloud_download i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.cloud_download span:hover, section.icons dl.icons dd p.cloud_download i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.cloud_download span:active, section.icons dl.icons dd p.cloud_download i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.cloud_download span::before, section.icons dl.icons dd p.cloud_download i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.cloud_download span, section.icons dl.icons dd p.cloud_download i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.cloud_download span::before, section.icons dl.icons dd p.cloud_download i::before {
+  content: "\e2c0";
+}
+section.icons dl.icons dd p.info {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.info span, section.icons dl.icons dd p.info i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.info span:hover, section.icons dl.icons dd p.info i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.info span:active, section.icons dl.icons dd p.info i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.info span::before, section.icons dl.icons dd p.info i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.info span, section.icons dl.icons dd p.info i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.info span::before, section.icons dl.icons dd p.info i::before {
+  content: "\e88e";
+}
+section.icons dl.icons dd p.renew {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.renew span, section.icons dl.icons dd p.renew i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.renew span:hover, section.icons dl.icons dd p.renew i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.renew span:active, section.icons dl.icons dd p.renew i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.renew span::before, section.icons dl.icons dd p.renew i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.renew span, section.icons dl.icons dd p.renew i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.renew span::before, section.icons dl.icons dd p.renew i::before {
+  content: "\e863";
+}
+section.icons dl.icons dd p.email {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.email span, section.icons dl.icons dd p.email i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.email span:hover, section.icons dl.icons dd p.email i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.email span:active, section.icons dl.icons dd p.email i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.email span::before, section.icons dl.icons dd p.email i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.email span, section.icons dl.icons dd p.email i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.email span::before, section.icons dl.icons dd p.email i::before {
+  content: "\e0be";
+}
+section.icons dl.icons dd p.alternate_email {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.alternate_email span, section.icons dl.icons dd p.alternate_email i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.alternate_email span:hover, section.icons dl.icons dd p.alternate_email i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.alternate_email span:active, section.icons dl.icons dd p.alternate_email i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.alternate_email span::before, section.icons dl.icons dd p.alternate_email i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.alternate_email span, section.icons dl.icons dd p.alternate_email i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.alternate_email span::before, section.icons dl.icons dd p.alternate_email i::before {
+  content: "\e0e6";
+}
+section.icons dl.icons dd p.phone {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.phone span, section.icons dl.icons dd p.phone i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.phone span:hover, section.icons dl.icons dd p.phone i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.phone span:active, section.icons dl.icons dd p.phone i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.phone span::before, section.icons dl.icons dd p.phone i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.phone span, section.icons dl.icons dd p.phone i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.phone span::before, section.icons dl.icons dd p.phone i::before {
+  content: "\e0b0";
+}
+section.icons dl.icons dd p.mobile {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.mobile span, section.icons dl.icons dd p.mobile i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.mobile span:hover, section.icons dl.icons dd p.mobile i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.mobile span:active, section.icons dl.icons dd p.mobile i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.mobile span::before, section.icons dl.icons dd p.mobile i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.mobile span, section.icons dl.icons dd p.mobile i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.mobile span::before, section.icons dl.icons dd p.mobile i::before {
+  content: "\e325";
+}
+section.icons dl.icons dd p.fax {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.fax span, section.icons dl.icons dd p.fax i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.fax span:hover, section.icons dl.icons dd p.fax i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.fax span:active, section.icons dl.icons dd p.fax i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.fax span::before, section.icons dl.icons dd p.fax i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.fax span, section.icons dl.icons dd p.fax i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.fax span::before, section.icons dl.icons dd p.fax i::before {
+  content: "\ead8";
+}
+section.icons dl.icons dd p.support_agent {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.support_agent span, section.icons dl.icons dd p.support_agent i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.support_agent span:hover, section.icons dl.icons dd p.support_agent i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.support_agent span:active, section.icons dl.icons dd p.support_agent i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.support_agent span::before, section.icons dl.icons dd p.support_agent i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.support_agent span, section.icons dl.icons dd p.support_agent i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.support_agent span::before, section.icons dl.icons dd p.support_agent i::before {
+  content: "\f0e2";
+}
+section.icons dl.icons dd p.qr_code {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.qr_code span, section.icons dl.icons dd p.qr_code i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.qr_code span:hover, section.icons dl.icons dd p.qr_code i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.qr_code span:active, section.icons dl.icons dd p.qr_code i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.qr_code span::before, section.icons dl.icons dd p.qr_code i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.qr_code span, section.icons dl.icons dd p.qr_code i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.qr_code span::before, section.icons dl.icons dd p.qr_code i::before {
+  content: "\f206";
+}
+section.icons dl.icons dd p.location {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.location span, section.icons dl.icons dd p.location i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.location span:hover, section.icons dl.icons dd p.location i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.location span:active, section.icons dl.icons dd p.location i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.location span::before, section.icons dl.icons dd p.location i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.location span, section.icons dl.icons dd p.location i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.location span::before, section.icons dl.icons dd p.location i::before {
+  content: "\e55f";
+}
+section.icons dl.icons dd p.checkbox {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.checkbox span, section.icons dl.icons dd p.checkbox i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.checkbox span:hover, section.icons dl.icons dd p.checkbox i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.checkbox span:active, section.icons dl.icons dd p.checkbox i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.checkbox span::before, section.icons dl.icons dd p.checkbox i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.checkbox span, section.icons dl.icons dd p.checkbox i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.checkbox span::before, section.icons dl.icons dd p.checkbox i::before {
+  content: "\e835";
+}
+section.icons dl.icons dd p.check_circle {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.check_circle span, section.icons dl.icons dd p.check_circle i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.check_circle span:hover, section.icons dl.icons dd p.check_circle i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.check_circle span:active, section.icons dl.icons dd p.check_circle i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.check_circle span::before, section.icons dl.icons dd p.check_circle i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.check_circle span, section.icons dl.icons dd p.check_circle i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.check_circle span::before, section.icons dl.icons dd p.check_circle i::before {
+  content: "\e86c";
+}
+section.icons dl.icons dd p.radio {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.radio span, section.icons dl.icons dd p.radio i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.radio span:hover, section.icons dl.icons dd p.radio i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.radio span:active, section.icons dl.icons dd p.radio i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.radio span::before, section.icons dl.icons dd p.radio i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.radio span, section.icons dl.icons dd p.radio i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.radio span::before, section.icons dl.icons dd p.radio i::before {
+  content: "\e836";
+}
+section.icons dl.icons dd p.radio_checked {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.radio_checked span, section.icons dl.icons dd p.radio_checked i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.radio_checked span:hover, section.icons dl.icons dd p.radio_checked i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.radio_checked span:active, section.icons dl.icons dd p.radio_checked i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.radio_checked span::before, section.icons dl.icons dd p.radio_checked i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.radio_checked span, section.icons dl.icons dd p.radio_checked i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.radio_checked span::before, section.icons dl.icons dd p.radio_checked i::before {
+  content: "\e837";
+}
+section.icons dl.icons dd p.checkbox_checked {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.checkbox_checked span, section.icons dl.icons dd p.checkbox_checked i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.checkbox_checked span:hover, section.icons dl.icons dd p.checkbox_checked i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.checkbox_checked span:active, section.icons dl.icons dd p.checkbox_checked i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.checkbox_checked span::before, section.icons dl.icons dd p.checkbox_checked i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.checkbox_checked span, section.icons dl.icons dd p.checkbox_checked i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.checkbox_checked span::before, section.icons dl.icons dd p.checkbox_checked i::before {
+  content: "\e834";
+}
+section.icons dl.icons dd p.checklist {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.checklist span, section.icons dl.icons dd p.checklist i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.checklist span:hover, section.icons dl.icons dd p.checklist i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.checklist span:active, section.icons dl.icons dd p.checklist i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.checklist span::before, section.icons dl.icons dd p.checklist i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.checklist span, section.icons dl.icons dd p.checklist i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.checklist span::before, section.icons dl.icons dd p.checklist i::before {
+  content: "\e6b1";
+}
+section.icons dl.icons dd p.assignment_ind {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.assignment_ind span, section.icons dl.icons dd p.assignment_ind i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.assignment_ind span:hover, section.icons dl.icons dd p.assignment_ind i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.assignment_ind span:active, section.icons dl.icons dd p.assignment_ind i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.assignment_ind span::before, section.icons dl.icons dd p.assignment_ind i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.assignment_ind span, section.icons dl.icons dd p.assignment_ind i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.assignment_ind span::before, section.icons dl.icons dd p.assignment_ind i::before {
+  content: "\e85e";
+}
+section.icons dl.icons dd p.account_circle {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.account_circle span, section.icons dl.icons dd p.account_circle i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.account_circle span:hover, section.icons dl.icons dd p.account_circle i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.account_circle span:active, section.icons dl.icons dd p.account_circle i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.account_circle span::before, section.icons dl.icons dd p.account_circle i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.account_circle span, section.icons dl.icons dd p.account_circle i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.account_circle span::before, section.icons dl.icons dd p.account_circle i::before {
+  content: "\e853";
+}
+section.icons dl.icons dd p.person {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.person span, section.icons dl.icons dd p.person i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.person span:hover, section.icons dl.icons dd p.person i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.person span:active, section.icons dl.icons dd p.person i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.person span::before, section.icons dl.icons dd p.person i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.person span, section.icons dl.icons dd p.person i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.person span::before, section.icons dl.icons dd p.person i::before {
+  content: "\e7fd";
+}
+section.icons dl.icons dd p.groups {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.groups span, section.icons dl.icons dd p.groups i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.groups span:hover, section.icons dl.icons dd p.groups i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.groups span:active, section.icons dl.icons dd p.groups i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.groups span::before, section.icons dl.icons dd p.groups i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.groups span, section.icons dl.icons dd p.groups i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.groups span::before, section.icons dl.icons dd p.groups i::before {
+  content: "\f233";
+}
+section.icons dl.icons dd p.login {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.login span, section.icons dl.icons dd p.login i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.login span:hover, section.icons dl.icons dd p.login i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.login span:active, section.icons dl.icons dd p.login i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.login span::before, section.icons dl.icons dd p.login i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.login span, section.icons dl.icons dd p.login i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.login span::before, section.icons dl.icons dd p.login i::before {
+  content: "\ea77";
+}
+section.icons dl.icons dd p.logout {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.logout span, section.icons dl.icons dd p.logout i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.logout span:hover, section.icons dl.icons dd p.logout i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.logout span:active, section.icons dl.icons dd p.logout i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.logout span::before, section.icons dl.icons dd p.logout i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.logout span, section.icons dl.icons dd p.logout i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.logout span::before, section.icons dl.icons dd p.logout i::before {
+  content: "\e9ba";
+}
+section.icons dl.icons dd p.male {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.male span, section.icons dl.icons dd p.male i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.male span:hover, section.icons dl.icons dd p.male i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.male span:active, section.icons dl.icons dd p.male i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.male span::before, section.icons dl.icons dd p.male i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.male span, section.icons dl.icons dd p.male i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.male span::before, section.icons dl.icons dd p.male i::before {
+  content: "\e58e";
+}
+section.icons dl.icons dd p.female {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.female span, section.icons dl.icons dd p.female i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.female span:hover, section.icons dl.icons dd p.female i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.female span:active, section.icons dl.icons dd p.female i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.female span::before, section.icons dl.icons dd p.female i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.female span, section.icons dl.icons dd p.female i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.female span::before, section.icons dl.icons dd p.female i::before {
+  content: "\e590";
+}
+section.icons dl.icons dd p.visibility {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.visibility span, section.icons dl.icons dd p.visibility i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.visibility span:hover, section.icons dl.icons dd p.visibility i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.visibility span:active, section.icons dl.icons dd p.visibility i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.visibility span::before, section.icons dl.icons dd p.visibility i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.visibility span, section.icons dl.icons dd p.visibility i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.visibility span::before, section.icons dl.icons dd p.visibility i::before {
+  content: "\e8f4";
+}
+section.icons dl.icons dd p.visibility_off {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.visibility_off span, section.icons dl.icons dd p.visibility_off i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.visibility_off span:hover, section.icons dl.icons dd p.visibility_off i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.visibility_off span:active, section.icons dl.icons dd p.visibility_off i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.visibility_off span::before, section.icons dl.icons dd p.visibility_off i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.visibility_off span, section.icons dl.icons dd p.visibility_off i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.visibility_off span::before, section.icons dl.icons dd p.visibility_off i::before {
+  content: "\e8f5";
+}
+section.icons dl.icons dd p.upload {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.upload span, section.icons dl.icons dd p.upload i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.upload span:hover, section.icons dl.icons dd p.upload i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.upload span:active, section.icons dl.icons dd p.upload i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.upload span::before, section.icons dl.icons dd p.upload i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.upload span, section.icons dl.icons dd p.upload i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.upload span::before, section.icons dl.icons dd p.upload i::before {
+  content: "\e2c6";
+}
+section.icons dl.icons dd p.upload span::before, section.icons dl.icons dd p.upload i::before {
+  content: "\e2c3";
+}
+section.icons dl.icons dd p.lock {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.lock span, section.icons dl.icons dd p.lock i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.lock span:hover, section.icons dl.icons dd p.lock i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.lock span:active, section.icons dl.icons dd p.lock i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.lock span::before, section.icons dl.icons dd p.lock i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.lock span, section.icons dl.icons dd p.lock i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.lock span::before, section.icons dl.icons dd p.lock i::before {
+  content: "\e897";
+}
+section.icons dl.icons dd p.manage_accounts {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.manage_accounts span, section.icons dl.icons dd p.manage_accounts i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.manage_accounts span:hover, section.icons dl.icons dd p.manage_accounts i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.manage_accounts span:active, section.icons dl.icons dd p.manage_accounts i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.manage_accounts span::before, section.icons dl.icons dd p.manage_accounts i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.manage_accounts span, section.icons dl.icons dd p.manage_accounts i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.manage_accounts span::before, section.icons dl.icons dd p.manage_accounts i::before {
+  content: "\f02e";
+}
+section.icons dl.icons dd p.edit {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.edit span, section.icons dl.icons dd p.edit i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.edit span:hover, section.icons dl.icons dd p.edit i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.edit span:active, section.icons dl.icons dd p.edit i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.edit span::before, section.icons dl.icons dd p.edit i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.edit span, section.icons dl.icons dd p.edit i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.edit span::before, section.icons dl.icons dd p.edit i::before {
+  content: "\e3c9";
+}
+section.icons dl.icons dd p.shopping_cart {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.shopping_cart span, section.icons dl.icons dd p.shopping_cart i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.shopping_cart span:hover, section.icons dl.icons dd p.shopping_cart i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.shopping_cart span:active, section.icons dl.icons dd p.shopping_cart i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.shopping_cart span::before, section.icons dl.icons dd p.shopping_cart i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.shopping_cart span, section.icons dl.icons dd p.shopping_cart i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.shopping_cart span::before, section.icons dl.icons dd p.shopping_cart i::before {
+  content: "\e8cc";
+}
+section.icons dl.icons dd p.shopping_bag {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.shopping_bag span, section.icons dl.icons dd p.shopping_bag i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.shopping_bag span:hover, section.icons dl.icons dd p.shopping_bag i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.shopping_bag span:active, section.icons dl.icons dd p.shopping_bag i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.shopping_bag span::before, section.icons dl.icons dd p.shopping_bag i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.shopping_bag span, section.icons dl.icons dd p.shopping_bag i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.shopping_bag span::before, section.icons dl.icons dd p.shopping_bag i::before {
+  content: "\f1cc";
+}
+section.icons dl.icons dd p.remove_cart {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.remove_cart span, section.icons dl.icons dd p.remove_cart i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.remove_cart span:hover, section.icons dl.icons dd p.remove_cart i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.remove_cart span:active, section.icons dl.icons dd p.remove_cart i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.remove_cart span::before, section.icons dl.icons dd p.remove_cart i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.remove_cart span, section.icons dl.icons dd p.remove_cart i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.remove_cart span::before, section.icons dl.icons dd p.remove_cart i::before {
+  content: "\e928";
+}
+section.icons dl.icons dd p.add_cart {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.add_cart span, section.icons dl.icons dd p.add_cart i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.add_cart span:hover, section.icons dl.icons dd p.add_cart i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.add_cart span:active, section.icons dl.icons dd p.add_cart i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.add_cart span::before, section.icons dl.icons dd p.add_cart i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.add_cart span, section.icons dl.icons dd p.add_cart i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.add_cart span::before, section.icons dl.icons dd p.add_cart i::before {
+  content: "\e854";
+}
+section.icons dl.icons dd p.pay {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.pay span, section.icons dl.icons dd p.pay i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.pay span:hover, section.icons dl.icons dd p.pay i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.pay span:active, section.icons dl.icons dd p.pay i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.pay span::before, section.icons dl.icons dd p.pay i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.pay span, section.icons dl.icons dd p.pay i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.pay span::before, section.icons dl.icons dd p.pay i::before {
+  content: "\f041";
+}
+section.icons dl.icons dd p.credit_card {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.credit_card span, section.icons dl.icons dd p.credit_card i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.credit_card span:hover, section.icons dl.icons dd p.credit_card i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.credit_card span:active, section.icons dl.icons dd p.credit_card i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.credit_card span::before, section.icons dl.icons dd p.credit_card i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.credit_card span, section.icons dl.icons dd p.credit_card i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.credit_card span::before, section.icons dl.icons dd p.credit_card i::before {
+  content: "\e870";
+}
+section.icons dl.icons dd p.delete {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.delete span, section.icons dl.icons dd p.delete i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.delete span:hover, section.icons dl.icons dd p.delete i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.delete span:active, section.icons dl.icons dd p.delete i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.delete span::before, section.icons dl.icons dd p.delete i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.delete span, section.icons dl.icons dd p.delete i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.delete span::before, section.icons dl.icons dd p.delete i::before {
+  content: "\e872";
+}
+section.icons dl.icons dd p.video {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.video span, section.icons dl.icons dd p.video i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.video span:hover, section.icons dl.icons dd p.video i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.video span:active, section.icons dl.icons dd p.video i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.video span::before, section.icons dl.icons dd p.video i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.video span, section.icons dl.icons dd p.video i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.video span::before, section.icons dl.icons dd p.video i::before {
+  content: "\e63a";
+}
+section.icons dl.icons dd p.smart_display {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.smart_display span, section.icons dl.icons dd p.smart_display i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.smart_display span:hover, section.icons dl.icons dd p.smart_display i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.smart_display span:active, section.icons dl.icons dd p.smart_display i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.smart_display span::before, section.icons dl.icons dd p.smart_display i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.smart_display span, section.icons dl.icons dd p.smart_display i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.smart_display span::before, section.icons dl.icons dd p.smart_display i::before {
+  content: "\f06a";
+}
+section.icons dl.icons dd p.stop_play {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.stop_play span, section.icons dl.icons dd p.stop_play i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.stop_play span:hover, section.icons dl.icons dd p.stop_play i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.stop_play span:active, section.icons dl.icons dd p.stop_play i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.stop_play span::before, section.icons dl.icons dd p.stop_play i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.stop_play span, section.icons dl.icons dd p.stop_play i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.stop_play span::before, section.icons dl.icons dd p.stop_play i::before {
+  content: "\e047";
+}
+section.icons dl.icons dd p.play_arrow {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.play_arrow span, section.icons dl.icons dd p.play_arrow i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.play_arrow span:hover, section.icons dl.icons dd p.play_arrow i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.play_arrow span:active, section.icons dl.icons dd p.play_arrow i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.play_arrow span::before, section.icons dl.icons dd p.play_arrow i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.play_arrow span, section.icons dl.icons dd p.play_arrow i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.play_arrow span::before, section.icons dl.icons dd p.play_arrow i::before {
+  content: "\e037";
+}
+section.icons dl.icons dd p.pause {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.pause span, section.icons dl.icons dd p.pause i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.pause span:hover, section.icons dl.icons dd p.pause i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.pause span:active, section.icons dl.icons dd p.pause i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.pause span::before, section.icons dl.icons dd p.pause i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.pause span, section.icons dl.icons dd p.pause i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.pause span::before, section.icons dl.icons dd p.pause i::before {
+  content: "\e034";
+}
+section.icons dl.icons dd p.skip_next {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.skip_next span, section.icons dl.icons dd p.skip_next i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.skip_next span:hover, section.icons dl.icons dd p.skip_next i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.skip_next span:active, section.icons dl.icons dd p.skip_next i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.skip_next span::before, section.icons dl.icons dd p.skip_next i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.skip_next span, section.icons dl.icons dd p.skip_next i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.skip_next span::before, section.icons dl.icons dd p.skip_next i::before {
+  content: "\e044";
+}
+section.icons dl.icons dd p.skip_previous {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.skip_previous span, section.icons dl.icons dd p.skip_previous i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.skip_previous span:hover, section.icons dl.icons dd p.skip_previous i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.skip_previous span:active, section.icons dl.icons dd p.skip_previous i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.skip_previous span::before, section.icons dl.icons dd p.skip_previous i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.skip_previous span, section.icons dl.icons dd p.skip_previous i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.skip_previous span::before, section.icons dl.icons dd p.skip_previous i::before {
+  content: "\e045";
+}
+section.icons dl.icons dd p.fast_forward {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.fast_forward span, section.icons dl.icons dd p.fast_forward i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.fast_forward span:hover, section.icons dl.icons dd p.fast_forward i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.fast_forward span:active, section.icons dl.icons dd p.fast_forward i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.fast_forward span::before, section.icons dl.icons dd p.fast_forward i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.fast_forward span, section.icons dl.icons dd p.fast_forward i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.fast_forward span::before, section.icons dl.icons dd p.fast_forward i::before {
+  content: "\e01f";
+}
+section.icons dl.icons dd p.fast_rewind {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.fast_rewind span, section.icons dl.icons dd p.fast_rewind i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.fast_rewind span:hover, section.icons dl.icons dd p.fast_rewind i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.fast_rewind span:active, section.icons dl.icons dd p.fast_rewind i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.fast_rewind span::before, section.icons dl.icons dd p.fast_rewind i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.fast_rewind span, section.icons dl.icons dd p.fast_rewind i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.fast_rewind span::before, section.icons dl.icons dd p.fast_rewind i::before {
+  content: "\e020";
+}
+section.icons dl.icons dd p.desktop {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.desktop span, section.icons dl.icons dd p.desktop i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.desktop span:hover, section.icons dl.icons dd p.desktop i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.desktop span:active, section.icons dl.icons dd p.desktop i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.desktop span::before, section.icons dl.icons dd p.desktop i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.desktop span, section.icons dl.icons dd p.desktop i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.desktop span::before, section.icons dl.icons dd p.desktop i::before {
+  content: "\e30c";
+}
+section.icons dl.icons dd p.laptop {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.laptop span, section.icons dl.icons dd p.laptop i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.laptop span:hover, section.icons dl.icons dd p.laptop i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.laptop span:active, section.icons dl.icons dd p.laptop i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.laptop span::before, section.icons dl.icons dd p.laptop i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.laptop span, section.icons dl.icons dd p.laptop i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.laptop span::before, section.icons dl.icons dd p.laptop i::before {
+  content: "\e31e";
+}
+section.icons dl.icons dd p.print {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.print span, section.icons dl.icons dd p.print i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.print span:hover, section.icons dl.icons dd p.print i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.print span:active, section.icons dl.icons dd p.print i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.print span::before, section.icons dl.icons dd p.print i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.print span, section.icons dl.icons dd p.print i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.print span::before, section.icons dl.icons dd p.print i::before {
+  content: "\e8ad";
+}
+section.icons dl.icons dd p.print span::before, section.icons dl.icons dd p.print i::before {
+  content: "\e8ad";
+}
+section.icons dl.icons dd p.clock {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.clock span, section.icons dl.icons dd p.clock i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.clock span:hover, section.icons dl.icons dd p.clock i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.clock span:active, section.icons dl.icons dd p.clock i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.clock span::before, section.icons dl.icons dd p.clock i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.clock span, section.icons dl.icons dd p.clock i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.clock span::before, section.icons dl.icons dd p.clock i::before {
+  content: "\e192";
+}
+section.icons dl.icons dd p.clock span::before, section.icons dl.icons dd p.clock i::before {
+  content: "\e192";
+}
+section.icons dl.icons dd p.settings {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.settings span, section.icons dl.icons dd p.settings i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.settings span:hover, section.icons dl.icons dd p.settings i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.settings span:active, section.icons dl.icons dd p.settings i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.settings span::before, section.icons dl.icons dd p.settings i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.settings span, section.icons dl.icons dd p.settings i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.settings span::before, section.icons dl.icons dd p.settings i::before {
+  content: "\e8b8";
+}
+section.icons dl.icons dd p.settings span::before, section.icons dl.icons dd p.settings i::before {
+  content: "\e8b8";
+}
+section.icons dl.icons dd p.desktop {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.desktop span, section.icons dl.icons dd p.desktop i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.desktop span:hover, section.icons dl.icons dd p.desktop i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.desktop span:active, section.icons dl.icons dd p.desktop i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.desktop span::before, section.icons dl.icons dd p.desktop i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.desktop span, section.icons dl.icons dd p.desktop i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.desktop span::before, section.icons dl.icons dd p.desktop i::before {
+  content: "\e30c";
+}
+section.icons dl.icons dd p.laptop {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.laptop span, section.icons dl.icons dd p.laptop i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.laptop span:hover, section.icons dl.icons dd p.laptop i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.laptop span:active, section.icons dl.icons dd p.laptop i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.laptop span::before, section.icons dl.icons dd p.laptop i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.laptop span, section.icons dl.icons dd p.laptop i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.laptop span::before, section.icons dl.icons dd p.laptop i::before {
+  content: "\e31e";
+}
+section.icons dl.icons dd p.print {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.print span, section.icons dl.icons dd p.print i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.print span:hover, section.icons dl.icons dd p.print i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.print span:active, section.icons dl.icons dd p.print i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.print span::before, section.icons dl.icons dd p.print i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.print span, section.icons dl.icons dd p.print i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.print span::before, section.icons dl.icons dd p.print i::before {
+  content: "\e8ad";
+}
+section.icons dl.icons dd p.print span::before, section.icons dl.icons dd p.print i::before {
+  content: "\e8ad";
+}
+section.icons dl.icons dd p.clock {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.clock span, section.icons dl.icons dd p.clock i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.clock span:hover, section.icons dl.icons dd p.clock i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.clock span:active, section.icons dl.icons dd p.clock i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.clock span::before, section.icons dl.icons dd p.clock i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.clock span, section.icons dl.icons dd p.clock i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.clock span::before, section.icons dl.icons dd p.clock i::before {
+  content: "\e192";
+}
+section.icons dl.icons dd p.clock span::before, section.icons dl.icons dd p.clock i::before {
+  content: "\e192";
+}
+section.icons dl.icons dd p.settings {
+  text-decoration: none;
+}
+section.icons dl.icons dd p.settings span, section.icons dl.icons dd p.settings i {
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 7.5px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+section.icons dl.icons dd p.settings span:hover, section.icons dl.icons dd p.settings i:hover {
+  color: #f90;
+}
+section.icons dl.icons dd p.settings span:active, section.icons dl.icons dd p.settings i:active {
+  color: #000;
+}
+section.icons dl.icons dd p.settings span::before, section.icons dl.icons dd p.settings i::before {
+  font-size: 1.25rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  line-height: 100%;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+  display: inline-block;
+}
+section.icons dl.icons dd p.settings span, section.icons dl.icons dd p.settings i {
+  font-family: "Material Icons";
+}
+section.icons dl.icons dd p.settings span::before, section.icons dl.icons dd p.settings i::before {
+  content: "\e8b8";
+}
+section.icons dl.icons dd p.settings span::before, section.icons dl.icons dd p.settings i::before {
+  content: "\e8b8";
+}
+section.icons dl.icons dd p {
+  text-align: center;
+}
+section.icons dl.icons dd p span, section.icons dl.icons dd p i {
+  background: none !important;
+}
+section.icons dl.icons dd p span::before, section.icons dl.icons dd p span::after, section.icons dl.icons dd p i::before, section.icons dl.icons dd p i::after {
+  font-size: 5rem !important;
+  color: #666 !important;
+}
+section.icons dl.icons dd p:last-of-type {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #f90;
+  word-break: break-word;
+}
+section.icons dl.icons dd:hover {
+  background: #f90;
+  color: #fff;
+}
+section.icons dl.icons dd:hover p span::before, section.icons dl.icons dd:hover p span::after, section.icons dl.icons dd:hover p i::before, section.icons dl.icons dd:hover p i::after {
+  color: #fff !important;
+}
+section.icons dl.icons dd:hover p:last-of-type {
+  color: #fff;
+}
+
+main.portfolio {
+  max-width: 1470px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media screen and (max-width: 575.98px) {
+  main.portfolio {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+main.portfolio h2 {
+  font-size: 6rem;
+  font-weight: 100;
+  color: #999;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 150%;
+  margin-bottom: 45px;
+}
+@media screen and (max-width: 575.98px) {
+  main.portfolio h2 {
+    font-size: 3rem;
+  }
+}
+main.portfolio section.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+@media screen and (max-width: 575.98px) {
+  main.portfolio section.portfolio {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  main.portfolio section.portfolio {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  main.portfolio section.portfolio {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+main.portfolio section.portfolio {
+  align-content: space-between;
+  align-items: stretch;
+}
+main.portfolio section.portfolio .content {
+  flex-basis: 0;
+  flex-grow: 1;
+  flex: 0 0 25%;
+  max-width: 25%;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  align-content: space-between;
+  align-items: stretch;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  main.portfolio section.portfolio .content {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  main.portfolio section.portfolio .content {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  main.portfolio section.portfolio .content {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  main.portfolio section.portfolio .content {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  main.portfolio section.portfolio .content {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+main.portfolio section.portfolio .content a figure {
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ccc;
+  padding: 7.5px;
+  position: relative;
+}
+main.portfolio section.portfolio .content a figure div.img {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  position: relative;
+  aspect-ratio: 1/1;
+}
+main.portfolio section.portfolio .content a figure div.img img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main.portfolio section.portfolio div a h3 {
+  font-weight: 400;
+  color: #333;
+}
+main.portfolio section.portfolio div a p {
+  font-weight: 300;
+}
+main.portfolio section.portfolio div a p span {
+  color: #666;
+}
+main.portfolio section.portfolio div a p i {
+  font-weight: 700;
+  font-style: initial;
+  color: #f00;
+}
+main.portfolio section.portfolio div.pseffects00 div.img {
+  position: relative;
+}
+main.portfolio section.portfolio div.pseffects00 div.img::before {
+  content: "";
+  mix-blend-mode: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  mix-blend-mode: unset;
+}
+main.portfolio section.portfolio div.pseffects01 div.img {
+  position: relative;
+}
+main.portfolio section.portfolio div.pseffects01 div.img::before {
+  content: "";
+  mix-blend-mode: multiply;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  mix-blend-mode: unset;
+  background: rgba(255, 153, 0, 0.6);
+  mix-blend-mode: multiply;
+}
+main.portfolio section.portfolio div.pseffects01 div.img:hover {
+  position: relative;
+}
+main.portfolio section.portfolio div.pseffects01 div.img:hover::before {
+  content: "";
+  mix-blend-mode: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  mix-blend-mode: unset;
+}
+main.portfolio section.portfolio div.pseffects02 div.img {
+  position: relative;
+}
+main.portfolio section.portfolio div.pseffects02 div.img::before {
+  content: "";
+  mix-blend-mode: screen;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  mix-blend-mode: unset;
+  background: rgba(255, 153, 0, 0.6);
+  mix-blend-mode: screen;
+}
+main.portfolio section.portfolio div.pseffects02 div.img:hover {
+  position: relative;
+}
+main.portfolio section.portfolio div.pseffects02 div.img:hover::before {
+  content: "";
+  mix-blend-mode: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  mix-blend-mode: unset;
+}
+main.portfolio section.portfolio div.pseffects03 div.img {
+  position: relative;
+}
+main.portfolio section.portfolio div.pseffects03 div.img::before {
+  content: "";
+  mix-blend-mode: overlay;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  mix-blend-mode: unset;
+  background: rgba(255, 153, 0, 0.6);
+  mix-blend-mode: overlay;
+}
+main.portfolio section.portfolio div.pseffects03 div.img:hover {
+  position: relative;
+}
+main.portfolio section.portfolio div.pseffects03 div.img:hover::before {
+  content: "";
+  mix-blend-mode: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  mix-blend-mode: unset;
+}
+main.portfolio section.portfolio div.pseffects04 div.img {
+  position: relative;
+}
+main.portfolio section.portfolio div.pseffects04 div.img::before {
+  content: "";
+  mix-blend-mode: darken;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  mix-blend-mode: unset;
+  background: rgba(255, 153, 0, 0.6);
+  mix-blend-mode: darken;
+}
+main.portfolio section.portfolio div.pseffects04 div.img:hover {
+  position: relative;
+}
+main.portfolio section.portfolio div.pseffects04 div.img:hover::before {
+  content: "";
+  mix-blend-mode: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  mix-blend-mode: unset;
+}
+main.portfolio section.portfolio div.pseffects05 div.img {
+  position: relative;
+}
+main.portfolio section.portfolio div.pseffects05 div.img::before {
+  content: "";
+  mix-blend-mode: lighten;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  mix-blend-mode: unset;
+  background: rgba(255, 153, 0, 0.6);
+  mix-blend-mode: lighten;
+}
+main.portfolio section.portfolio div.pseffects05 div.img:hover {
+  position: relative;
+}
+main.portfolio section.portfolio div.pseffects05 div.img:hover::before {
+  content: "";
+  mix-blend-mode: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  mix-blend-mode: unset;
+}
+main.portfolio section.portfolio div.pseffects06 div.img {
+  position: relative;
+}
+main.portfolio section.portfolio div.pseffects06 div.img::before {
+  content: "";
+  mix-blend-mode: colordodge;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  mix-blend-mode: unset;
+  background: rgba(255, 153, 0, 0.6);
+  mix-blend-mode: color-dodge;
+}
+main.portfolio section.portfolio div.pseffects06 div.img:hover {
+  position: relative;
+}
+main.portfolio section.portfolio div.pseffects06 div.img:hover::before {
+  content: "";
+  mix-blend-mode: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  mix-blend-mode: unset;
+}
+main.portfolio section.portfolio div.pseffects07 div.img {
+  position: relative;
+}
+main.portfolio section.portfolio div.pseffects07 div.img::before {
+  content: "";
+  mix-blend-mode: colorburn;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  mix-blend-mode: unset;
+  background: rgba(255, 153, 0, 0.6);
+  mix-blend-mode: color-burn;
+}
+main.portfolio section.portfolio div.pseffects07 div.img:hover {
+  position: relative;
+}
+main.portfolio section.portfolio div.pseffects07 div.img:hover::before {
+  content: "";
+  mix-blend-mode: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  mix-blend-mode: unset;
+}
+main.portfolio section.portfolio div.pseffects08 div.img {
+  position: relative;
+}
+main.portfolio section.portfolio div.pseffects08 div.img::before {
+  content: "";
+  mix-blend-mode: hardlight;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  mix-blend-mode: unset;
+  background: rgba(255, 153, 0, 0.6);
+  mix-blend-mode: hard-light;
+}
+main.portfolio section.portfolio div.pseffects08 div.img:hover {
+  position: relative;
+}
+main.portfolio section.portfolio div.pseffects08 div.img:hover::before {
+  content: "";
+  mix-blend-mode: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  mix-blend-mode: unset;
+}
+main.portfolio section.portfolio div.pseffects09 div.img {
+  position: relative;
+}
+main.portfolio section.portfolio div.pseffects09 div.img::before {
+  content: "";
+  mix-blend-mode: softlight;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  mix-blend-mode: unset;
+  background: rgba(255, 153, 0, 0.6);
+  mix-blend-mode: soft-light;
+}
+main.portfolio section.portfolio div.pseffects09 div.img:hover {
+  position: relative;
+}
+main.portfolio section.portfolio div.pseffects09 div.img:hover::before {
+  content: "";
+  mix-blend-mode: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  mix-blend-mode: unset;
+}
+main.portfolio section.portfolio div.pseffects10 div.img {
+  position: relative;
+}
+main.portfolio section.portfolio div.pseffects10 div.img::before {
+  content: "";
+  mix-blend-mode: difference;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  mix-blend-mode: unset;
+  background: rgba(255, 153, 0, 0.6);
+  mix-blend-mode: difference;
+}
+main.portfolio section.portfolio div.pseffects10 div.img:hover {
+  position: relative;
+}
+main.portfolio section.portfolio div.pseffects10 div.img:hover::before {
+  content: "";
+  mix-blend-mode: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  mix-blend-mode: unset;
+}
+main.portfolio section.portfolio div.pseffects11 div.img {
+  position: relative;
+}
+main.portfolio section.portfolio div.pseffects11 div.img::before {
+  content: "";
+  mix-blend-mode: exclusion;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  mix-blend-mode: unset;
+  background: rgba(255, 153, 0, 0.6);
+  mix-blend-mode: exclusion;
+}
+main.portfolio section.portfolio div.pseffects11 div.img:hover {
+  position: relative;
+}
+main.portfolio section.portfolio div.pseffects11 div.img:hover::before {
+  content: "";
+  mix-blend-mode: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  mix-blend-mode: unset;
+}
+main.portfolio section.portfolio div.pseffects12 div.img {
+  position: relative;
+}
+main.portfolio section.portfolio div.pseffects12 div.img::before {
+  content: "";
+  mix-blend-mode: hue;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  mix-blend-mode: unset;
+  background: rgba(255, 153, 0, 0.6);
+  mix-blend-mode: hue;
+}
+main.portfolio section.portfolio div.pseffects12 div.img:hover {
+  position: relative;
+}
+main.portfolio section.portfolio div.pseffects12 div.img:hover::before {
+  content: "";
+  mix-blend-mode: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  mix-blend-mode: unset;
+}
+main.portfolio section.portfolio div.pseffects13 div.img {
+  position: relative;
+}
+main.portfolio section.portfolio div.pseffects13 div.img::before {
+  content: "";
+  mix-blend-mode: saturation;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  mix-blend-mode: unset;
+  background: rgba(255, 153, 0, 0.6);
+  mix-blend-mode: saturation;
+}
+main.portfolio section.portfolio div.pseffects13 div.img:hover {
+  position: relative;
+}
+main.portfolio section.portfolio div.pseffects13 div.img:hover::before {
+  content: "";
+  mix-blend-mode: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  mix-blend-mode: unset;
+}
+main.portfolio section.portfolio div.pseffects14 div.img {
+  position: relative;
+}
+main.portfolio section.portfolio div.pseffects14 div.img::before {
+  content: "";
+  mix-blend-mode: color;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  mix-blend-mode: unset;
+  background: rgba(255, 153, 0, 0.6);
+  mix-blend-mode: color;
+}
+main.portfolio section.portfolio div.pseffects14 div.img:hover {
+  position: relative;
+}
+main.portfolio section.portfolio div.pseffects14 div.img:hover::before {
+  content: "";
+  mix-blend-mode: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  mix-blend-mode: unset;
+}
+main.portfolio section.portfolio div.pseffects15 div.img {
+  position: relative;
+}
+main.portfolio section.portfolio div.pseffects15 div.img::before {
+  content: "";
+  mix-blend-mode: luminosity;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  mix-blend-mode: unset;
+  background: rgba(255, 153, 0, 0.6);
+  mix-blend-mode: luminosity;
+}
+main.portfolio section.portfolio div.pseffects15 div.img:hover {
+  position: relative;
+}
+main.portfolio section.portfolio div.pseffects15 div.img:hover::before {
+  content: "";
+  mix-blend-mode: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transition: all 0.5s ease-in-out;
+  background: none;
+  mix-blend-mode: unset;
+}
+main.portfolio section.portfolio div.imgeffects01 a img {
+  transition: all 0.5s ease-in-out;
+}
+main.portfolio section.portfolio div.imgeffects01 a img {
+  filter: initial;
+}
+main.portfolio section.portfolio div.imgeffects01 a img {
+  filter: grayscale(100%);
+}
+main.portfolio section.portfolio div.imgeffects01 a:hover img {
+  transition: all 0.5s ease-in-out;
+}
+main.portfolio section.portfolio div.imgeffects01 a:hover img {
+  filter: initial;
+}
+main.portfolio section.portfolio div.imgeffects02 a img {
+  transition: all 0.5s ease-in-out;
+}
+main.portfolio section.portfolio div.imgeffects02 a img {
+  filter: initial;
+}
+main.portfolio section.portfolio div.imgeffects02 a img {
+  filter: brightness(50%);
+}
+main.portfolio section.portfolio div.imgeffects02 a:hover img {
+  transition: all 0.5s ease-in-out;
+}
+main.portfolio section.portfolio div.imgeffects02 a:hover img {
+  filter: initial;
+}
+main.portfolio section.portfolio div.imgeffects03 a img {
+  transition: all 0.5s ease-in-out;
+}
+main.portfolio section.portfolio div.imgeffects03 a img {
+  filter: initial;
+}
+main.portfolio section.portfolio div.imgeffects03 a img {
+  filter: contrast(50%);
+}
+main.portfolio section.portfolio div.imgeffects03 a:hover img {
+  transition: all 0.5s ease-in-out;
+}
+main.portfolio section.portfolio div.imgeffects03 a:hover img {
+  filter: initial;
+}
+main.portfolio section.portfolio div.imgeffects04 a img {
+  transition: all 0.5s ease-in-out;
+}
+main.portfolio section.portfolio div.imgeffects04 a img {
+  filter: initial;
+}
+main.portfolio section.portfolio div.imgeffects04 a img {
+  filter: invert(100%);
+}
+main.portfolio section.portfolio div.imgeffects04 a:hover img {
+  transition: all 0.5s ease-in-out;
+}
+main.portfolio section.portfolio div.imgeffects04 a:hover img {
+  filter: initial;
+}
+main.portfolio section.portfolio div.imgeffects05 a img {
+  transition: all 0.5s ease-in-out;
+}
+main.portfolio section.portfolio div.imgeffects05 a img {
+  filter: initial;
+}
+main.portfolio section.portfolio div.imgeffects05 a img {
+  filter: opacity(50%);
+}
+main.portfolio section.portfolio div.imgeffects05 a:hover img {
+  transition: all 0.5s ease-in-out;
+}
+main.portfolio section.portfolio div.imgeffects05 a:hover img {
+  filter: initial;
+}
+main.portfolio section.portfolio div.imgeffects06 a img {
+  transition: all 0.5s ease-in-out;
+}
+main.portfolio section.portfolio div.imgeffects06 a img {
+  filter: initial;
+}
+main.portfolio section.portfolio div.imgeffects06 a img {
+  filter: sepia(100%);
+}
+main.portfolio section.portfolio div.imgeffects06 a:hover img {
+  transition: all 0.5s ease-in-out;
+}
+main.portfolio section.portfolio div.imgeffects06 a:hover img {
+  filter: initial;
+}
+main.portfolio section.portfolio div.imgeffects07 a img {
+  -webkit-filter: hue-rotate(180deg);
+}
+main.portfolio section.portfolio div.imgeffects07 a:hover img {
+  transition: all 0.5s ease-in-out;
+}
+main.portfolio section.portfolio div.imgeffects07 a:hover img {
+  filter: initial;
+}
+main.portfolio section.portfolio div.imgeffects08 a img {
+  -webkit-filter: blur(5px);
+}
+main.portfolio section.portfolio div.imgeffects08 a:hover img {
+  transition: all 0.5s ease-in-out;
+}
+main.portfolio section.portfolio div.imgeffects08 a:hover img {
+  filter: initial;
+}
+main.portfolio section.portfolio div.imgeffects09 a img {
+  -webkit-filter: saturate(2);
+}
+main.portfolio section.portfolio div.imgeffects09 a:hover img {
+  transition: all 0.5s ease-in-out;
+}
+main.portfolio section.portfolio div.imgeffects09 a:hover img {
+  filter: initial;
+}
+
+@media (min-width: 1200px) {
+  main.list {
+    max-width: 992px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  main.list {
+    max-width: 992px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (min-width: 1280px) {
+  main.list {
+    max-width: 992px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  main.list {
+    max-width: 992px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (min-width: 1366px) {
+  main.list {
+    max-width: 1310px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  main.list {
+    max-width: 1310px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (min-width: 1920px) {
+  main.list {
+    max-width: 1470px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  main.list {
+    max-width: 1470px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+main.list section.graphic_list {
+  max-width: 1470px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+@media screen and (max-width: 575.98px) {
+  main.list section.graphic_list {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  main.list section.graphic_list {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  main.list section.graphic_list {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+main.list section.graphic_list {
+  align-content: space-between;
+  align-items: stretch;
+}
+main.list section.graphic_list .content {
+  display: flex;
+  align-content: space-between;
+  align-items: stretch;
+  margin-bottom: 30px;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex: 0 0 25%;
+  max-width: 25%;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  main.list section.graphic_list .content {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  main.list section.graphic_list .content {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  main.list section.graphic_list .content {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  main.list section.graphic_list .content {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  main.list section.graphic_list .content {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+main.list section.graphic_list .content figure {
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ccc;
+}
+main.list section.graphic_list .content figure:hover {
+  border-color: #666;
+}
+main.list section.graphic_list .content figure {
+  padding: 7.5px;
+}
+main.list section.graphic_list .content figure .img {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  position: relative;
+  aspect-ratio: 6/4;
+}
+main.list section.graphic_list .content figure .img img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main.list section.graphic_list .content figure figcaption h3 {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #f90;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  margin-bottom: 3.75px;
+}
+main.list section.graphic_list .content figure figcaption p {
+  color: #999;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+main.list section.graphic_list div.graphic_list_01 img {
+  transition: all 0.5s ease-in-out;
+}
+main.list section.graphic_list div.graphic_list_01 img {
+  filter: initial;
+}
+main.list section.graphic_list div.graphic_list_01 img {
+  filter: grayscale(100%);
+}
+main.list section.graphic_list div.graphic_list_01:hover img, main.list section.graphic_list div.graphic_list_01:focus img {
+  transition: all 0.5s ease-in-out;
+}
+main.list section.graphic_list div.graphic_list_01:hover img, main.list section.graphic_list div.graphic_list_01:focus img {
+  filter: initial;
+}
+main.list section.graphic_list div.graphic_list_01:hover h3, main.list section.graphic_list div.graphic_list_01:focus h3 {
+  color: #f60;
+}
+main.list section.graphic_list div.graphic_list_02 img {
+  transition: all 0.5s ease-in-out;
+}
+main.list section.graphic_list div.graphic_list_02 img {
+  filter: initial;
+}
+main.list section.graphic_list div.graphic_list_02 img {
+  filter: brightness(50%);
+}
+main.list section.graphic_list div.graphic_list_02:hover img, main.list section.graphic_list div.graphic_list_02:focus img {
+  transition: all 0.5s ease-in-out;
+}
+main.list section.graphic_list div.graphic_list_02:hover img, main.list section.graphic_list div.graphic_list_02:focus img {
+  filter: initial;
+}
+main.list section.graphic_list div.graphic_list_02:hover h3, main.list section.graphic_list div.graphic_list_02:focus h3 {
+  color: #f60;
+}
+main.list section.graphic_list div.graphic_list_03 img {
+  transition: all 0.5s ease-in-out;
+}
+main.list section.graphic_list div.graphic_list_03 img {
+  filter: initial;
+}
+main.list section.graphic_list div.graphic_list_03 img {
+  filter: contrast(50%);
+}
+main.list section.graphic_list div.graphic_list_03:hover img {
+  transition: all 0.5s ease-in-out;
+}
+main.list section.graphic_list div.graphic_list_03:hover img {
+  filter: initial;
+}
+main.list section.graphic_list div.graphic_list_03:hover h3 {
+  color: #f60;
+}
+main.list section.graphic_list div.graphic_list_04 img {
+  transition: all 0.5s ease-in-out;
+}
+main.list section.graphic_list div.graphic_list_04 img {
+  filter: initial;
+}
+main.list section.graphic_list div.graphic_list_04 img {
+  filter: invert(100%);
+}
+main.list section.graphic_list div.graphic_list_04:hover img {
+  transition: all 0.5s ease-in-out;
+}
+main.list section.graphic_list div.graphic_list_04:hover img {
+  filter: initial;
+}
+main.list section.graphic_list div.graphic_list_04:hover h3 {
+  color: #f60;
+}
+main.list section.graphic_list div.graphic_list_05 img {
+  transition: all 0.5s ease-in-out;
+}
+main.list section.graphic_list div.graphic_list_05 img {
+  filter: initial;
+}
+main.list section.graphic_list div.graphic_list_05 img {
+  filter: opacity(50%);
+}
+main.list section.graphic_list div.graphic_list_05:hover img {
+  transition: all 0.5s ease-in-out;
+}
+main.list section.graphic_list div.graphic_list_05:hover img {
+  filter: initial;
+}
+main.list section.graphic_list div.graphic_list_05:hover h3 {
+  color: #f60;
+}
+main.list section.graphic_list div.graphic_list_06 img {
+  transition: all 0.5s ease-in-out;
+}
+main.list section.graphic_list div.graphic_list_06 img {
+  filter: initial;
+}
+main.list section.graphic_list div.graphic_list_06 img {
+  filter: sepia(100%);
+}
+main.list section.graphic_list div.graphic_list_06:hover img {
+  transition: all 0.5s ease-in-out;
+}
+main.list section.graphic_list div.graphic_list_06:hover img {
+  filter: initial;
+}
+main.list section.graphic_list div.graphic_list_06:hover h3 {
+  color: #f60;
+}
+main.list section.graphic_list div.graphic_list_07 img {
+  -webkit-filter: hue-rotate(180deg);
+}
+main.list section.graphic_list div.graphic_list_07:hover img {
+  transition: all 0.5s ease-in-out;
+}
+main.list section.graphic_list div.graphic_list_07:hover img {
+  filter: initial;
+}
+main.list section.graphic_list div.graphic_list_07:hover h3 {
+  color: #f60;
+}
+main.list section.graphic_list div.graphic_list_08 img {
+  -webkit-filter: blur(5px);
+}
+main.list section.graphic_list div.graphic_list_08:hover img {
+  transition: all 0.5s ease-in-out;
+}
+main.list section.graphic_list div.graphic_list_08:hover img {
+  filter: initial;
+}
+main.list section.graphic_list div.graphic_list_08:hover h3 {
+  color: #f60;
+}
+main.list section.graphic_list div.graphic_list_09 img {
+  -webkit-filter: saturate(2);
+}
+main.list section.graphic_list div.graphic_list_09:hover img {
+  transition: all 0.5s ease-in-out;
+}
+main.list section.graphic_list div.graphic_list_09:hover img {
+  filter: initial;
+}
+main.list section.graphic_list div.graphic_list_09:hover h3 {
+  color: #f60;
+}
+main.list section.graphic_pic ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+@media screen and (max-width: 575.98px) {
+  main.list section.graphic_pic ul {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  main.list section.graphic_pic ul {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  main.list section.graphic_pic ul {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+main.list section.graphic_pic ul {
+  align-content: space-between;
+  align-items: stretch;
+}
+main.list section.graphic_pic ul .content {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  align-items: stretch;
+  margin-bottom: 30px;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex: 0 0 25%;
+  max-width: 25%;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+  main.list section.graphic_pic ul .content {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  main.list section.graphic_pic ul .content {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+  main.list section.graphic_pic ul .content {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  main.list section.graphic_pic ul .content {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  main.list section.graphic_pic ul .content {
+    flex-basis: 0;
+    flex-grow: 1;
+    flex: 0 0 100%;
+    max-width: 100%;
+    position: relative;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+main.list section.graphic_pic ul .content figure {
+  width: 100%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ccc;
+}
+main.list section.graphic_pic ul .content figure:hover, main.list section.graphic_pic ul .content figure:focus {
+  border-color: #666;
+}
+main.list section.graphic_pic ul .content figure {
+  padding: 7.5px;
+  position: relative;
+}
+main.list section.graphic_pic ul .content figure div.img {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+  aspect-ratio: 6/4;
+}
+main.list section.graphic_pic ul .content figure div.img img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main.list section.graphic_pic ul .content figure figcaption {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+  align-items: center !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+main.list section.graphic_pic ul .content figure figcaption h3 {
+  font-size: 1.15rem;
+  font-weight: 500;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+main.list section.graphic_pic ul .content figure figcaption p.intro_text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+main.list section.graphic_pic ul .content figure figcaption p.more_link {
+  margin-top: 22.5px;
+}
+main.list section.graphic_pic ul .content figure figcaption p.more_link span {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #fff;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #fff;
+  text-transform: uppercase;
+  padding-top: 7.5px;
+  padding-bottom: 7.5px;
+  padding-left: 22.5px;
+  padding-right: 22.5px;
+}
+main.list section.graphic_pic ul .content figure figcaption p.more_link a:hover span {
+  background: #fff;
+  color: #333;
+}
+main.list section.graphic_pic ul li.content {
+  flex-direction: column;
+}
+main.list section.graphic_pic ul li.content figure {
+  overflow: hidden;
+}
+main.list section.graphic_pic ul li.content:hover figcaption {
+  transition: all ease 1s;
+}
+main.list section.graphic_pic ul li.content figcaption {
+  opacity: 0;
+}
+main.list section.graphic_pic ul li.content:hover figcaption {
+  opacity: 1;
+}
+main.list section.graphic_pic ul li.content figcaption {
+  color: #fff;
+}
+main.list section.graphic_pic ul li.content div.note {
+  margin-top: 3.75px;
+  padding-left: 7.5px;
+  padding-right: 7.5px;
+}
+main.list section.graphic_pic ul li.content div.note h3 {
+  font-weight: 400;
+}
+main.list section.graphic_pic ul li.content div.note p {
+  color: #666;
+}
+main.list section.graphic_pic ul li.content div.note span {
+  color: #f90;
+}
+main.list section.graphic_pic ul li.content div.note span i {
+  font-weight: 500;
+  font-style: initial;
+  color: #f00;
+}
+main.list section.graphic_pic ul li.content:hover img {
+  -webkit-filter: blur(10px);
+}
+main.list section.graphic_pic ul li.graphic_trans02 figure {
+  overflow: hidden;
+}
+main.list section.graphic_pic ul li.graphic_trans02:hover figcaption {
+  transition: all ease 1s;
+}
+main.list section.graphic_pic ul li.graphic_trans02 figcaption {
+  opacity: 0;
+}
+main.list section.graphic_pic ul li.graphic_trans02:hover figcaption {
+  opacity: 1;
+}
+@keyframes slideInDown {
+  0% {
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+main.list section.graphic_pic ul li.graphic_trans02 figcaption {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+main.list section.graphic_pic ul li.graphic_trans02:hover figcaption {
+  animation-name: slideInDown;
+  animation-duration: 400ms;
+}
+main.list section.graphic_pic ul li.graphic_trans02:hover img {
+  -webkit-filter: blur(10px);
+}
+main.list section.graphic_pic ul li.graphic_trans03 figure {
+  overflow: hidden;
+}
+main.list section.graphic_pic ul li.graphic_trans03:hover figcaption {
+  transition: all ease 1s;
+}
+main.list section.graphic_pic ul li.graphic_trans03 figcaption {
+  opacity: 0;
+}
+main.list section.graphic_pic ul li.graphic_trans03:hover figcaption {
+  opacity: 1;
+}
+@keyframes slideInUP {
+  0% {
+    transform: translate3d(0, 100%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+main.list section.graphic_pic ul li.graphic_trans03 figcaption {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+main.list section.graphic_pic ul li.graphic_trans03:hover figcaption {
+  animation-name: slideInUP;
+  animation-duration: 400ms;
+}
+main.list section.graphic_pic ul li.graphic_trans03:hover img {
+  -webkit-filter: blur(10px);
+}
+main.list section.graphic_pic ul li.graphic_trans04 figure {
+  overflow: hidden;
+}
+main.list section.graphic_pic ul li.graphic_trans04:hover figcaption {
+  transition: all ease 1s;
+}
+main.list section.graphic_pic ul li.graphic_trans04 figcaption {
+  opacity: 0;
+}
+main.list section.graphic_pic ul li.graphic_trans04:hover figcaption {
+  opacity: 1;
+}
+@keyframes slideInLeft {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+main.list section.graphic_pic ul li.graphic_trans04 figcaption {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+main.list section.graphic_pic ul li.graphic_trans04:hover figcaption {
+  animation-name: slideInLeft;
+  animation-duration: 400ms;
+}
+main.list section.graphic_pic ul li.graphic_trans04:hover img {
+  -webkit-filter: blur(10px);
+}
+main.list section.graphic_pic ul li.graphic_trans05 figure {
+  overflow: hidden;
+}
+main.list section.graphic_pic ul li.graphic_trans05:hover figcaption {
+  transition: all ease 1s;
+}
+main.list section.graphic_pic ul li.graphic_trans05 figcaption {
+  opacity: 0;
+}
+main.list section.graphic_pic ul li.graphic_trans05:hover figcaption {
+  opacity: 1;
+}
+@keyframes slideInRight {
+  0% {
+    transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+main.list section.graphic_pic ul li.graphic_trans05 figcaption {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+main.list section.graphic_pic ul li.graphic_trans05:hover figcaption {
+  animation-name: slideInRight;
+  animation-duration: 400ms;
+}
+main.list section.graphic_pic ul li.graphic_trans05:hover img {
+  -webkit-filter: blur(10px);
+}
+main.list section.graphic_pic ul li.graphic_trans06 figure {
+  overflow: hidden;
+}
+main.list section.graphic_pic ul li.graphic_trans06:hover figcaption {
+  transition: all ease 1s;
+}
+main.list section.graphic_pic ul li.graphic_trans06 figcaption {
+  opacity: 0;
+}
+main.list section.graphic_pic ul li.graphic_trans06:hover figcaption {
+  opacity: 1;
+}
+@keyframes slideInLeftTop {
+  0% {
+    transform: translate3d(-100%, -100%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+main.list section.graphic_pic ul li.graphic_trans06 figcaption {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+main.list section.graphic_pic ul li.graphic_trans06:hover figcaption {
+  animation-name: slideInLeftTop;
+  animation-duration: 400ms;
+}
+main.list section.graphic_pic ul li.graphic_trans06:hover img {
+  -webkit-filter: blur(10px);
+}
+main.list section.graphic_pic ul li.graphic_trans07 figure {
+  overflow: hidden;
+}
+main.list section.graphic_pic ul li.graphic_trans07:hover figcaption {
+  transition: all ease 1s;
+}
+main.list section.graphic_pic ul li.graphic_trans07 figcaption {
+  opacity: 0;
+}
+main.list section.graphic_pic ul li.graphic_trans07:hover figcaption {
+  opacity: 1;
+}
+@keyframes slideInRightTop {
+  0% {
+    transform: translate3d(100%, -100%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+main.list section.graphic_pic ul li.graphic_trans07 figcaption {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+main.list section.graphic_pic ul li.graphic_trans07:hover figcaption {
+  animation-name: slideInRightTop;
+  animation-duration: 400ms;
+}
+main.list section.graphic_pic ul li.graphic_trans07:hover img {
+  -webkit-filter: blur(10px);
+}
+main.list section.graphic_pic ul li.graphic_trans08 figure {
+  overflow: hidden;
+}
+main.list section.graphic_pic ul li.graphic_trans08:hover figcaption {
+  transition: all ease 1s;
+}
+main.list section.graphic_pic ul li.graphic_trans08 figcaption {
+  opacity: 0;
+}
+main.list section.graphic_pic ul li.graphic_trans08:hover figcaption {
+  opacity: 1;
+}
+@keyframes slideInLeftBottom {
+  0% {
+    transform: translate3d(-100%, 100%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+main.list section.graphic_pic ul li.graphic_trans08 figcaption {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+main.list section.graphic_pic ul li.graphic_trans08:hover figcaption {
+  animation-name: slideInLeftBottom;
+  animation-duration: 400ms;
+}
+main.list section.graphic_pic ul li.graphic_trans08:hover img {
+  -webkit-filter: blur(10px);
+}
+main.list section.graphic_pic ul li.graphic_trans09 figure {
+  overflow: hidden;
+}
+main.list section.graphic_pic ul li.graphic_trans09:hover figcaption {
+  transition: all ease 1s;
+}
+main.list section.graphic_pic ul li.graphic_trans09 figcaption {
+  opacity: 0;
+}
+main.list section.graphic_pic ul li.graphic_trans09:hover figcaption {
+  opacity: 1;
+}
+@keyframes slideInRightBottom {
+  0% {
+    transform: translate3d(100%, 100%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+main.list section.graphic_pic ul li.graphic_trans09 figcaption {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+main.list section.graphic_pic ul li.graphic_trans09:hover figcaption {
+  animation-name: slideInRightBottom;
+  animation-duration: 400ms;
+}
+main.list section.graphic_pic ul li.graphic_trans09:hover img {
+  -webkit-filter: blur(10px);
+}
+main.list section.graphic_pic ul li.graphic_trans10 figure {
+  overflow: hidden;
+}
+main.list section.graphic_pic ul li.graphic_trans10:hover figcaption {
+  transition: all ease 1s;
+}
+main.list section.graphic_pic ul li.graphic_trans10 figcaption {
+  opacity: 0;
+}
+main.list section.graphic_pic ul li.graphic_trans10:hover figcaption {
+  opacity: 1;
+}
+@keyframes backInDown {
+  0% {
+    transform: translateY(-100%) scale(0.7);
+    opacity: 0.7;
+  }
+  80% {
+    transform: translateY(0) scale(0.7);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+main.list section.graphic_pic ul li.graphic_trans10 figcaption {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+main.list section.graphic_pic ul li.graphic_trans10:hover figcaption {
+  animation-name: backInDown;
+  animation-duration: 400ms;
+}
+main.list section.graphic_pic ul li.graphic_trans10:hover img {
+  -webkit-filter: blur(10px);
+}
+main.list section.graphic_pic ul li.graphic_trans11 figure {
+  overflow: hidden;
+}
+main.list section.graphic_pic ul li.graphic_trans11:hover figcaption {
+  transition: all ease 1s;
+}
+main.list section.graphic_pic ul li.graphic_trans11 figcaption {
+  opacity: 0;
+}
+main.list section.graphic_pic ul li.graphic_trans11:hover figcaption {
+  opacity: 1;
+}
+@keyframes backInUp {
+  0% {
+    transform: translateY(100%) scale(0.7);
+    opacity: 0.7;
+  }
+  80% {
+    transform: translateY(0) scale(0.7);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+main.list section.graphic_pic ul li.graphic_trans11 figcaption {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+main.list section.graphic_pic ul li.graphic_trans11:hover figcaption {
+  animation-name: backInUp;
+  animation-duration: 400ms;
+}
+main.list section.graphic_pic ul li.graphic_trans11:hover img {
+  -webkit-filter: blur(10px);
+}
+main.list section.graphic_pic ul li.graphic_trans12 figure {
+  overflow: hidden;
+}
+main.list section.graphic_pic ul li.graphic_trans12:hover figcaption {
+  transition: all ease 1s;
+}
+main.list section.graphic_pic ul li.graphic_trans12 figcaption {
+  opacity: 0;
+}
+main.list section.graphic_pic ul li.graphic_trans12:hover figcaption {
+  opacity: 1;
+}
+@keyframes backInLeft {
+  0% {
+    transform: translateX(-100%) scale(0.7);
+    opacity: 0.7;
+  }
+  80% {
+    transform: translateX(0) scale(0.7);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+main.list section.graphic_pic ul li.graphic_trans12 figcaption {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+main.list section.graphic_pic ul li.graphic_trans12:hover figcaption {
+  animation-name: backInLeft;
+  animation-duration: 400ms;
+}
+main.list section.graphic_pic ul li.graphic_trans12:hover img {
+  -webkit-filter: blur(10px);
+}
+main.list section.graphic_pic ul li.graphic_trans13 figure {
+  overflow: hidden;
+}
+main.list section.graphic_pic ul li.graphic_trans13:hover figcaption {
+  transition: all ease 1s;
+}
+main.list section.graphic_pic ul li.graphic_trans13 figcaption {
+  opacity: 0;
+}
+main.list section.graphic_pic ul li.graphic_trans13:hover figcaption {
+  opacity: 1;
+}
+@keyframes backInRight {
+  0% {
+    transform: translateX(100%) scale(0.7);
+    opacity: 0.7;
+  }
+  80% {
+    transform: translateX(0) scale(0.7);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+main.list section.graphic_pic ul li.graphic_trans13 figcaption {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+main.list section.graphic_pic ul li.graphic_trans13:hover figcaption {
+  animation-name: backInRight;
+  animation-duration: 400ms;
+}
+main.list section.graphic_pic ul li.graphic_trans13:hover img {
+  -webkit-filter: blur(10px);
+}
+main.list section.graphic_pic ul li.graphic_trans14 figure {
+  overflow: hidden;
+}
+main.list section.graphic_pic ul li.graphic_trans14:hover figcaption {
+  transition: all ease 1s;
+}
+main.list section.graphic_pic ul li.graphic_trans14 figcaption {
+  opacity: 0;
+}
+main.list section.graphic_pic ul li.graphic_trans14:hover figcaption {
+  opacity: 1;
+}
+@keyframes zoomIn {
+  0% {
+    transform: scale3d(0.3, 0.3, 0.3);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+main.list section.graphic_pic ul li.graphic_trans14 figcaption {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+main.list section.graphic_pic ul li.graphic_trans14:hover figcaption {
+  animation-name: zoomIn;
+  animation-duration: 400ms;
+}
+main.list section.graphic_pic ul li.graphic_trans14:hover img {
+  -webkit-filter: blur(10px);
+}
+main.list section.graphic_pic ul li.graphic_trans15 figure {
+  overflow: hidden;
+}
+main.list section.graphic_pic ul li.graphic_trans15:hover figcaption {
+  transition: all ease 1s;
+}
+main.list section.graphic_pic ul li.graphic_trans15 figcaption {
+  opacity: 0;
+}
+main.list section.graphic_pic ul li.graphic_trans15:hover figcaption {
+  opacity: 1;
+}
+@keyframes zoomInDown {
+  0% {
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    opacity: 0;
+  }
+  60% {
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    opacity: 1;
+  }
+}
+main.list section.graphic_pic ul li.graphic_trans15 figcaption {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+main.list section.graphic_pic ul li.graphic_trans15:hover figcaption {
+  animation-name: zoomInDown;
+  animation-duration: 1s;
+}
+main.list section.graphic_pic ul li.graphic_trans15:hover img {
+  -webkit-filter: blur(10px);
+}
+main.list section.graphic_pic ul li.graphic_trans16 figure {
+  overflow: hidden;
+}
+main.list section.graphic_pic ul li.graphic_trans16:hover figcaption {
+  transition: all ease 1s;
+}
+main.list section.graphic_pic ul li.graphic_trans16 figcaption {
+  opacity: 0;
+}
+main.list section.graphic_pic ul li.graphic_trans16:hover figcaption {
+  opacity: 1;
+}
+main.list section.graphic_pic ul li.graphic_trans16:hover img {
+  -webkit-filter: blur(10px);
+}
+main.list section.graphic_pic ul li.graphic_trans17 figure {
+  overflow: hidden;
+}
+main.list section.graphic_pic ul li.graphic_trans17:hover figcaption {
+  transition: all ease 1s;
+}
+main.list section.graphic_pic ul li.graphic_trans17 figcaption {
+  opacity: 0;
+}
+main.list section.graphic_pic ul li.graphic_trans17:hover figcaption {
+  opacity: 1;
+}
+@keyframes zoomInLeft {
+  0% {
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    opacity: 0;
+  }
+  60% {
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    opacity: 1;
+  }
+}
+main.list section.graphic_pic ul li.graphic_trans17 figcaption {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+main.list section.graphic_pic ul li.graphic_trans17:hover figcaption {
+  animation-name: zoomInLeft;
+  animation-duration: 1s;
+}
+main.list section.graphic_pic ul li.graphic_trans17:hover img {
+  -webkit-filter: blur(10px);
+}
+main.list section.graphic_pic ul li.graphic_trans18 figure {
+  overflow: hidden;
+}
+main.list section.graphic_pic ul li.graphic_trans18:hover figcaption {
+  transition: all ease 1s;
+}
+main.list section.graphic_pic ul li.graphic_trans18 figcaption {
+  opacity: 0;
+}
+main.list section.graphic_pic ul li.graphic_trans18:hover figcaption {
+  opacity: 1;
+}
+@keyframes zoomInRight {
+  0% {
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    opacity: 0;
+  }
+  60% {
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    opacity: 1;
+  }
+}
+main.list section.graphic_pic ul li.graphic_trans18 figcaption {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+main.list section.graphic_pic ul li.graphic_trans18:hover figcaption {
+  animation-name: zoomInRight;
+  animation-duration: 1s;
+}
+main.list section.graphic_pic ul li.graphic_trans18:hover img {
+  -webkit-filter: blur(10px);
+}
+main.list section.graphic_pic ul li.graphic_trans19 figure {
+  overflow: hidden;
+}
+main.list section.graphic_pic ul li.graphic_trans19:hover figcaption {
+  transition: all ease 1s;
+}
+main.list section.graphic_pic ul li.graphic_trans19 figcaption {
+  opacity: 0;
+}
+main.list section.graphic_pic ul li.graphic_trans19:hover figcaption {
+  opacity: 1;
+}
+@keyframes flipInX {
+  from {
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  40% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+  60% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+  80% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+  to {
+    transform: perspective(400px);
+  }
+}
+main.list section.graphic_pic ul li.graphic_trans19 figcaption {
+  animation-fill-mode: forwards;
+}
+main.list section.graphic_pic ul li.graphic_trans19:hover figcaption {
+  animation-name: flipInX;
+  animation-duration: 1s;
+  backface-visibility: visible;
+}
+main.list section.graphic_pic ul li.graphic_trans19:hover img {
+  -webkit-filter: blur(10px);
+}
+main.list section.graphic_pic ul li.graphic_trans20 figure {
+  overflow: hidden;
+}
+main.list section.graphic_pic ul li.graphic_trans20:hover figcaption {
+  transition: all ease 1s;
+}
+main.list section.graphic_pic ul li.graphic_trans20 figcaption {
+  opacity: 0;
+}
+main.list section.graphic_pic ul li.graphic_trans20:hover figcaption {
+  opacity: 1;
+}
+@keyframes flipInY {
+  from {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+  60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+  to {
+    transform: perspective(400px);
+  }
+}
+main.list section.graphic_pic ul li.graphic_trans20 figcaption {
+  animation-fill-mode: forwards;
+}
+main.list section.graphic_pic ul li.graphic_trans20:hover figcaption {
+  animation-name: flipInY;
+  animation-duration: 1s;
+  backface-visibility: visible;
+}
+main.list section.graphic_pic ul li.graphic_trans20:hover img {
+  -webkit-filter: blur(10px);
+}
+main.list section.graphic_pic ul li.graphic_trans21 figure {
+  overflow: hidden;
+}
+main.list section.graphic_pic ul li.graphic_trans21:hover figcaption {
+  transition: all ease 1s;
+}
+main.list section.graphic_pic ul li.graphic_trans21 figcaption {
+  opacity: 0;
+}
+main.list section.graphic_pic ul li.graphic_trans21:hover figcaption {
+  opacity: 1;
+}
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+  40% {
+    transform: scale3d(0.6, 0.6, 0.6);
+  }
+  60% {
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+main.list section.graphic_pic ul li.graphic_trans21 figcaption {
+  animation-fill-mode: forwards;
+}
+main.list section.graphic_pic ul li.graphic_trans21:hover figcaption {
+  animation-name: bounceIn;
+  animation-duration: 0.75s;
+  backface-visibility: visible;
+}
+main.list section.graphic_pic ul li.graphic_trans21:hover img {
+  -webkit-filter: blur(10px);
+}
+main.list section.graphic_pic ul li.graphic_trans22 figure {
+  overflow: hidden;
+}
+main.list section.graphic_pic ul li.graphic_trans22:hover figcaption {
+  transition: all ease 1s;
+}
+main.list section.graphic_pic ul li.graphic_trans22 figcaption {
+  opacity: 0;
+}
+main.list section.graphic_pic ul li.graphic_trans22:hover figcaption {
+  opacity: 1;
+}
+@keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0) scaleY(3);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0) scaleY(0.9);
+  }
+  75% {
+    transform: translate3d(0, -10px, 0) scaleY(0.95);
+  }
+  90% {
+    transform: translate3d(0, 5px, 0) scaleY(0.985);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+main.list section.graphic_pic ul li.graphic_trans22 figcaption {
+  animation-fill-mode: forwards;
+}
+main.list section.graphic_pic ul li.graphic_trans22:hover figcaption {
+  animation-name: bounceInDown;
+  animation-duration: 0.75s;
+}
+main.list section.graphic_pic ul li.graphic_trans22:hover img {
+  -webkit-filter: blur(10px);
+}
+main.list section.graphic_pic ul li.graphic_trans23 figure {
+  overflow: hidden;
+}
+main.list section.graphic_pic ul li.graphic_trans23:hover figcaption {
+  transition: all ease 1s;
+}
+main.list section.graphic_pic ul li.graphic_trans23 figcaption {
+  opacity: 0;
+}
+main.list section.graphic_pic ul li.graphic_trans23:hover figcaption {
+  opacity: 1;
+}
+@keyframes bounceInUp {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 3000px, 0) scaleY(3);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(0, -20px, 0) scaleY(0.9);
+  }
+  75% {
+    transform: translate3d(0, 10px, 0) scaleY(0.95);
+  }
+  90% {
+    transform: translate3d(0, -5px, 0) scaleY(0.985);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+main.list section.graphic_pic ul li.graphic_trans23 figcaption {
+  animation-fill-mode: forwards;
+}
+main.list section.graphic_pic ul li.graphic_trans23:hover figcaption {
+  animation-name: bounceInUp;
+  animation-duration: 0.75s;
+}
+main.list section.graphic_pic ul li.graphic_trans23:hover img {
+  -webkit-filter: blur(10px);
+}
+main.list section.graphic_pic ul li.graphic_trans24 figure {
+  overflow: hidden;
+}
+main.list section.graphic_pic ul li.graphic_trans24:hover figcaption {
+  transition: all ease 1s;
+}
+main.list section.graphic_pic ul li.graphic_trans24 figcaption {
+  opacity: 0;
+}
+main.list section.graphic_pic ul li.graphic_trans24:hover figcaption {
+  opacity: 1;
+}
+@keyframes bounceInLeft {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(-3000px, 0, 0) scaleX(3);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(25px, 0, 0) scaleX(1);
+  }
+  75% {
+    transform: translate3d(-10px, 0, 0) scaleX(0.98);
+  }
+  90% {
+    transform: translate3d(5px, 0, 0) scaleX(0.995);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+main.list section.graphic_pic ul li.graphic_trans24 figcaption {
+  animation-fill-mode: forwards;
+}
+main.list section.graphic_pic ul li.graphic_trans24:hover figcaption {
+  animation-name: bounceInLeft;
+  animation-duration: 0.75s;
+}
+main.list section.graphic_pic ul li.graphic_trans24:hover img {
+  -webkit-filter: blur(10px);
+}
+main.list section.graphic_pic ul li.graphic_trans25 figure {
+  overflow: hidden;
+}
+main.list section.graphic_pic ul li.graphic_trans25:hover figcaption {
+  transition: all ease 1s;
+}
+main.list section.graphic_pic ul li.graphic_trans25 figcaption {
+  opacity: 0;
+}
+main.list section.graphic_pic ul li.graphic_trans25:hover figcaption {
+  opacity: 1;
+}
+@keyframes bounceInRight {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(3000px, 0, 0) scaleX(3);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(-25px, 0, 0) scaleX(1);
+  }
+  75% {
+    transform: translate3d(10px, 0, 0) scaleX(0.98);
+  }
+  90% {
+    transform: translate3d(-5px, 0, 0) scaleX(0.995);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+main.list section.graphic_pic ul li.graphic_trans25 figcaption {
+  animation-fill-mode: forwards;
+}
+main.list section.graphic_pic ul li.graphic_trans25:hover figcaption {
+  animation-name: bounceInRight;
+  animation-duration: 0.75s;
+}
+main.list section.graphic_pic ul li.graphic_trans25:hover img {
+  -webkit-filter: blur(10px);
+}/*# sourceMappingURL=exsample.css.map */
