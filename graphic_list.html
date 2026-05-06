@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<!--orangeCat template v4.0-->
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+    <meta http-equiv="content-language" content="zh-Hant-TW">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- for iOS-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="author" content="orangeCat's photography">
+    <meta name="copyright" content="orangeCat's photography">
+    <meta name="description" content="orangeCat's photography 的網站基本模板設定">
+    <meta name="keyword" content="網頁版型, 網站模板, orangeCat's photography, 基本樣式, website template, template">
+    <meta property="og:title" content="orangeCat's photography web template">
+    <meta property="og:url" content=" http://demo.orangecat.com.tw/oc-template/">
+    <meta property="og:image" content=" http://demo.orangecat.com.tw/oc-template/images/logo.svg">
+    <!-- meta(property="fb:admins" content="Facebook numberic ID")-->
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="icon" href="favicon.ico?v=1.1">
+    <title>Graphic List | Orange Web Template v4.0 - orangeCat's photography</title>
+    <link href="css/exsample.min.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <h1><a href="." title="orangeCat's photography"><img src="images/logo.svg" alt="orangeCat's photography"></a></h1>
+        </div>
+        <!-- nav desktop-->
+        <nav class="desktop">
+          <ul class="nav">
+            <li><a href="basic_exsample.html" title="Basic Exsample">Basic Exsample</a></li>
+            <li><a href="portfolio.html" title="Portfolio Effects">Portfolio Effects</a></li>
+            <li><a href="graphic_list.html" title="Graphic List">Graphic List</a></li>
+            <li><a href="icon_exsample.html" title="Google Icons">Google Icons</a></li>
+            <li><a href="#" title="nav">nav5</a></li>
+          </ul>
+        </nav>
+        <!-- nav mobile-->
+        <nav class="mobile">
+          <div class="navOpen">
+            <button class="js-open-left-slidebar navOpen"><img src="images/btn_open.svg" alt="open nav"></button>
+          </div>
+          <div off-canvas="slidebar-1 left overlay">
+            <button class="js-close-left-slidebar navClose"><img src="images/btn_close.svg" alt="close nav"></button>
+            <ul class="nav">
+              <li><a href="basic_exsample.html" title="Basic Exsample">Basic Exsample</a></li>
+              <li><a href="portfolio.html" title="Portfolio Effects">Portfolio Effects</a></li>
+              <li><a href="graphic_list.html" title="Graphic List">Graphic List</a></li>
+              <li><a href="icon_exsample.html" title="Google Icons">Google Icons</a></li>
+              <li><a href="#" title="nav">nav5</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <h2 class="page_title">graphic list</h2>
+      <section class="guide">
+        <!--浮動快速選單-->
+        <dl class="jump">
+          <dd><a href="#graphic_list1">上圖下文+濾鏡效果</a></dd>
+          <dd><a href="#graphic_list2">左圖右文</a></dd>
+          <dd><a href="#graphic_pic1">圖文重疊+轉場效果</a></dd>
+        </dl>
+      </section>
+      <main class="list">
+        <h3 class="unit_title" id="graphic_list1">上圖下文 | + 濾鏡效果</h3>
+        <section class="guide">
+          <div class="note">
+            <p><span style="color: #f00">* aspect-ratio</span> IE, Edge 87, Firefox 88, Opera 73, Chrome 87, iOS 15, Android Browser 4.4.4, Opera Mobile 12.1 以前不支援</p>
+            <p>請參照 <a href="https://caniuse.com/?search=aspect-ratio" target="_blank">https://caniuse.com/?search=aspect-ratio</a></p>
+          </div>
+          <div class="guide">
+            <h3>In SASS</h3>
+            <div class="codeArea"><code class="sass">
+                <div class="EXcode">
+                                <p class="number">1</p>
+                  <p class="comment">// in _mixin.sass</p>
+                </div>
+                <div class="EXcode">
+                                <p class="number">2</p>
+                  <p class="tag"><i>element</i>.<i>customize class</i></p>
+                </div>
+                <div class="EXcode">
+                                <p class="number">3</p>
+                  <p class="tag cs1">+img_list01</p>
+                </div>
+                <div class="EXcode">
+                                <p class="number">4</p>
+                  <p class="tag cs1"><i>element</i>.content</p>
+                </div>
+                <div class="EXcode">
+                                <p class="number">5</p>
+                  <p class="comment cs2">// in _effects.sass</p>
+                </div>
+                <div class="EXcode">
+                                <p class="number">6</p>
+                  <p class="tag cs2">+imgfilter(<i>100, grayscale</i>)</p>
+                </div></code>
+            </div>
+            <h3>In HTML</h3>
+            <div class="codeArea"><code class="html">
+                <div class="EXcode">
+                                <p class="number">1</p>
+                  <p class="tag"><span><i>element</i> class="<i>customize class</i>"</span></p>
+                </div>
+                <div class="EXcode">
+                                <p class="number">2</p>
+                  <p class="tag cs1"><span><i>element</i> class="content"</span></p>
+                </div>
+                <div class="EXcode">
+                                <p class="number">3</p>
+                  <p class="tag cs2"><span>a</span></p>
+                </div>
+                <div class="EXcode">
+                                <p class="number">4</p>
+                  <p class="tag cs3"><span>figure</span></p>
+                </div>
+                <div class="EXcode">
+                                <p class="number">5</p>
+                  <p class="tag cs4"><span>div class="img"</span><span>img src="<i>upload/images.jpg</i>" alt="<i>image alt</i>"</span><span>/div</span></p>
+                </div>
+                <div class="EXcode">
+                                <p class="number">6</p>
+                  <p class="tag cs4"><span>figcaption</span></p>
+                </div>
+                <div class="EXcode">
+                                <p class="number">7</p>
+                  <p class="tag cs5"><span>h3</span><i>list title , 列表標題</i><span>/h3</span></p>
+                </div>
+                <div class="EXcode">
+                                <p class="number">8</p>
+                  <p class="tag cs5"><span>p</span><i>content text , 內容描述</i><span>/p</span></p>
+                </div>
+                <div class="EXcode">
+                                <p class="number">9</p>
+                  <p class="tag cs4"><span>/figcaption</span></p>
+                </div>
+                <div class="EXcode">
+                                <p class="number">10</p>
+                  <p class="tag cs3"><span>/figure</span></p>
+                </div>
+                <div class="EXcode">
+                                <p class="number">11</p>
+                  <p class="tag cs2"><span>/a</span></p>
+                </div>
+                <div class="EXcode">
+                                <p class="number">12</p>
+                  <p class="tag cs1"><span><i>/element</i></span></p>
+                </div>
+                <div class="EXcode">
+                                <p class="number">13</p>
+                  <p class="tag"><span><i>/element</i></span></p>
+                </div></code>
+            </div>
+            <h3>In PUG</h3>
+            <div class="codeArea"><code class="pug">
+                <div class="EXcode">
+                                <p class="number">1</p>
+                  <p class="tag"><i>element</i>.<i>customize class</i></p>
+                </div>
+                <div class="EXcode">
+                                <p class="number">2</p>
+                  <p class="tag cs1"><i>element</i>.content</p>
+                </div>
+                <div class="EXcode">
+                                <p class="number">3</p>
+                  <p class="tag cs2">a</p>
+                </div>
+                <div class="EXcode">
+                                <p class="number">4</p>
+                  <p class="tag cs3">figure</p>
+                </div>
+                <div class="EXcode">
+                                <p class="number">5</p>
+                  <p class="tag cs4">.img</p>
+                </div>
+                <div class="EXcode">
+                                <p class="number">6</p>
+                  <p class="tag cs5">img(src="<i>upload/images.jpg</i>", alt="<i>alt</i>")</p>
+                </div>
+                <div class="EXcode">
+                                <p class="number">7</p>
+                  <p class="tag cs4">figcaption</p>
+                </div>
+                <div class="EXcode">
+                                <p class="number">8</p>
+                  <p class="tag cs5">h3 <i>list title , 列表標題</i></p>
+                </div>
+                <div class="EXcode">
+                                <p class="number">9</p>
+                  <p class="tag cs5">p <i>content text , 內容描述</i></p>
+                </div></code>
+            </div>
+            <h3>In PUG ( 模組化 )</h3>
+            <div class="codeArea"><code class="pug">
+                <div class="EXcode">
+                                <p class="number">1</p>
+                  <p class="tag"><i>element</i></p>
+                </div>
+                <div class="EXcode">
+                                <p class="number">2</p>
+                  <p class="tag cs1"><i>element</i>.content</p>
+                </div>
+                <div class="EXcode">
+                                <p class="number">3</p>
+                  <p class="tag cs2">+img_list01('<i>#</i>', '<i>atitle</i>', '<i>upload/image.jpg</i>', '<i>alt</i>', '<i>list title , 列表標題</i>', '<i>content text , 內容描述</i>')</p>
+                </div>
+                <div class="EXcode">
+                                <p class="number">4</p>
+                  <p class="tag cs2">1.連結, 2.連結標題, 3.圖檔位置, 4.圖說 5.文章標題, 6.內容描述, 很重要 順序不能錯誤 會找不到東西</p>
+                </div></code>
+            </div>
+          </div>
+        </section>
+        <section class="graphic_list">
+          <div class="content"><a href="#">
+              <figure>
+                <div class="img"><img src="upload/IMG_8167.JPG" alt=""></div>
+                <figcaption>
+                  <h3>Title123列表標題長度測試Title123列表標題長度測試Title123列表標題長度測試Title123列表標題長度測試</h3>
+                  <p class="intro_text">content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列</p>
+                </figcaption>
+              </figure></a></div>
+          <div class="content graphic_list_01"><a href="#" title="連結標題">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8236.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3>連結標題</h3>
+                        <p class="intro_text">cat</p>
+                      </figcaption>
+                    </figure></a>
+          </div>
+          <div class="content graphic_list_02"><a href="#" title="連結標題">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8242.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3>連結標題</h3>
+                        <p class="intro_text">cat</p>
+                      </figcaption>
+                    </figure></a>
+          </div>
+          <div class="content graphic_list_03"><a href="#" title="連結標題">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8240.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3>連結標題</h3>
+                        <p class="intro_text">cat</p>
+                      </figcaption>
+                    </figure></a>
+          </div>
+          <div class="content graphic_list_04"><a href="#" title="連結標題">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8249.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3>連結標題</h3>
+                        <p class="intro_text">cat</p>
+                      </figcaption>
+                    </figure></a>
+          </div>
+          <div class="content graphic_list_05"><a href="#" title="連結標題">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8171.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3>連結標題</h3>
+                        <p class="intro_text">cat</p>
+                      </figcaption>
+                    </figure></a>
+          </div>
+          <div class="content graphic_list_06"><a href="#" title="連結標題">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8252.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3>連結標題</h3>
+                        <p class="intro_text">cat</p>
+                      </figcaption>
+                    </figure></a>
+          </div>
+          <div class="content graphic_list_07"><a href="#" title="連結標題">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8174.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3>連結標題</h3>
+                        <p class="intro_text">cat</p>
+                      </figcaption>
+                    </figure></a>
+          </div>
+          <div class="content graphic_list_08"><a href="#" title="連結標題">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8231.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3>連結標題</h3>
+                        <p class="intro_text">cat</p>
+                      </figcaption>
+                    </figure></a>
+          </div>
+          <div class="content graphic_list_09"><a href="#" title="連結標題">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8256.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3>連結標題</h3>
+                        <p class="intro_text">cat</p>
+                      </figcaption>
+                    </figure></a>
+          </div>
+        </section>
+        
+        <h3 class="unit_title" id="graphic_pic1">圖文重疊 | + 轉場效果</h3>
+        <section class="guide">
+          <div class="note">
+            <p><span style="color: #f00">*</span> 無障礙不適用</p>
+          </div>
+          <h3>In SASS</h3>
+          <div class="codeArea"><code class="sass">
+              <div class="EXcode">
+                            <p class="number">1</p>
+                <p class="tag"><i>element</i>.<i>customize class</i></p>
+              </div>
+              <div class="EXcode">
+                            <p class="number">2</p>
+                <p class="tag cs1"><i>ul</i></p>
+              </div>
+              <div class="EXcode">
+                            <p class="number">3</p>
+                <p class="comment cs2">// 圖文列表 | 圖文重疊 in _mixin.sass</p>
+              </div>
+              <div class="EXcode">
+                            <p class="number">4</p>
+                <p class="tag cs2">+img_list02</p>
+              </div>
+              <div class="EXcode">
+                            <p class="number">5</p>
+                <p class="comment cs2">// in _effects.sass 如果需要濾淨效果加在 +img_list02 底下 ex: +imgfilter(100, grayscale)</p>
+              </div>
+              <div class="EXcode">
+                            <p class="number">6</p>
+                <p class="tag cs2"><i>li</i>.content</p>
+              </div>
+              <div class="EXcode">
+                            <p class="number">7</p>
+                <p class="comment cs3">// 轉場效果 in _effects.sass "(slideInDown)" 可寫可不寫 , 不寫預設淡入淡出</p>
+              </div>
+              <div class="EXcode">
+                            <p class="number">8</p>
+                <p class="tag cs3">+graphic_tran(<i>slideInDown</i>)</p>
+              </div></code>
+          </div>
+          <h3>In HTML</h3>
+          <div class="codeArea"><code class="html">
+              <div class="EXcode">
+                            <p class="number">1</p>
+                <p class="tag"><span><i>element</i> class="<i>customize class</i>"</span></p>
+              </div>
+              <div class="EXcode">
+                            <p class="number">2</p>
+                <p class="tag cs1"><span><i>ul</i></span></p>
+              </div>
+              <div class="EXcode">
+                            <p class="number">3</p>
+                <p class="tag cs2"><span><i>li</i> class="content"</span></p>
+              </div>
+              <div class="EXcode">
+                            <p class="number">4</p>
+                <p class="tag cs3"><span>figure</span></p>
+              </div>
+              <div class="EXcode">
+                            <p class="number">5</p>
+                <p class="tag cs4"><span>div class="img"</span><span>img src="<i>upload/images.jpg</i>" alt="<i>image alt</i>"</span><span>/div</span></p>
+              </div>
+              <div class="EXcode">
+                            <p class="number">6</p>
+                <p class="tag cs4"><span>figcaption</span></p>
+              </div>
+              <div class="EXcode">
+                            <p class="number">7</p>
+                <p class="tag cs5"><span>h3</span><i>list title , 列表標題</i><span>/h3</span></p>
+              </div>
+              <div class="EXcode">
+                            <p class="number">8</p>
+                <p class="tag cs5"><span>p</span><i>content text , 內容描述</i><span>/p</span></p>
+              </div>
+              <div class="EXcode">
+                            <p class="number">9</p>
+                <p class="tag cs4"><span>/figcaption</span></p>
+              </div>
+              <div class="EXcode">
+                            <p class="number">10</p>
+                <p class="tag cs3"><span>/figure</span></p>
+              </div>
+              <div class="EXcode">
+                            <p class="number">11</p>
+                <p class="tag cs2"><span><i>/li</i></span></p>
+              </div>
+              <div class="EXcode">
+                            <p class="number">12</p>
+                <p class="tag cs1"><span><i>/ul</i></span></p>
+              </div>
+              <div class="EXcode">
+                            <p class="number">13</p>
+                <p class="tag"><span><i>/element</i></span></p>
+              </div></code>
+          </div>
+          <h3>In PUG</h3>
+          <div class="codeArea"><code class="pug">
+              <div class="EXcode">
+                            <p class="number">1</p>
+                <p class="tag"><i>ul</i></p>
+              </div>
+              <div class="EXcode">
+                            <p class="number">2</p>
+                <p class="tag cs1"><i>li</i>.content</p>
+              </div>
+              <div class="EXcode">
+                            <p class="number">3</p>
+                <p class="tag cs2">figure</p>
+              </div>
+              <div class="EXcode">
+                            <p class="number">4</p>
+                <p class="tag cs3">.img</p>
+              </div>
+              <div class="EXcode">
+                            <p class="number">5</p>
+                <p class="tag cs4">img(src="<i>upload/images.jpg</i>", alt="<i>alt</i>")</p>
+              </div>
+              <div class="EXcode">
+                            <p class="number">6</p>
+                <p class="tag cs3">figcaption</p>
+              </div>
+              <div class="EXcode">
+                            <p class="number">7</p>
+                <p class="tag cs4">h3 <i>list title , 列表標題</i></p>
+              </div>
+              <div class="EXcode">
+                            <p class="number">8</p>
+                <p class="tag cs4">p <i>content text , 內容描述</i></p>
+              </div></code>
+          </div>
+          <h3>In PUG ( 模組化 )</h3>
+          <div class="codeArea"><code class="pug">
+              <div class="EXcode">
+                            <p class="number">1</p>
+                <p class="tag"><i>ul</i></p>
+              </div>
+              <div class="EXcode">
+                            <p class="number">2</p>
+                <p class="tag cs1"><i>li</i>.content</p>
+              </div>
+              <div class="EXcode">
+                            <p class="number">3</p>
+                <p class="tag cs2">+img_list02('<i>#</i>', '<i>連結標題</i>', '<i>upload/image.jpg</i>', '<i>alt</i>', '<i>list title , 列表標題</i>', '<i>content text , 內容描述</i>') </p>
+              </div>
+              <div class="EXcode">
+                            <p class="number">4</p>
+                <p class="tag cs2">1.連結, 2.連結標題, 3.圖檔位置, 4.圖說 5.文章標題, 6.內容描述, 很重要 順序不能錯誤 會找不到東西</p>
+              </div></code>
+          </div>
+        </section>
+        <section class="graphic_pic">
+          <ul>
+            <li class="content">
+              <figure>
+                <div class="img"><img src="upload/IMG_8167.JPG" alt=""></div>
+                <figcaption>
+                  <h3><a href="#">Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題 Title 123 列表標題</a></h3>
+                  <p class="intro_text">content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列 content text 123 文字列</p>
+                  <p class="more_link"><a href="#"><span>more</span></a></p>
+                </figcaption>
+              </figure>
+              <div class="note">
+                <h3>預設淡入</h3>
+                <p>SASS code | <span>+graphic_trans</span></p>
+              </div>
+            </li>
+            <li class="content graphic_trans02">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8167.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3><a href="#" title="連結標題">連結標題</a></h3>
+                        <p class="intro_text">屁貓陳柳丁</p>
+                        <p class="more_link"><a href="#" title="more"><span>more</span></a></p>
+                      </figcaption>
+                    </figure>
+              <div class="note">
+                <h3>滑動上往下</h3>
+                <p>SASS code | <span>+graphic_trans(<i>slideInDown</i>)</span></p>
+              </div>
+            </li>
+            <li class="content graphic_trans03">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8167.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3><a href="#" title="連結標題">連結標題</a></h3>
+                        <p class="intro_text">屁貓陳柳丁</p>
+                        <p class="more_link"><a href="#" title="more"><span>more</span></a></p>
+                      </figcaption>
+                    </figure>
+              <div class="note">
+                <h3>滑動下往上</h3>
+                <p>SASS code | <span>+graphic_trans(<i>slideInUP</i>)</span></p>
+              </div>
+            </li>
+            <li class="content graphic_trans04">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8167.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3><a href="#" title="連結標題">連結標題</a></h3>
+                        <p class="intro_text">屁貓陳柳丁</p>
+                        <p class="more_link"><a href="#" title="more"><span>more</span></a></p>
+                      </figcaption>
+                    </figure>
+              <div class="note">
+                <h3>滑動左往右</h3>
+                <p>SASS code | <span>+graphic_trans(<i>slideInLeft</i>)</span></p>
+              </div>
+            </li>
+            <li class="content graphic_trans05">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8167.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3><a href="#" title="連結標題">連結標題</a></h3>
+                        <p class="intro_text">屁貓陳柳丁</p>
+                        <p class="more_link"><a href="#" title="more"><span>more</span></a></p>
+                      </figcaption>
+                    </figure>
+              <div class="note">
+                <h3>滑動右往左</h3>
+                <p>SASS code | <span>+graphic_trans(<i>slideInRight</i>)</span></p>
+              </div>
+            </li>
+            <li class="content graphic_trans06">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8167.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3><a href="#" title="連結標題">連結標題</a></h3>
+                        <p class="intro_text">屁貓陳柳丁</p>
+                        <p class="more_link"><a href="#" title="more"><span>more</span></a></p>
+                      </figcaption>
+                    </figure>
+              <div class="note">
+                <h3>滑動左上往右下</h3>
+                <p>SASS code | <span>+graphic_trans(<i>slideInLeftTop</i>)</span></p>
+              </div>
+            </li>
+            <li class="content graphic_trans07">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8167.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3><a href="#" title="連結標題">連結標題</a></h3>
+                        <p class="intro_text">屁貓陳柳丁</p>
+                        <p class="more_link"><a href="#" title="more"><span>more</span></a></p>
+                      </figcaption>
+                    </figure>
+              <div class="note">
+                <h3>滑動右上往左下</h3>
+                <p>SASS code | <span>+graphic_trans(<i>slideInRightTop</i>)</span></p>
+              </div>
+            </li>
+            <li class="content graphic_trans08">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8167.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3><a href="#" title="連結標題">連結標題</a></h3>
+                        <p class="intro_text">屁貓陳柳丁</p>
+                        <p class="more_link"><a href="#" title="more"><span>more</span></a></p>
+                      </figcaption>
+                    </figure>
+              <div class="note">
+                <h3>滑動左下往右上</h3>
+                <p>SASS code | <span>+graphic_trans(<i>slideInRightBottom</i>)</span></p>
+              </div>
+            </li>
+            <li class="content graphic_trans09">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8167.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3><a href="#" title="連結標題">連結標題</a></h3>
+                        <p class="intro_text">屁貓陳柳丁</p>
+                        <p class="more_link"><a href="#" title="more"><span>more</span></a></p>
+                      </figcaption>
+                    </figure>
+              <div class="note">
+                <h3>滑動右下往左上</h3>
+                <p>SASS code | <span>+graphic_trans(<i>slideInRightBottom</i>)</span></p>
+              </div>
+            </li>
+            <li class="content graphic_trans10">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8167.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3><a href="#" title="連結標題">連結標題</a></h3>
+                        <p class="intro_text">屁貓陳柳丁</p>
+                        <p class="more_link"><a href="#" title="more"><span>more</span></a></p>
+                      </figcaption>
+                    </figure>
+              <div class="note">
+                <h3>滑動放大上往下</h3>
+                <p>SASS code | <span>+graphic_trans(<i>backInDown</i>)</span></p>
+              </div>
+            </li>
+            <li class="content graphic_trans11">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8167.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3><a href="#" title="連結標題">連結標題</a></h3>
+                        <p class="intro_text">屁貓陳柳丁</p>
+                        <p class="more_link"><a href="#" title="more"><span>more</span></a></p>
+                      </figcaption>
+                    </figure>
+              <div class="note">
+                <h3>滑動放大下往上</h3>
+                <p>SASS code | <span>+graphic_trans(<i>backInUp</i>)</span></p>
+              </div>
+            </li>
+            <li class="content graphic_trans12">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8167.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3><a href="#" title="連結標題">連結標題</a></h3>
+                        <p class="intro_text">屁貓陳柳丁</p>
+                        <p class="more_link"><a href="#" title="more"><span>more</span></a></p>
+                      </figcaption>
+                    </figure>
+              <div class="note">
+                <h3>滑動放大左往右</h3>
+                <p>SASS code | <span>+graphic_trans(<i>backInLeft</i>)</span></p>
+              </div>
+            </li>
+            <li class="content graphic_trans13">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8167.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3><a href="#" title="連結標題">連結標題</a></h3>
+                        <p class="intro_text">屁貓陳柳丁</p>
+                        <p class="more_link"><a href="#" title="more"><span>more</span></a></p>
+                      </figcaption>
+                    </figure>
+              <div class="note">
+                <h3>滑動放大右往左</h3>
+                <p>SASS code | <span>+graphic_trans(<i>backInRight</i>)</span></p>
+              </div>
+            </li>
+            <li class="content graphic_trans14">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8167.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3><a href="#" title="連結標題">連結標題</a></h3>
+                        <p class="intro_text">屁貓陳柳丁</p>
+                        <p class="more_link"><a href="#" title="more"><span>more</span></a></p>
+                      </figcaption>
+                    </figure>
+              <div class="note">
+                <h3>放大</h3>
+                <p>SASS code | <span>+graphic_trans(<i>zoomIn</i>)</span></p>
+              </div>
+            </li>
+            <li class="content graphic_trans15">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8167.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3><a href="#" title="連結標題">連結標題</a></h3>
+                        <p class="intro_text">屁貓陳柳丁</p>
+                        <p class="more_link"><a href="#" title="more"><span>more</span></a></p>
+                      </figcaption>
+                    </figure>
+              <div class="note">
+                <h3>放大上往下</h3>
+                <p>SASS code | <span>+graphic_trans(<i>zoomInDown</i>)</span></p>
+              </div>
+            </li>
+            <li class="content graphic_trans16">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8167.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3><a href="#" title="連結標題">連結標題</a></h3>
+                        <p class="intro_text">屁貓陳柳丁</p>
+                        <p class="more_link"><a href="#" title="more"><span>more</span></a></p>
+                      </figcaption>
+                    </figure>
+              <div class="note">
+                <h3>放大下往上</h3>
+                <p>SASS code | <span>+imgfilter(<i>zoomInUp</i>)</span></p>
+              </div>
+            </li>
+            <li class="content graphic_trans17">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8167.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3><a href="#" title="連結標題">連結標題</a></h3>
+                        <p class="intro_text">屁貓陳柳丁</p>
+                        <p class="more_link"><a href="#" title="more"><span>more</span></a></p>
+                      </figcaption>
+                    </figure>
+              <div class="note">
+                <h3>放大左往右</h3>
+                <p>SASS code | <span>+imgfilter(<i>zoomInLeft</i>)</span></p>
+              </div>
+            </li>
+            <li class="content graphic_trans18">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8167.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3><a href="#" title="連結標題">連結標題</a></h3>
+                        <p class="intro_text">屁貓陳柳丁</p>
+                        <p class="more_link"><a href="#" title="more"><span>more</span></a></p>
+                      </figcaption>
+                    </figure>
+              <div class="note">
+                <h3>放大右往左</h3>
+                <p>SASS code | <span>+imgfilter(<i>zoomInLRight</i>)</span></p>
+              </div>
+            </li>
+            <li class="content graphic_trans19">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8167.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3><a href="#" title="連結標題">連結標題</a></h3>
+                        <p class="intro_text">屁貓陳柳丁</p>
+                        <p class="more_link"><a href="#" title="more"><span>more</span></a></p>
+                      </figcaption>
+                    </figure>
+              <div class="note">
+                <h3>旋轉 X 軸</h3>
+                <p>SASS code | <span>+imgfilter(<i>flipInX</i>)</span></p>
+              </div>
+            </li>
+            <li class="content graphic_trans20">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8167.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3><a href="#" title="連結標題">連結標題</a></h3>
+                        <p class="intro_text">屁貓陳柳丁</p>
+                        <p class="more_link"><a href="#" title="more"><span>more</span></a></p>
+                      </figcaption>
+                    </figure>
+              <div class="note">
+                <h3>旋轉 Y 軸</h3>
+                <p>SASS code | <span>+imgfilter(<i>flipInY</i>)</span></p>
+              </div>
+            </li>
+            <li class="content graphic_trans21">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8167.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3><a href="#" title="連結標題">連結標題</a></h3>
+                        <p class="intro_text">屁貓陳柳丁</p>
+                        <p class="more_link"><a href="#" title="more"><span>more</span></a></p>
+                      </figcaption>
+                    </figure>
+              <div class="note">
+                <h3>Bounce</h3>
+                <p>SASS code | <span>+imgfilter(<i>bounceIn</i>)</span></p>
+              </div>
+            </li>
+            <li class="content graphic_trans22">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8167.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3><a href="#" title="連結標題">連結標題</a></h3>
+                        <p class="intro_text">屁貓陳柳丁</p>
+                        <p class="more_link"><a href="#" title="more"><span>more</span></a></p>
+                      </figcaption>
+                    </figure>
+              <div class="note">
+                <h3>bounceInDown</h3>
+                <p>SASS code | <span>+imgfilter(<i>bounceInDown</i>)</span></p>
+              </div>
+            </li>
+            <li class="content graphic_trans23">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8167.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3><a href="#" title="連結標題">連結標題</a></h3>
+                        <p class="intro_text">屁貓陳柳丁</p>
+                        <p class="more_link"><a href="#" title="more"><span>more</span></a></p>
+                      </figcaption>
+                    </figure>
+              <div class="note">
+                <h3>bounceInUp</h3>
+                <p>SASS code | <span>+imgfilter(<i>bounceInUp</i>)</span></p>
+              </div>
+            </li>
+            <li class="content graphic_trans24">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8167.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3><a href="#" title="連結標題">連結標題</a></h3>
+                        <p class="intro_text">屁貓陳柳丁</p>
+                        <p class="more_link"><a href="#" title="more"><span>more</span></a></p>
+                      </figcaption>
+                    </figure>
+              <div class="note">
+                <h3>bounceInLeft</h3>
+                <p>SASS code | <span>+imgfilter(<i>bounceInLeft</i>)</span></p>
+              </div>
+            </li>
+            <li class="content graphic_trans25">
+                    <figure>
+                      <div class="img"><img src="upload/IMG_8167.JPG" alt="圖說"></div>
+                      <figcaption>
+                        <h3><a href="#" title="連結標題">連結標題</a></h3>
+                        <p class="intro_text">屁貓陳柳丁</p>
+                        <p class="more_link"><a href="#" title="more"><span>more</span></a></p>
+                      </figcaption>
+                    </figure>
+              <div class="note">
+                <h3>bounceInRight</h3>
+                <p>SASS code | <span>+imgfilter(<i>bounceInRight</i>)</span></p>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </main>
+    <footer>
+      <div class="copyright">&copy;
+        <script>document.write(new Date().getFullYear())</script> orangeCat's photography
+      </div>
+    </footer>
+    <div class="goTop hide"><a class="goTop jq-goTop" href="#"><img src="images/btn_gotop.svg" alt=""></a></div>
+    <!-- basic script-->
+    <script src="js/jquery-3.5.0.js"></script>
+    <script src="js/nav/slidebars.js"></script>
+    <script src="js/nav/slidebars-scripts.js"></script>
+    <script src="js/basic.js"></script>
+  </body>
+</html>

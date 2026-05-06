@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<!--orangeCat template v4.0-->
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+    <meta http-equiv="content-language" content="zh-Hant-TW">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- for iOS-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="author" content="orangeCat's photography">
+    <meta name="copyright" content="orangeCat's photography">
+    <meta name="description" content="orangeCat's photography 的網站基本模板設定">
+    <meta name="keyword" content="網頁版型, 網站模板, orangeCat's photography, 基本樣式, website template, template">
+    <meta property="og:title" content="orangeCat's photography web template">
+    <meta property="og:url" content=" http://demo.orangecat.com.tw/oc-template/">
+    <meta property="og:image" content=" http://demo.orangecat.com.tw/oc-template/images/logo.svg">
+    <!-- meta(property="fb:admins" content="Facebook numberic ID")-->
+    <meta name="robots" content="noindex,nofollow">
+    <link rel="icon" href="favicon.ico?v=1.1">
+    <title>Portfolio Effects | Orange Web Template v4.0 - orangeCat's photography</title>
+    <link href="css/exsample.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <h1><a href="." title="orangeCat's photography"><img src="images/logo.svg" alt="orangeCat's photography"></a></h1>
+        </div>
+        <!-- nav desktop-->
+        <nav class="desktop">
+          <ul class="nav">
+            <li><a href="basic_exsample.html" title="Basic Exsample">Basic Exsample</a></li>
+            <li><a href="portfolio.html" title="Portfolio Effects">Portfolio Effects</a></li>
+            <li><a href="graphic_list.html" title="Graphic List">Graphic List</a></li>
+            <li><a href="icon_exsample.html" title="Google Icons">Google Icons</a></li>
+            <li><a href="#" title="nav">nav5</a></li>
+          </ul>
+        </nav>
+        <!-- nav mobile-->
+        <nav class="mobile">
+          <div class="navOpen">
+            <button class="js-open-left-slidebar navOpen"><img src="images/btn_open.svg" alt="open nav"></button>
+          </div>
+          <div off-canvas="slidebar-1 left overlay">
+            <button class="js-close-left-slidebar navClose"><img src="images/btn_close.svg" alt="close nav"></button>
+            <ul class="nav">
+              <li><a href="basic_exsample.html" title="Basic Exsample">Basic Exsample</a></li>
+              <li><a href="portfolio.html" title="Portfolio Effects">Portfolio Effects</a></li>
+              <li><a href="graphic_list.html" title="Graphic List">Graphic List</a></li>
+              <li><a href="icon_exsample.html" title="Google Icons">Google Icons</a></li>
+              <li><a href="#" title="nav">nav5</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <h2 class="page_title">portfolio effects</h2>
+      <section class="guide">
+        <!--浮動快速選單-->
+        <dl class="jump">
+          <dd><a href="#pseffects">PS 濾鏡效果</a></dd>
+          <dd><a href="#imgeffects">Image Effects</a></dd>
+        </dl>
+        <div class="note">
+          <p><span style="color: #f00">* aspect-ratio</span> IE, Edge 87, Firefox 88, Opera 73, Chrome 87, iOS 15, Android Browser 4.4.4, Opera Mobile 12.1 以前不支援</p>
+          <p>請參照 <a href="https://caniuse.com/?search=aspect-ratio" target="_blank">https://caniuse.com/?search=aspect-ratio</a></p>
+        </div>
+        <div class="guide">
+          <h3>In SASS</h3>
+          <div class="code"><code>
+              <p><i>// _mixin.sass line 384</i></p>
+              <p><span>element</span>.<span>customize class</span></p>
+              <p class="element">+gallery</p>
+              <p>修改圖片比例</p>
+              <p><i>// _mixin.sass line 410</i></p>
+              <p>aspect-ratio:  <span>1/1</span></p></code></div>
+        </div>
+      </section>
+      <main class="portfolio">
+        <!-- Photoshop 濾鏡效果-->
+        <h3 class="unit_title" id="pseffects">Portfolio | PS 濾鏡效果</h3>
+        <section class="guide">
+          <div class="note">
+            <p>Photoshop 濾鏡效果，無法直接使用在 &lt;img&gt;，需要疊一層色塊在圖片上。工具寫在偽元素 ::before 裡。</p>
+            <p>感覺實用性不高，不過都寫了還是留著備用。</p>
+          </div>
+          <div class="guide">
+            <h3>In SASS</h3>
+            <div class="code"><code>
+                <p><i>// _effects.sass line 4</i></p>
+                <p><i>// color _colors.sass line 47</i></p>
+                <p><span>element</span>.<span>customize class</span></p>
+                <p class="element">+pseffects <span>(effects name)</span></p></code></div>
+            <h3>In HTML</h3>
+            <div class="code"><code>
+                <p>&lt; <span>element</span> class="<span>customize class</span>"&gt;</p>
+                <p class="element">&lt;img src="<span>upload/images.jpg</span>" alt="<span>image alt</span>&gt;</p>
+                <p>&lt;/<span>element</span>&gt;</p></code></div>
+          </div>
+        </section>
+        <section class="portfolio">
+          <div class="content pseffects00"><a href="#">
+              <figure>
+                <div class="img"><img src="upload/IMG_8167.JPG" alt=""></div>
+                <figcaption>
+                  <h3>無濾鏡效果</h3>
+                  <p><span>SASS code |</span> +pseffects</p>
+                </figcaption>
+              </figure></a></div>
+          <div class="content pseffects01"><a href="#">
+              <figure>
+                <div class="img"><img src="upload/IMG_8236.JPG" alt=""></div>
+                <figcaption>
+                  <h3>multiply 色彩增值</h3>
+                  <p><span>SASS code |</span> +pseffects(multiply)</p>
+                </figcaption>
+              </figure></a></div>
+          <div class="content pseffects02"><a href="#">
+              <figure>
+                <div class="img"><img src="upload/IMG_8242.JPG" alt=""></div>
+                <figcaption>
+                  <h3>screen 濾色</h3>
+                  <p><span>SASS code |</span> +pseffects(screen)</p>
+                </figcaption>
+              </figure></a></div>
+          <div class="content pseffects03"><a href="#">
+              <figure>
+                <div class="img"><img src="upload/IMG_8240.JPG" alt=""></div>
+                <figcaption>
+                  <h3>overlay 覆蓋</h3>
+                  <p><span>SASS code |</span> +pseffects(overlay)</p>
+                </figcaption>
+              </figure></a></div>
+          <div class="content pseffects04"><a href="#">
+              <figure>
+                <div class="img"><img src="upload/IMG_8249.JPG" alt=""></div>
+                <figcaption>
+                  <h3>darken 變暗</h3>
+                  <p><span>SASS code |</span> +pseffects(darken)</p>
+                </figcaption>
+              </figure></a></div>
+          <div class="content pseffects05"><a href="#">
+              <figure>
+                <div class="img"><img src="upload/IMG_8171.JPG" alt=""></div>
+                <figcaption>
+                  <h3>lighten 變亮</h3>
+                  <p><span>SASS code |</span> +pseffects(lighten)</p>
+                </figcaption>
+              </figure></a></div>
+          <div class="content pseffects06"><a href="#">
+              <figure>
+                <div class="img"><img src="upload/IMG_8252.JPG" alt=""></div>
+                <figcaption>
+                  <h3>color-dodge 加亮顏色</h3>
+                  <p><span>SASS code |</span> +pseffects(colordodge)</p>
+                </figcaption>
+              </figure></a></div>
+          <div class="content pseffects07"><a href="#">
+              <figure>
+                <div class="img"><img src="upload/IMG_8174.JPG" alt=""></div>
+                <figcaption>
+                  <h3>color-burn 加深顏色</h3>
+                  <p><span>SASS code |</span> +pseffects(colorburn)</p>
+                </figcaption>
+              </figure></a></div>
+          <div class="content pseffects08"><a href="#">
+              <figure>
+                <div class="img"><img src="upload/IMG_8231.JPG" alt=""></div>
+                <figcaption>
+                  <h3>hard-light 實光</h3>
+                  <p><span>SASS code |</span> +pseffects(hardlight)</p>
+                </figcaption>
+              </figure></a></div>
+          <div class="content pseffects09"><a href="#">
+              <figure>
+                <div class="img"><img src="upload/IMG_8256.JPG" alt=""></div>
+                <figcaption>
+                  <h3>soft-light 柔光</h3>
+                  <p><span>SASS code |</span> +pseffects(softlight)</p>
+                </figcaption>
+              </figure></a></div>
+          <div class="content pseffects10"><a href="#">
+              <figure>
+                <div class="img"><img src="upload/IMG_8256.JPG" alt=""></div>
+                <figcaption>
+                  <h3>difference 差異化</h3>
+                  <p><span>SASS code |</span> +pseffects(difference)</p>
+                </figcaption>
+              </figure></a></div>
+          <div class="content pseffects11"><a href="#">
+              <figure>
+                <div class="img"><img src="upload/IMG_8256.JPG" alt=""></div>
+                <figcaption>
+                  <h3>exclusion 排除</h3>
+                  <p><span>SASS code |</span> +pseffects(exclusion)</p>
+                </figcaption>
+              </figure></a></div>
+          <div class="content pseffects12"><a href="#">
+              <figure>
+                <div class="img"><img src="upload/IMG_8256.JPG" alt=""></div>
+                <figcaption>
+                  <h3>hue 色相</h3>
+                  <p><span>SASS code |</span> +pseffects(hue)</p>
+                </figcaption>
+              </figure></a></div>
+          <div class="content pseffects13"><a href="#">
+              <figure>
+                <div class="img"><img src="upload/IMG_8256.JPG" alt=""></div>
+                <figcaption>
+                  <h3>aturation 飽和度</h3>
+                  <p><span>SASS code |</span> +pseffects(aturation)</p>
+                </figcaption>
+              </figure></a></div>
+          <div class="content pseffects14"><a href="#">
+              <figure>
+                <div class="img"><img src="upload/IMG_8256.JPG" alt=""></div>
+                <figcaption>
+                  <h3>color 顏色</h3>
+                  <p><span>SASS code |</span> +pseffects(color)</p>
+                </figcaption>
+              </figure></a></div>
+          <div class="content pseffects15"><a href="#">
+              <figure>
+                <div class="img"><img src="upload/IMG_8256.JPG" alt=""></div>
+                <figcaption>
+                  <h3>luminosity 明度</h3>
+                  <p><span>SASS code |</span> +pseffects(luminosity)</p>
+                </figcaption>
+              </figure></a></div>
+        </section>
+        
+        <!-- image 濾鏡效果-->
+        <h3 class="unit_title" id="imgeffects">Portfolio | Image Effects</h3>
+        <section class="guide">
+          <div class="note">
+            <p>圖片濾鏡效果，可以直接使用在 &lt;img&gt; 上。</p>
+          </div>
+          <div class="guide">
+            <h3>In SASS</h3>
+            <div class="code"><code>
+                <p><i>// _effects.sass line 80</i></p>
+                <p><span>element</span>.<span>customize class</span></p>
+                <p class="element">+imgfilter <span>(count, imgfilter)</span></p>
+                <p><i>hue rotate 色相</i>、<i>blur 模糊</i>、<i>saturate 飽和</i> 運算方式不同，獨立寫三支。</p>
+                <p><i>// 色相 _effects.sass line 119</i> <span>+hue-rotate($count)</span></p>
+                <p><i>// 模糊 _effects.sass line 124</i> <span>+blur($count)</span></p>
+                <p><i>// 飽和 _effects.sass line 129</i> <span>+saturate($count)</span></p></code></div>
+            <h3>In HTML</h3>
+            <div class="code"><code>
+                <p>&lt; <span>element</span> class="<span>customize class</span>"&gt;</p>
+                <p class="element">&lt;img src="<span>upload/images.jpg</span>" alt="<span>image alt</span>&gt;</p>
+                <p>&lt;/<span>element</span>&gt;</p></code></div>
+          </div>
+        </section>
+        <section class="portfolio">
+          <div class="content"><a href="">
+              <figure>
+                <div class="img"><img src="upload/IMG_8157.JPG" alt=""></div>
+                <figcaption>
+                  <h3>無濾鏡效果</h3>
+                  <p>SASS code | <span>+imgfilter</span></p>
+                </figcaption>
+              </figure></a></div>
+          <div class="content imgeffects01"><a href="">
+              <figure>
+                <div class="img"><img src="upload/IMG_8157.JPG" alt=""></div>
+                <figcaption>
+                  <h3>grayscale 灰階</h3>
+                  <p>SASS code | <span>+imgfilter(<i>100</i>, grayscale)</span></p>
+                </figcaption>
+              </figure></a></div>
+          <div class="content imgeffects02"><a href="">
+              <figure>
+                <div class="img"><img src="upload/IMG_8157.JPG" alt=""></div>
+                <figcaption>
+                  <h3>brightness 亮度</h3>
+                  <p>SASS code | <span>+imgfilter(<i>50</i>, brightness)</span></p>
+                </figcaption>
+              </figure></a></div>
+          <div class="content imgeffects03"><a href="">
+              <figure>
+                <div class="img"><img src="upload/IMG_8157.JPG" alt=""></div>
+                <figcaption>
+                  <h3>contrast 對比</h3>
+                  <p>SASS code | <span>+imgfilter(<i>50</i>, contrast)</span></p>
+                </figcaption>
+              </figure></a></div>
+          <div class="content imgeffects04"><a href="">
+              <figure>
+                <div class="img"><img src="upload/IMG_8157.JPG" alt=""></div>
+                <figcaption>
+                  <h3>invert 負片</h3>
+                  <p>SASS code | <span>+imgfilter(<i>100</i>, invert)</span></p>
+                </figcaption>
+              </figure></a></div>
+          <div class="content imgeffects05"><a href="">
+              <figure>
+                <div class="img"><img src="upload/IMG_8157.JPG" alt=""></div>
+                <figcaption>
+                  <h3>opacity 不透明</h3>
+                  <p>SASS code | <span>+imgfilter(<i>50</i>, opacity)</span></p>
+                </figcaption>
+              </figure></a></div>
+          <div class="content imgeffects06"><a href="">
+              <figure>
+                <div class="img"><img src="upload/IMG_8157.JPG" alt=""></div>
+                <figcaption>
+                  <h3>epia 懷舊</h3>
+                  <p>SASS code | <span>+imgfilter(<i>100</i>, epia)</span></p>
+                </figcaption>
+              </figure></a></div>
+          <div class="content imgeffects07"><a href="">
+              <figure>
+                <div class="img"><img src="upload/IMG_8157.JPG" alt=""></div>
+                <figcaption>
+                  <h3>hue rotate 色相</h3>
+                  <p>SASS code | <span>++hue-rotate(<i>100</i>)</span></p>
+                </figcaption>
+              </figure></a></div>
+          <div class="content imgeffects08"><a href="">
+              <figure>
+                <div class="img"><img src="upload/IMG_8157.JPG" alt=""></div>
+                <figcaption>
+                  <h3>blur 模糊</h3>
+                  <p>SASS code | <span>+blur(<i>5</i>)</span></p>
+                </figcaption>
+              </figure></a></div>
+          <div class="content imgeffects09"><a href="">
+              <figure>
+                <div class="img"><img src="upload/IMG_8157.JPG" alt=""></div>
+                <figcaption>
+                  <h3>saturate 飽和</h3>
+                  <p>SASS code | <span>+saturate(<i>2</i>)</span></p>
+                </figcaption>
+              </figure></a></div>
+        </section>
+      </main>
+    </main>
+    <footer>
+      <div class="copyright">&copy;
+        <script>document.write(new Date().getFullYear())</script> orangeCat's photography
+      </div>
+    </footer>
+    <div class="goTop hide"><a class="goTop jq-goTop" href="#"><img src="images/btn_gotop.svg" alt=""></a></div>
+    <!-- basic script-->
+    <script src="js/jquery-3.5.0.js"></script>
+    <script src="js/nav/slidebars.js"></script>
+    <script src="js/nav/slidebars-scripts.js"></script>
+    <script src="js/basic.js"></script>
+  </body>
+</html>
